@@ -31,6 +31,7 @@ public class NewTest {
 	private String expected;
 	private String actual;
 	private WebElement email;
+	//
 	private WebElement submit;
 	private WebElement verifyemail;
 	private WebElement pass;
