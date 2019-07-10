@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="FG_RegistrationTest.NewTest">
+        <methods>
+          <include name="verifyEmptyRegistrationFields"/>
+          <include name="verifyEmailConfirmationFelides"/>
+          <include name="verifyPasswordContainsAtLeast6Characters"/>
+          <include name="terminateBrowser"/>
+          <include name="verifyPasswordConfirmationFiled"/>
+          <include name="verifyPasswordContainsAtLeast1Digit"/>
+          <include name="launchBrowser"/>
+          <include name="verifyEmailAddressNotRegistered"/>
+          <include name="verifyPasswordNotContainsSameCharacter4Time"/>
+          <include name="verifysuccsessRegisgtration"/>
+          <include name="verifyInvalidEmail"/>
+          <include name="verifyPasswordContainsAtLeast1Letter"/>
+        </methods>
+      </class> <!-- FG_RegistrationTest.NewTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
