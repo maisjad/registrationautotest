@@ -1,6 +1,7 @@
 package FG_RegistrationTest;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -42,10 +43,15 @@ public class address {
 	
 
 	public void setbillNames(String fn,String mn,String ln,String com){
-		 driver.findElement(this.fn).sendKeys(fn);
+		  try {
+	     driver.findElement(this.fn).sendKeys(fn);
          driver.findElement(this.mn).sendKeys(mn);
          driver.findElement(this.ln).sendKeys(ln);
          driver.findElement(this.company).sendKeys(com);
+         }
+		  catch (NoSuchElementException e){
+		    	System.out.print(e.getMessage());
+		    	}
 		 
 	 }
 	 public void setbilladdrss(String str1,String str2,String city,String code,String region,String state){

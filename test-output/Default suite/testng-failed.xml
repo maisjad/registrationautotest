@@ -5,13 +5,10 @@
     <classes>
       <class name="FG_RegistrationTest.NewTest">
         <methods>
-          <include name="verifyEmptyRegistrationFields"/>
-          <include name="verifyPasswordContainsAtLeast6Characters"/>
           <include name="terminateBrowser"/>
-          <include name="verifyPasswordContainsAtLeast1Digit"/>
           <include name="launchBrowser"/>
-          <include name="verifyPasswordNotContainsSameCharacter4Time"/>
-          <include name="verifyPasswordContainsAtLeast1Letter"/>
+          <include name="verifyssucsessregistration"/>
+          <include name="readTC"/>
         </methods>
       </class> <!-- FG_RegistrationTest.NewTest -->
     </classes>
