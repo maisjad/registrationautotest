@@ -6,16 +6,11 @@
       <class name="FG_RegistrationTest.NewTest">
         <methods>
           <include name="verifyEmptyRegistrationFields"/>
-          <include name="verifyEmailConfirmationFelides"/>
           <include name="verifyPasswordContainsAtLeast6Characters"/>
           <include name="terminateBrowser"/>
-          <include name="verifyPasswordConfirmationFiled"/>
           <include name="verifyPasswordContainsAtLeast1Digit"/>
           <include name="launchBrowser"/>
-          <include name="verifyEmailAddressNotRegistered"/>
           <include name="verifyPasswordNotContainsSameCharacter4Time"/>
-          <include name="verifysuccsessRegisgtration"/>
-          <include name="verifyInvalidEmail"/>
           <include name="verifyPasswordContainsAtLeast1Letter"/>
         </methods>
       </class> <!-- FG_RegistrationTest.NewTest -->

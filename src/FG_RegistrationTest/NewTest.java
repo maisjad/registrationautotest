@@ -1,8 +1,18 @@
 package FG_RegistrationTest;
-
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
@@ -28,117 +38,129 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 public class NewTest {
 	WebDriver driver;
+	FGRegisterdemo demo ;
+	address add;
+	String[][]  Data =new String [64][64];
 	private String expected;
-	private String actual;
-	private WebElement email;
-	//
-	private WebElement submit;
-	private WebElement verifyemail;
-	private WebElement pass;
-	private WebElement verifypass;
+	
+	
 	private String emailaddress;
 	private String password;
+	private String vemail;
+	private String vpass;
+	private String[] Add=new String[64];
 	
-	
-	public void testresult(String expected,String actual){
+	 void setup(String email, String pass, String vemail,String vpass){
+
+        demo.setEmail(email);
+        demo.setVEmail(vemail);
+        demo.setPass(pass);
+        demo.setVPass(vpass);
+        demo.clickcontinue();
+		
+	}
+	private void testresult(String expected,String actual){
 		  System.out.println(actual);
          AssertJUnit.assertEquals(actual, expected);
 		
 	}
-	
+	@BeforeTest	 
+	void fileopen(){
+		  
+		  File file = new File("C:\\Users\\me\\workspace\\FG_Registration\\files\\DTC1.xlsx"); 
+		   FileInputStream inputStream = null;
+		try {
+			inputStream = new FileInputStream(file);
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+
+		    Workbook WB = null;
+			try {
+				WB = new XSSFWorkbook(inputStream);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		    Sheet sh = WB.getSheet("Sheet1");
+            int rowCount = sh.getLastRowNum()-sh.getFirstRowNum();
+	        int colcount=sh.getRow(0).getLastCellNum();
+	       
+		    for (int i = 0; i < rowCount+1; i++) {
+		    	if (i==10){
+		    		
+		    		
+		    		
+		    	}
+		    	
+		        Row row = sh.getRow(i);
+		        System.out.println();
+            for (int j = 0; j < row.getLastCellNum(); j++) {
+            	try{ System.out.print(row.getCell(j).getStringCellValue()+"|| ");
+            		if(i==10){
+            		Add[j]=	row.getCell(j).getStringCellValue();
+            			
+            		}
+            		
+            		else{	
+            		 Data[i][j]=row.getCell(j).getStringCellValue();
+            		 }
+            		
+            		 }
+            	 
+            	 catch (IllegalStateException e){
+            		 if(i==10){
+             			Add[j]= "10167";
+             			
+             		}
+             		
+            		 else{ System.out.print(row.getCell(j).getRowIndex()+"|| ");
+            		 
+            		 Data[i][j]= ""+row.getCell(j).getRowIndex();}
+            		
+            		 
+            	 }
+            	
+            	
+               }}
+		
+		
+		
+	}
+    
+    
 	@BeforeMethod
     public void launchBrowser() {
+	    
+
         System.out.println("launching chrome browser"); 
         String baseUrl = "https://devwcs2.frontgate.com/UserRegistrationFormView";					
     	System.setProperty("webdriver.chrome.driver","C:\\Users\\me\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
         driver = new ChromeDriver();					
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
         driver.get(baseUrl);	
-       email = driver.findElement(By.id("logonId"));
-       submit = driver.findElement(By.id("continue"));
-        verifyemail = driver.findElement(By.id("verifyLogonId"));
-        pass = driver.findElement(By.id("logonPassword"));
-        verifypass = driver.findElement(By.id("logonPasswordVerify"));
+        demo=new FGRegisterdemo (driver);
+       
+      
     }
 	
-  @Test(priority=1)
+  @Test(priority=0)
   public void verifysuccsessRegisgtration() {
-	  //this information we can read it from external file 
-		 emailaddress="maria11.2019@yahoo.com"; 
-		  password="**123456789987654321aA";
-		 String fn="maria"; 
-		 String ln="jad";
-		 String mn="mj"; 
-		 String phone1="456-789-1234";
-		 String phone2=""; 
-		 String str1="Str 245 park ave";
-		 String str2="";
-		 String company="itg";
-		 String state="New York"; 
-		 String region="United States";
-		 String city="NY";
-		 String code="10167";
-		 Boolean billaddress=true;
-		 String shipfn="mary"; 
-		 String shipln="jad";
-		 String shipmn="mj"; 
-		 String shipphone1="456-789-1234";
-		 String shipphone2=""; 
-		 String shipstr1="Str 245 park ave";
-		 String shipstr2="";
-		 String shipcompany="itg";
-		 String shipstate="New York"; 
-		 String shipregion="United States";
-		 String shipcity="NY";
-		 String shipcode="10167"; 
-		 
-		 
+	  
+	 setup(Data[1][0],Data[1][1],Data[1][2],Data[1][3]);	
+	 add=new address(demo.getdriver());
+	 add.setbillNames(Add[1], Add[2], Add[3], Add[4]);
+
+	 add.setbilladdrss(Add[5], Add[6], Add[7], Add[8], Add[9], Add[10]);
+	 add.setbillphone(Add[11], Add[12]);
+	 if(Add[13]!=null){
+		 add.hasshipaddress();
+		 add.setshipNames(Add[13], Add[14], Add[15], Add[16]);
+         add.setshipaddrss(Add[17], Add[18], Add[19], Add[20], Add[21], Add[22]);
+		 add.setshipphone(Add[23], Add[24]); 
+	 }
+	add.clicksave();
 	        
-	        email.sendKeys(emailaddress);					
-	        verifyemail.sendKeys(emailaddress);
-	        pass.sendKeys(password);					
-	        verifypass.sendKeys(password);
-	        submit.click();			
-	        System.out.println("Login Done with Click");
-	         driver.findElement(By.id("bill_fnbox")).sendKeys(fn);
-	         driver.findElement(By.id("bill_mibox")).sendKeys(mn);
-	         driver.findElement(By.id("bill_lnbox")).sendKeys(ln);
-	         driver.findElement(By.id("bill_cnbox")).sendKeys(company);
-	         driver.findElement(By.id("bill_sa1box")).sendKeys(str1);
-	         driver.findElement(By.id("bill_sa2box")).sendKeys(str2);
-	         driver.findElement(By.id("bill_citybox")).sendKeys(city);
-	         driver.findElement(By.id("bill_zipbox")).sendKeys(code);
-	         driver.findElement(By.id("bill_phone1box")).sendKeys(phone1);
-	         driver.findElement(By.id("bill_phone2box")).sendKeys(phone2);
-	        Select drpCountry = new Select(driver.findElement(By.id("bill_country-name")));
-			drpCountry.selectByVisibleText(region);
-	        Select drpCountry1 = new Select(driver.findElement(By.id("bill_region")));
-	        drpCountry1.selectByVisibleText(state);
-	        if (!billaddress){
-	        driver.findElement(By.id("gwt-uid-286")).click();
-	        driver.findElement(By.id("ship_fnbox")).sendKeys(shipfn);
-	        driver.findElement(By.id("ship_mibox")).sendKeys(shipmn);
-	        driver.findElement(By.id("ship_lnbox")).sendKeys(shipln);
-	        driver.findElement(By.id("ship_cnbox")).sendKeys(shipcompany);
-	        driver.findElement(By.id("ship_sa1box")).sendKeys(shipstr1);
-	        driver.findElement(By.id("ship_sa2box")).sendKeys(shipstr2);
-	        driver.findElement(By.id("ship_citybox")).sendKeys(shipcity);
-	        driver.findElement(By.id("ship_zipbox")).sendKeys(shipcode);
-	        driver.findElement(By.id("ship_phone1box")).sendKeys(shipphone1);
-	        driver.findElement(By.id("ship_phone2box")).sendKeys(shipphone2);
-	       Select shipdrpCountry = new Select(driver.findElement(By.id("ship_country-name")));
-			shipdrpCountry.selectByVisibleText(shipregion);
-	       Select shipdrpCountry1 = new Select(driver.findElement(By.id("ship_region")));
-	       shipdrpCountry1.selectByVisibleText(shipstate);
-	        
-	        }
-	        
-	        
-	        
-	        WebElement save = driver.findElement(By.xpath("//*[@id=\"gwt_billshipaddr_btn\"]/button"));
-	        save.click();
-      	
-	        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)							
+	        Wait<WebDriver> wait = new FluentWait<WebDriver>(add.getDriver())							
 	    			.withTimeout(30, TimeUnit.SECONDS) 			
 	    			.pollingEvery(5, TimeUnit.SECONDS) 			
 	    			.ignoring(NoSuchElementException.class);
@@ -156,167 +178,101 @@ public class NewTest {
   }
   
   
- @Test (priority=0)
+ @Test (priority=1)
   public void verifyInvalidEmail(){
-	   emailaddress="lldsslcs"; 
-		  password="**123456789987654321aA";
-		 
-	        email.sendKeys(emailaddress);
-	        verifyemail.sendKeys(emailaddress);
-	        pass.sendKeys(password);					
-	        verifypass.sendKeys(password);
-	        WebElement emaillabel = driver.findElement(By.xpath("//*[@id=\"error-div-logonId\"]/div"));
-           
-	        testresult("Please enter Email Address in valid format.",emaillabel.getText());
-	        submit.click();
+	 setup(Data[2][0],Data[2][1],Data[2][2],Data[2][3]);
+	        testresult("Please enter Email Address in valid format.",demo.getEmailLabel());
+	       
 	        expected="Registration | Frontgate";
             
   }
-  @Test(priority=4)
+  @Test(priority=9)
   public void verifyEmptyRegistrationFields(){
-	   emailaddress=""; 
-		  password="";
-		
-	        email.sendKeys(emailaddress);
-	        verifyemail.sendKeys(emailaddress);
-	        pass.sendKeys(password);					
-	        verifypass.sendKeys(password);
-	        submit.click();
-	        WebElement emaillabel = driver.findElement(By.xpath("//*[@id=\"error-div-logonId\"]/div"));
-	        WebElement verifyemaillabel = driver.findElement(By.xpath("//*[@id=\"error-div-verifyLogonId\"]/div"));
-	        WebElement passlabel = driver.findElement(By.xpath("//*[@id=\"error-div-logonPassword\"]/div"));
-	        WebElement verifypasslabel = driver.findElement(By.xpath("//*[@id=\"error-div-logonPasswordVerify\"]/div"));
-	        testresult("Please enter Email Address.",emaillabel.getText());
-	        testresult("Please Re-Enter Email Address.",verifyemaillabel.getText());
-	        testresult("Please Enter Password.",passlabel.getText());
-	        testresult("Please Re-Enter Password.",verifypasslabel.getText());
+	  setup("","","","");
+	       
+	        testresult("Please enter Email Address.",demo.getEmailLabel());
+	        testresult("Please Re-Enter Email Address.",demo.getVerifyEmptyEmailLabel());
+	        testresult("Please Enter Password.",demo.getPassLabel());
+	        testresult("Please Re-Enter Password.",demo.getVerifyEmptyPassLabel());
 	        expected="Registration | Frontgate";
 
             
         
   }
   
-  @Test (priority=1)
+  @Test (priority=2)
   public void verifyEmailConfirmationFelides(){
-	  
-	  emailaddress="mary22.2019@yahoo.com"; 
-	  password="a12356911";
-	String vemail="mary220.2019@yahoo.com";
-        email.sendKeys(emailaddress);
-        verifyemail.sendKeys(vemail);
-        pass.sendKeys(password);					
-        verifypass.sendKeys(password);
-        WebElement verifyemaillabel = driver.findElement(By.xpath("//*[@id=\"error-div-logonId-verifyLogonId\"]/div"));
-        testresult("The Email Addresses you entered do not match. Please try again.",verifyemaillabel.getText());
-submit.click();
-expected="Registration | Frontgate";
+	  setup(Data[3][0],Data[3][1],Data[3][2],Data[3][3]);
+	 
+       
+        testresult("The Email Addresses you entered do not match. Please try again.",demo.getVerifyConfermEmailLabel());
+
+        expected="Registration | Frontgate";
 } 
   
   @Test (priority=3)
   public void verifyPasswordContainsAtLeast1Digit(){
-	  
-	  emailaddress="mary22.2019@yahoo.com"; 
-	  password="jkiutrf";
-	
-        email.sendKeys(emailaddress);
-        verifyemail.sendKeys(emailaddress);
-        pass.sendKeys(password);					
-        verifypass.sendKeys(password);
-        WebElement passlabel = driver.findElement(By.xpath("//*[@id=\"error-div-logonPassword\"]/div"));
-        testresult("Your password must contain at least 1 digit. Please try again.",passlabel.getText());
-        submit.click();
+	  setup(Data[4][0],Data[4][1],Data[4][2],Data[4][3]);
+	 
+        
+        testresult("Your password must contain at least 1 digit. Please try again.",demo.getPassLabel());
+        
         expected="Registration | Frontgate";
         
   } 
   @Test (priority=4)
   public void verifyPasswordContainsAtLeast1Letter(){
 	  
-	  emailaddress="mary22.2019@yahoo.com"; 
-	  password="123365486";
-	
-        email.sendKeys(emailaddress);
-        verifyemail.sendKeys(emailaddress);
-        pass.sendKeys(password);					
-        verifypass.sendKeys(password);
-        WebElement passlabel = driver.findElement(By.xpath("//*[@id=\"error-div-logonPassword\"]/div"));
-        testresult("Your password must contain at least 1 letter. Please try again.",passlabel.getText());
-  
-        submit.click();
+	  setup(Data[5][0],Data[5][1],Data[5][2],Data[5][3]);
+        
+      testresult("Your password must contain at least 1 letter. Please try again.",demo.getPassLabel());
+        
         expected="Registration | Frontgate";
   } 
   @Test (priority=5)
   public void verifyPasswordContainsAtLeast6Characters(){
+	  setup(Data[6][0],Data[6][1],Data[6][2],Data[6][3]);
 	  
-	  emailaddress="mary22.2019@yahoo.com"; 
-	  password="123k";
-	
-        email.sendKeys(emailaddress);
-        verifyemail.sendKeys(emailaddress);
-        pass.sendKeys(password);					
-        verifypass.sendKeys(password);
-        WebElement passlabel = driver.findElement(By.xpath("//*[@id=\"error-div-logonPassword\"]/div"));
-       
-        testresult("Your password must be at least 6 characters. Please try again.",passlabel.getText());
-        submit.click();
+        
+      testresult("Your password must be at least 6 characters. Please try again.",demo.getPassLabel());
+        
         expected="Registration | Frontgate";
   } 
   @Test (priority=6)
 
   public void verifyPasswordNotContainsSameCharacter4Time(){
 	  
-	  emailaddress="mary22.2019@yahoo.com"; 
-	  password="kkkkkkk";
-	
-        email.sendKeys(emailaddress);
-        verifyemail.sendKeys(emailaddress);
-        pass.sendKeys(password);					
-        verifypass.sendKeys(password);
-        WebElement passlabel = driver.findElement(By.xpath("//*[@id=\"error-div-logonPassword\"]/div"));
-       testresult("You cannot use the same character 4 or more times. Please try again.",passlabel.getText()); 
-       submit.click();
-       expected="Registration | Frontgate";
+	  setup(Data[7][0],Data[7][1],Data[7][2],Data[7][3]);
+        
+      testresult("You cannot use the same character 4 or more times. Please try again.",demo.getPassLabel());
+        
+        expected="Registration | Frontgate";
   }
   @Test (priority=7)
 
   public void verifyPasswordConfirmationFiled(){
-	  
-	  emailaddress="mary22.2019@yahoo.com"; 
-	  password="a123456789";
-	String vpass="887hhjuij";
-        email.sendKeys(emailaddress);
-        verifyemail.sendKeys(emailaddress);
-        pass.sendKeys(password);					
-        verifypass.sendKeys(vpass);
-        submit.click();
-        WebElement verifypasslabel = driver.findElement(By.xpath("//*[@id=\"error-div-logonPassword-logonPasswordVerify\"]/div"));
-        
-        testresult("The passwords you entered do not match. Please try again.",verifypasslabel.getText());
+	  setup(Data[8][0],Data[8][1],Data[8][2],Data[8][3]);
+	         
+       testresult("The passwords you entered do not match. Please try again.",demo.getVerifyConfermPassLabel());
         expected="Registration | Frontgate";
         
   }
-  @Test (priority=1)
+  @Test (priority=8)
 
   public void verifyEmailAddressNotRegistered (){
+	  setup(Data[9][0],Data[9][1],Data[9][2],Data[9][3]);
 	  
-	  emailaddress="mais.jad@outlook.com"; 
-	  password="bn123456";
-	
-        email.sendKeys(emailaddress);
-        verifyemail.sendKeys(emailaddress);
-        pass.sendKeys(password);					
-        verifypass.sendKeys(password);
-        submit.click();
         
-        WebElement generalerror = driver.findElement(By.xpath("//*[@id=\"gwt-error-placement-div\"]/div/span"));
-        testresult("The email address is already registered with the website. Please enter a different email address.",generalerror.getText());
+        
+        testresult("The email address is already registered with the website. Please enter a different email address.",demo.getGeneralError());
         expected="Registration | Frontgate";
         
   }
   
   @AfterMethod
   public void terminateBrowser(){
-      testresult(expected,driver.getTitle());
-	  driver.quit();
+      testresult(expected,demo.getTitle());
+	  demo.quit();
       
       
   }
