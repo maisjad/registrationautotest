@@ -1,107 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="12" passed="10">
+<testng-results skipped="0" failed="1" ignored="0" total="12" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="409970" started-at="2019-07-14T07:37:23Z" finished-at="2019-07-14T07:44:13Z">
+  <suite name="Default suite" duration-ms="431447" started-at="2019-07-14T08:01:39Z" finished-at="2019-07-14T08:08:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="409970" started-at="2019-07-14T07:37:23Z" finished-at="2019-07-14T07:44:13Z">
+    <test name="Default test" duration-ms="431447" started-at="2019-07-14T08:01:39Z" finished-at="2019-07-14T08:08:50Z">
       <class name="FG_RegistrationTest.NewTest">
-        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="readTC" is-config="true" duration-ms="2188" started-at="2019-07-14T07:37:24Z" finished-at="2019-07-14T07:37:26Z">
+        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="readTC" is-config="true" duration-ms="1975" started-at="2019-07-14T08:01:40Z" finished-at="2019-07-14T08:01:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readTC -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="58366" started-at="2019-07-14T07:37:26Z" finished-at="2019-07-14T07:38:25Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="65923" started-at="2019-07-14T08:01:42Z" finished-at="2019-07-14T08:02:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="FAIL" signature="verifyEmailAddressNotRegistered()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyEmailAddressNotRegistered" duration-ms="17" started-at="2019-07-14T07:38:25Z" finished-at="2019-07-14T07:38:25Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at FG_RegistrationTest.NewTest.TCindex(NewTest.java:254)
-at FG_RegistrationTest.NewTest.verifyEmailAddressNotRegistered(NewTest.java:164)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="verifyEmailAddressNotRegistered()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyEmailAddressNotRegistered" duration-ms="16094" started-at="2019-07-14T08:02:48Z" finished-at="2019-07-14T08:03:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEmailAddressNotRegistered -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1401" started-at="2019-07-14T07:38:31Z" finished-at="2019-07-14T07:38:33Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1888" started-at="2019-07-14T08:03:04Z" finished-at="2019-07-14T08:03:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="18202" started-at="2019-07-14T07:38:33Z" finished-at="2019-07-14T07:38:51Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="25678" started-at="2019-07-14T08:03:06Z" finished-at="2019-07-14T08:03:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyEmailConfirmationFelides()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyEmailConfirmationFelides" duration-ms="6724" started-at="2019-07-14T07:38:51Z" finished-at="2019-07-14T07:38:58Z">
+        <test-method status="PASS" signature="verifyEmailConfirmationFelides()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyEmailConfirmationFelides" duration-ms="7711" started-at="2019-07-14T08:03:32Z" finished-at="2019-07-14T08:03:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEmailConfirmationFelides -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="933" started-at="2019-07-14T07:38:58Z" finished-at="2019-07-14T07:38:59Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1714" started-at="2019-07-14T08:03:40Z" finished-at="2019-07-14T08:03:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="14595" started-at="2019-07-14T07:38:59Z" finished-at="2019-07-14T07:39:13Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="17862" started-at="2019-07-14T08:03:41Z" finished-at="2019-07-14T08:03:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyEmptyRegistrationFields()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyEmptyRegistrationFields" duration-ms="4379" started-at="2019-07-14T07:39:13Z" finished-at="2019-07-14T07:39:17Z">
+        <test-method status="PASS" signature="verifyEmptyRegistrationFields()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyEmptyRegistrationFields" duration-ms="6416" started-at="2019-07-14T08:03:59Z" finished-at="2019-07-14T08:04:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEmptyRegistrationFields -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="979" started-at="2019-07-14T07:39:17Z" finished-at="2019-07-14T07:39:18Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1044" started-at="2019-07-14T08:04:06Z" finished-at="2019-07-14T08:04:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="14773" started-at="2019-07-14T07:39:18Z" finished-at="2019-07-14T07:39:33Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="17794" started-at="2019-07-14T08:04:07Z" finished-at="2019-07-14T08:04:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="FAIL" signature="verifyEmptyRegistrationInfoFields()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyEmptyRegistrationInfoFields" duration-ms="14150" started-at="2019-07-14T07:39:33Z" finished-at="2019-07-14T07:39:47Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="PASS" signature="verifyEmptyRegistrationInfoFields()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyEmptyRegistrationInfoFields" duration-ms="25317" started-at="2019-07-14T08:04:24Z" finished-at="2019-07-14T08:04:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmptyRegistrationInfoFields -->
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1564" started-at="2019-07-14T08:04:50Z" finished-at="2019-07-14T08:04:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateBrowser -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="17354" started-at="2019-07-14T08:04:51Z" finished-at="2019-07-14T08:05:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="verifyErrZipCodeRegistration()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyErrZipCodeRegistration" duration-ms="11832" started-at="2019-07-14T08:05:09Z" finished-at="2019-07-14T08:05:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyErrZipCodeRegistration -->
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1082" started-at="2019-07-14T08:05:21Z" finished-at="2019-07-14T08:05:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateBrowser -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="25871" started-at="2019-07-14T08:05:22Z" finished-at="2019-07-14T08:05:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="FAIL" signature="verifyInvalidEmail()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyInvalidEmail" duration-ms="13999" started-at="2019-07-14T08:05:48Z" finished-at="2019-07-14T08:06:02Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot locate element with text: 
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: driver.version: unknown]]>
+              <![CDATA[expected:<!!> but was:<Please enter Email Address in valid format.>]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-at FG_RegistrationTest.address.setbilladdrss(address.java:223)
-at FG_RegistrationTest.NewTest.verifyEmptyRegistrationInfoFields(NewTest.java:186)
+              <![CDATA[java.lang.AssertionError: expected:<!!> but was:<Please enter Email Address in valid format.>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)
+at FG_RegistrationTest.NewTest.testresult(NewTest.java:247)
+at FG_RegistrationTest.NewTest.verifyInvalidEmail(NewTest.java:115)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -129,107 +113,83 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEmptyRegistrationInfoFields -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="931" started-at="2019-07-14T07:39:48Z" finished-at="2019-07-14T07:39:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="16004" started-at="2019-07-14T07:39:49Z" finished-at="2019-07-14T07:40:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyErrZipCodeRegistration()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyErrZipCodeRegistration" duration-ms="10458" started-at="2019-07-14T07:40:05Z" finished-at="2019-07-14T07:40:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyErrZipCodeRegistration -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="845" started-at="2019-07-14T07:40:15Z" finished-at="2019-07-14T07:40:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="12577" started-at="2019-07-14T07:40:16Z" finished-at="2019-07-14T07:40:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyInvalidEmail()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyInvalidEmail" duration-ms="5202" started-at="2019-07-14T07:40:29Z" finished-at="2019-07-14T07:40:34Z">
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidEmail -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="858" started-at="2019-07-14T07:40:34Z" finished-at="2019-07-14T07:40:35Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="838" started-at="2019-07-14T08:06:07Z" finished-at="2019-07-14T08:06:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="13049" started-at="2019-07-14T07:40:35Z" finished-at="2019-07-14T07:40:48Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="26194" started-at="2019-07-14T08:06:08Z" finished-at="2019-07-14T08:06:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyPasswordConfirmationFiled()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyPasswordConfirmationFiled" duration-ms="5864" started-at="2019-07-14T07:40:48Z" finished-at="2019-07-14T07:40:54Z">
+        <test-method status="PASS" signature="verifyPasswordConfirmationFiled()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyPasswordConfirmationFiled" duration-ms="8919" started-at="2019-07-14T08:06:34Z" finished-at="2019-07-14T08:06:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPasswordConfirmationFiled -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1040" started-at="2019-07-14T07:40:54Z" finished-at="2019-07-14T07:40:55Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="912" started-at="2019-07-14T08:06:43Z" finished-at="2019-07-14T08:06:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="11216" started-at="2019-07-14T07:40:55Z" finished-at="2019-07-14T07:41:06Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="13299" started-at="2019-07-14T08:06:44Z" finished-at="2019-07-14T08:06:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyPasswordContainsAtLeast1Digit()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyPasswordContainsAtLeast1Digit" duration-ms="5146" started-at="2019-07-14T07:41:06Z" finished-at="2019-07-14T07:41:11Z">
+        <test-method status="PASS" signature="verifyPasswordContainsAtLeast1Digit()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyPasswordContainsAtLeast1Digit" duration-ms="6217" started-at="2019-07-14T08:06:57Z" finished-at="2019-07-14T08:07:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPasswordContainsAtLeast1Digit -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1031" started-at="2019-07-14T07:41:11Z" finished-at="2019-07-14T07:41:12Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="889" started-at="2019-07-14T08:07:03Z" finished-at="2019-07-14T08:07:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="16075" started-at="2019-07-14T07:41:12Z" finished-at="2019-07-14T07:41:28Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="15681" started-at="2019-07-14T08:07:04Z" finished-at="2019-07-14T08:07:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyPasswordContainsAtLeast1Letter()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyPasswordContainsAtLeast1Letter" duration-ms="4377" started-at="2019-07-14T07:41:28Z" finished-at="2019-07-14T07:41:33Z">
+        <test-method status="PASS" signature="verifyPasswordContainsAtLeast1Letter()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyPasswordContainsAtLeast1Letter" duration-ms="7915" started-at="2019-07-14T08:07:20Z" finished-at="2019-07-14T08:07:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPasswordContainsAtLeast1Letter -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="954" started-at="2019-07-14T07:41:33Z" finished-at="2019-07-14T07:41:34Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="977" started-at="2019-07-14T08:07:28Z" finished-at="2019-07-14T08:07:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="11429" started-at="2019-07-14T07:41:34Z" finished-at="2019-07-14T07:41:45Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="14803" started-at="2019-07-14T08:07:29Z" finished-at="2019-07-14T08:07:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyPasswordContainsAtLeast6Characters()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyPasswordContainsAtLeast6Characters" duration-ms="4938" started-at="2019-07-14T07:41:45Z" finished-at="2019-07-14T07:41:50Z">
+        <test-method status="PASS" signature="verifyPasswordContainsAtLeast6Characters()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyPasswordContainsAtLeast6Characters" duration-ms="5666" started-at="2019-07-14T08:07:43Z" finished-at="2019-07-14T08:07:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPasswordContainsAtLeast6Characters -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="860" started-at="2019-07-14T07:41:50Z" finished-at="2019-07-14T07:41:51Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="975" started-at="2019-07-14T08:07:49Z" finished-at="2019-07-14T08:07:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="11480" started-at="2019-07-14T07:41:51Z" finished-at="2019-07-14T07:42:02Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="19334" started-at="2019-07-14T08:07:50Z" finished-at="2019-07-14T08:08:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyPasswordNotContainsSameCharacter4Time()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyPasswordNotContainsSameCharacter4Time" duration-ms="4790" started-at="2019-07-14T07:42:02Z" finished-at="2019-07-14T07:42:07Z">
+        <test-method status="PASS" signature="verifyPasswordNotContainsSameCharacter4Time()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyPasswordNotContainsSameCharacter4Time" duration-ms="4762" started-at="2019-07-14T08:08:09Z" finished-at="2019-07-14T08:08:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPasswordNotContainsSameCharacter4Time -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1272" started-at="2019-07-14T07:42:07Z" finished-at="2019-07-14T07:42:08Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1003" started-at="2019-07-14T08:08:14Z" finished-at="2019-07-14T08:08:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="12239" started-at="2019-07-14T07:42:08Z" finished-at="2019-07-14T07:42:21Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="launchBrowser" is-config="true" duration-ms="13038" started-at="2019-07-14T08:08:15Z" finished-at="2019-07-14T08:08:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyssucsessregistration()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyssucsessregistration" duration-ms="111356" started-at="2019-07-14T07:42:21Z" finished-at="2019-07-14T07:44:12Z">
+        <test-method status="PASS" signature="verifyssucsessregistration()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="verifyssucsessregistration" duration-ms="21035" started-at="2019-07-14T08:08:28Z" finished-at="2019-07-14T08:08:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyssucsessregistration -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1218" started-at="2019-07-14T07:44:12Z" finished-at="2019-07-14T07:44:13Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:FG_RegistrationTest.NewTest@5c3bd550]" name="terminateBrowser" is-config="true" duration-ms="1056" started-at="2019-07-14T08:08:49Z" finished-at="2019-07-14T08:08:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
