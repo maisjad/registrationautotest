@@ -213,14 +213,20 @@ public class address {
 		 
 	 }
 	 public void setbilladdrss(String str1,String str2,String city,String code,String region,String state){
-		 driver.findElement(this.str1).sendKeys(str1);
+		try{ driver.findElement(this.str1).sendKeys(str1);
          driver.findElement(this.str2).sendKeys(str2);
          driver.findElement(this.city).sendKeys(city);
          driver.findElement(this.code).sendKeys(code);
          Select drpCountry = new Select(driver.findElement(this.region));
 			drpCountry.selectByVisibleText(region);
 	     Select drpCountry1 = new Select(driver.findElement(this.state));
-	        drpCountry1.selectByVisibleText(state);
+	        drpCountry1.selectByVisibleText(state);}
+		catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	
+	    	
+	       
 	 }
 	 public void setbillphone(String ph1,String ph2){
 		 driver.findElement(this.phone1).sendKeys(ph1);
@@ -235,14 +241,18 @@ public class address {
 		 
 	 }
 	 public void setshipaddrss(String str1,String str2,String city,String code,String region,String state){
-		 driver.findElement(this.shipstr1).sendKeys(str1);
+	try{	 driver.findElement(this.shipstr1).sendKeys(str1);
          driver.findElement(this.shipstr2).sendKeys(str2);
          driver.findElement(this.shipcity).sendKeys(city);
          driver.findElement(this.shipcode).sendKeys(code);
          Select drpCountry = new Select(driver.findElement(this.shipregion));
 			drpCountry.selectByVisibleText(region);
 	     Select drpCountry1 = new Select(driver.findElement(this.shipstate));
-	        drpCountry1.selectByVisibleText(state);
+	        drpCountry1.selectByVisibleText(state);}
+	catch (NoSuchElementException e){
+    	System.out.print(e.getMessage());
+    	}
+    
 	 }
 	 public void setshipphone(String ph1,String ph2){
 		 driver.findElement(this.shipphone1).sendKeys(ph1);
