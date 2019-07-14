@@ -197,14 +197,14 @@ public void verifyEmptyRegistrationInfoFields(){
     testresult("Please enter City.",add.getCityLabel());
     testresult("Please enter Zip/Postal Code.",add.getcodeLabel());
     testresult("Please select a Country Name.",add.getRegoinLabel());
-    testresult("Please enter a Daytime phone number, including area code (US Only).Evening Phone",add.getPhoneLabel());
+    testresult("Please enter a Daytime phone number, including area code (US Only).",add.getPhoneLabel());
     testresult("Please enter First Name.",add.getSFNLabel());
     testresult("Please enter Last Name.",add.getSLNLabel());
     testresult("Please enter Street Address 1.",add.getSstrLabel());
     testresult("Please enter City.",add.getSCityLabel());
     testresult("Please enter Zip/Postal Code.",add.getScodeLabel());
     testresult("Please select a Country Name.",add.getSRegoinLabel());
-    testresult("Please enter a Daytime phone number, including area code (US Only).Evening Phone",add.getSPhoneLabel());
+    testresult("Please enter a Daytime phone number, including area code (US Only).",add.getSPhoneLabel());
 }
 @Test  
 public void verifyErrZipCodeRegistration(){
@@ -250,10 +250,10 @@ private void testresult(String expected,String actual){
 public int TCindex(String msg){
 	int i=0;
 	for ( ;i<Data.length;i++){
-	//	if (msg.equals("verifyEmailAddressNotRegistered")){return 10;}
+		if (msg.equals("verifyEmailAddressNotRegistered")){return 10;}
 		                 
 				 if(Data[i][0].equals(msg)){
-        System.out.println(i);
+       
 					break;
 					 }
 				 
