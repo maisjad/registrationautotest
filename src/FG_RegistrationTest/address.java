@@ -34,13 +34,171 @@ public class address {
 	 By shipregion=By.id("ship_country-name");
 	 By shipcity=By.id("ship_citybox");
 	 By shipcode=By.id("ship_zipbox");
-	 
-	 
+	 By fnlabel=By.xpath("//*[@id=\"error-div-bill_fnbox\"]/div");
+	 By lnlabel=By.xpath("//*[@id=\"error-div-bill_lnbox\"]/div");
+	 By strlabel=By.xpath("//*[@id=\"error-div-bill_sa1box\"]/div");
+	 By citylabel=By.xpath("//*[@id=\"error-div-bill_citybox\"]/div");
+	 By codelabel=By.xpath("//*[@id=\"error-div-bill_zipbox\"]/div");
+	 By regoinlabel=By.xpath("//*[@id=\"error-div-bill_country-name\"]/div");
+	 By phonelabel=By.xpath("//*[@id=\"error-div-bill_phone1box\"]/div");
+	 By errcodelabel=By.xpath("//*[@id=\"error-div-bill_country-name-bill_region-bill_zipbox\"]/div");
+	 By sfnlabel=By.xpath("//*[@id=\"error-div-ship_fnbox\"]/div");
+	 By slnlabel=By.xpath("//*[@id=\"error-div-ship_lnbox\"]/div");
+	 By sstrlabel=By.xpath("//*[@id=\"error-div-ship_sa1box\"]/div");
+	 By scitylabel=By.xpath("//*[@id=\"error-div-ship_citybox\"]/div");
+	 By scodelabel=By.xpath("//*[@id=\"error-div-ship_zipbox\"]/div");
+	 By sregoinlabel=By.xpath("//*[@id=\"error-div-ship_country-name\"]/div");
+	 By sphonelabel=By.xpath("//*[@id=\"error-div-ship_phone1box\"]/div");
+	 By serrcodelabel=By.xpath("//*[@id=\"error-div-ship_country-name-bill_region-bill_zipbox\"]/div");
 	 public address(WebDriver driver){
 	    	this.driver = driver;
 	       }	
+	 public String getLNLabel(){
+	    	try{
+	    	return driver.findElement(lnlabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getcodeLabel(){
+	    	try{
+	    	return driver.findElement(codelabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getCityLabel(){
+	    	try{
+	    	return driver.findElement(citylabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getstrLabel(){
+	    	try{
+	    	return driver.findElement(strlabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getPhoneLabel(){
+	    	try{
+	    	return driver.findElement(phonelabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getErrCodeLabel(){
+	    	try{
+	    	return driver.findElement(errcodelabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getFNLabel(){
+	    	try{
+	    	return driver.findElement(fnlabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getRegoinLabel(){
+	    	try{
+	    	return driver.findElement(regoinlabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getSRegoinLabel(){
+	    	try{
+	    	return driver.findElement(sregoinlabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
 	 
-	
+	 public String getSLNLabel(){
+	    	try{
+	    	return driver.findElement(slnlabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getScodeLabel(){
+	    	try{
+	    	return driver.findElement(scodelabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getSCityLabel(){
+	    	try{
+	    	return driver.findElement(scitylabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getSstrLabel(){
+	    	try{
+	    	return driver.findElement(sstrlabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getSPhoneLabel(){
+	    	try{
+	    	return driver.findElement(sphonelabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getSErrCodeLabel(){
+	    	try{
+	    	return driver.findElement(serrcodelabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 public String getSFNLabel(){
+	    	try{
+	    	return driver.findElement(sfnlabel).getText();}
+	    	catch (NoSuchElementException e){
+	    	System.out.print(e.getMessage());
+	    	}
+	    	return "!!";
+	    	
+	       }
+	 
 
 	public void setbillNames(String fn,String mn,String ln,String com){
 		  try {

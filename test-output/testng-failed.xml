@@ -6,8 +6,9 @@
       <class name="FG_RegistrationTest.NewTest">
         <methods>
           <include name="terminateBrowser"/>
+          <include name="verifyEmptyRegistrationInfoFields"/>
           <include name="launchBrowser"/>
-          <include name="verifyssucsessregistration"/>
+          <include name="verifyEmailAddressNotRegistered"/>
           <include name="readTC"/>
         </methods>
       </class> <!-- FG_RegistrationTest.NewTest -->

@@ -177,7 +177,59 @@ public void verifyEmptyRegistrationFields(){
     testresult("Please Enter Password.",demo.getPassLabel());
     testresult("Please Re-Enter Password.",demo.getVerifyEmptyPassLabel());
 }
-
+@Test
+public void verifyEmptyRegistrationInfoFields(){
+	int i=TCindex("verifyEmptyRegistrationInfoFields");
+	setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	 add=new address(demo.getdriver());
+	 add.setbillNames("", "", "", "");
+ 	 add.setbilladdrss("","", "", "", "Select Country", "");
+	
+ 	 add.setbillphone("", "");
+	 	 add.hasshipaddress();
+		 add.setshipNames("", "", "","");
+         add.setshipaddrss("", "","", "","Select Country", "");
+		 add.setshipphone("", ""); 
+			add.clicksave();
+    testresult("Please enter First Name.",add.getFNLabel());
+    testresult("Please enter Last Name.",add.getLNLabel());
+    testresult("Please enter Street Address 1.",add.getstrLabel());
+    testresult("Please enter City.",add.getCityLabel());
+    testresult("Please enter Zip/Postal Code.",add.getcodeLabel());
+    testresult("Please select a Country Name.",add.getRegoinLabel());
+    testresult("Please enter a Daytime phone number, including area code (US Only).Evening Phone",add.getPhoneLabel());
+    testresult("Please enter First Name.",add.getSFNLabel());
+    testresult("Please enter Last Name.",add.getSLNLabel());
+    testresult("Please enter Street Address 1.",add.getSstrLabel());
+    testresult("Please enter City.",add.getSCityLabel());
+    testresult("Please enter Zip/Postal Code.",add.getScodeLabel());
+    testresult("Please select a Country Name.",add.getSRegoinLabel());
+    testresult("Please enter a Daytime phone number, including area code (US Only).Evening Phone",add.getSPhoneLabel());
+}
+@Test  
+public void verifyErrZipCodeRegistration(){
+	int i=TCindex("verifyErrZipCodeRegistration");
+	 setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	 
+	 add=new address(demo.getdriver());
+	 add.setbillNames(Data[i][5], Data[i][6], Data[i][7], Data[i][8]);
+ 	 add.setbilladdrss(Data[i][9], Data[i][10], Data[i][11], Data[i][12], Data[i][13], Data[i][14]);
+	 add.setbillphone(Data[i][15], Data[i][16]);
+	 if(Data[i][17]!=null){
+		 add.hasshipaddress();
+		 add.setshipNames(Data[i][18], Data[i][19], Data[i][20],Data[i][21]);
+         add.setshipaddrss(Data[i][22], Data[i][23],Data[i][24], Data[i][25],Data[i][26], Data[i][27]);
+		 add.setshipphone(Data[i][28], Data[i][29]); 
+	 }
+	add.clicksave();
+	testresult("Please enter a valid Zip/Postal code for the selected state.",add.getErrCodeLabel());
+	 if(Data[i][17]!=null){
+			testresult("Please enter a valid Zip/Postal code for the selected state.",add.getSErrCodeLabel());
+ 
+	 }
+	 
+	
+}
 
 void setup(String email, String pass, String vemail,String vpass){
 
@@ -198,11 +250,11 @@ private void testresult(String expected,String actual){
 public int TCindex(String msg){
 	int i=0;
 	for ( ;i<Data.length;i++){
-		if (msg.equals("verifyEmailAddressNotRegistered")){return 10;}
-		
+	//	if (msg.equals("verifyEmailAddressNotRegistered")){return 10;}
+		                 
 				 if(Data[i][0].equals(msg)){
-
-					 return i;
+        System.out.println(i);
+					break;
 					 }
 				 
 	 }
