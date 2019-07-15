@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class address {
+public class FGAddressdemo {
 	WebDriver driver;
 	 By save=By.xpath("//*[@id=\"gwt_billshipaddr_btn\"]/button");
 	 By fn=By.id("bill_fnbox"); 
@@ -50,7 +50,7 @@ public class address {
 	 By sregoinlabel=By.xpath("//*[@id=\"error-div-ship_country-name\"]/div");
 	 By sphonelabel=By.xpath("//*[@id=\"error-div-ship_phone1box\"]/div");
 	 By serrcodelabel=By.xpath("//*[@id=\"error-div-ship_country-name-bill_region-bill_zipbox\"]/div");
-	 public address(WebDriver driver){
+	 public FGAddressdemo(WebDriver driver){
 	    	this.driver = driver;
 	       }	
 	 public String getLNLabel(){

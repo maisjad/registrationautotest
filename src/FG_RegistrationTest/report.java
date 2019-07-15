@@ -3,7 +3,14 @@ package FG_RegistrationTest;
 
 
 import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Random;
@@ -13,8 +20,7 @@ import org.openqa.selenium.remote.html5.AddApplicationCache;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
-
+import org.w3c.dom.html.HTMLTableElement;
 
 import com.lowagie.text.Chunk;
 import com.lowagie.text.Document;
@@ -31,37 +37,51 @@ import com.lowagie.text.pdf.PdfWriter;
 /**
  * JyperionListener
  * 
- * @author janaudy at jyperion dot org
- */
-public class JyperionListener implements ITestListener {
+ * @author */
+public class report implements ITestListener {
 	/**
 	 * Document
 	 */
 	private Document document = null;
-	
+	ArrayList <ITestResult >passresult=new ArrayList <ITestResult>();
+	ArrayList <ITestResult >failresult=new ArrayList <ITestResult>();
+	ArrayList <ITestResult >skipresult=new ArrayList <ITestResult>();
+	ArrayList <String >img=new ArrayList <String>();
+
 	/**
 	 * PdfPTables
 	 */
+	HTMLTableElement t=null;
 	PdfPTable successTable = null, failTable = null;
 	
 	/**
 	 * throwableMap
 	 */
 	private HashMap<Integer, Throwable> throwableMap = null;
-	
+	 File f ;
+	 BufferedWriter bw;
+
 	/**
 	 * nbExceptions
 	 */
 	private int nbExceptions = 0;
-	
+	private HashMap<Integer, Throwable> throwableMap1 = null;
+	private int nb1Exceptions = 0;
 	/**
 	 * JyperionListener
 	 */
-	public JyperionListener() {
-		log("JyperionListener()");
+	public report() {
+		log("Report()");
 		
 		this.document = new Document();
 		this.throwableMap = new HashMap<Integer, Throwable>();
+		this.throwableMap1 = new HashMap<Integer, Throwable>();
+		try{
+	        f = new File("reports\\Registrationreport.html");
+	        bw = new BufferedWriter(new FileWriter(f));}
+	catch(IOException e){
+		e.printStackTrace();
+	}
 	}
 	
 	/**
@@ -69,7 +89,7 @@ public class JyperionListener implements ITestListener {
 	 */
 	public void onTestSuccess(ITestResult result) {
 		log("onTestSuccess("+result+")");
-		
+		 passresult.add(result);
 		if (successTable == null) {
 			this.successTable = new PdfPTable(new float[]{.3f, .3f, .1f, .3f});
 			Paragraph p = new Paragraph("PASSED TESTS", new Font(Font.TIMES_ROMAN, Font.DEFAULTSIZE, Font.BOLD));
@@ -120,9 +140,11 @@ public class JyperionListener implements ITestListener {
 	 */
 	public void onTestFailure(ITestResult result) {
 		log("onTestFailure("+result+")");
+		failresult.add(result);
 		String file = System.getProperty("user.dir")+"\\"+"screenshot"+(new Random().nextInt())+".png";
+		img.add(file);
 		try {
-			NewTest.takeSnapShot(NewTest.getDriver(), file);
+			RegistrationTesting.takeSnapShot(RegistrationTesting.getDriver(), file);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -189,6 +211,7 @@ public class JyperionListener implements ITestListener {
 	 */
 	public void onTestSkipped(ITestResult result) {
 		log("onTestSkipped("+result+")");
+		skipresult.add(result);
 	}
 
 	/**
@@ -219,7 +242,81 @@ public class JyperionListener implements ITestListener {
 	 */
 	public void onFinish(ITestContext context) {
 		log("onFinish("+context+")");
-		
+		 try {
+			String passcolor = " <tr bgcolor=\"#5FFF33\">";
+			String failcolor =" <tr bgcolor=\"red\">";
+			String skipcolor=" <tr bgcolor=\"yellow\">";
+			bw.write("<html>");
+			 bw.write("<body>");
+		        bw.write("<h1>Registration Report</h1>");
+		        bw.write("<table border ='1'>" +"<tr>"+"<h2>Failed Test</h2>"+"</tr>"
+			           + "<tr>" +
+			            "<td>Class</td>" +
+			            "<td>Method</td>" +
+			            "<td>Time (ms)</td>" +
+			            "<td>Exception</td>" +
+			            "</tr>");
+		        int i=0;
+		        for(ITestResult res :failresult){
+		        	bw.write(failcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
+		                      res.getMethod().getMethodName().toString()+"</td>"+ 
+		        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
+		       
+		        	Throwable throwable = res.getThrowable();
+		        	
+		    		if (throwable != null) {
+		    			this.throwableMap1.put(new Integer(throwable.hashCode()), throwable);
+		    			this.nb1Exceptions++;
+		    			String []token=throwable.getMessage().split(",");
+		    			
+		        	bw.write("<td>"+token[0]+","+token[1]+"<a href="+img.get(i)+">[SCREEN SHOT]</a>"+"</td></tr>");
+		        	i++;
+		    		}}
+		        bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>Passed Test</h2>"+"</tr>"
+				           + "<tr>" +
+				            "<td>Class</td>" +
+				            "<td>Method</td>" +
+				            "<td>Time (ms)</td>" +
+				             "</tr>");
+		    		
+		    		for(ITestResult res :passresult){
+			        	bw.write(passcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
+			                      res.getMethod().getMethodName().toString()+"</td>"+ 
+			        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
+			            bw.write("</tr>");
+			        	
+			    		 }
+		    		 bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>skipped Test</h2>"+"</tr>"
+					           + "<tr>" +
+					            "<td>Class</td>" +
+					            "<td>Method</td>" +
+					            "<td>Time (ms)</td>" +
+					            "<td>Exception</td>" +
+					            "</tr>");
+			    		
+			    		for(ITestResult res :skipresult){
+				        	bw.write(skipcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
+				                      res.getMethod().getMethodName().toString()+"</td>"+ 
+				        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
+				        	Throwable throwable = res.getThrowable();
+				    		
+				            bw.write("<td>"+throwable.getMessage()+"</td></tr>");
+				        	
+				    		 }
+			    		bw.write("</table>" +
+			    			       "</body>" +
+			    			       "</html>"); 
+			    	bw.close();
+
+
+		}
+		 
+		 
+		 catch (IOException e4) {
+			
+			e4.printStackTrace();
+		}
+	       
 		try {
 			if (this.failTable != null) {
 				log("Added fail table");

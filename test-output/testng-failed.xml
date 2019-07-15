@@ -3,14 +3,23 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FG_RegistrationTest.NewTest">
+      <class name="FG_RegistrationTest.RegistrationTesting">
         <methods>
-          <include name="terminateBrowser"/>
-          <include name="launchBrowser"/>
-          <include name="verifyInvalidEmail"/>
+          <include name="verifyPasswordNotContainsSameCharacter4Time"/>
+          <include name="verifyPasswordContainsAtLeast6Characters"/>
+          <include name="verifyEmptyRegistrationInfoFields"/>
+          <include name="verifyErrZipCodeRegistration"/>
           <include name="readTC"/>
+          <include name="verifyPasswordContainsAtLeast1Letter"/>
+          <include name="verifyInvalidEmail"/>
+          <include name="verifyEmailAddressNotRegistered"/>
+          <include name="verifyPasswordContainsAtLeast1Digit"/>
+          <include name="verifyPasswordConfirmationFiled"/>
+          <include name="verifyEmailConfirmationFelides"/>
+          <include name="verifyEmptyRegistrationFields"/>
+          <include name="verifyssucsessregistration"/>
         </methods>
-      </class> <!-- FG_RegistrationTest.NewTest -->
+      </class> <!-- FG_RegistrationTest.RegistrationTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

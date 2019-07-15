@@ -9,6 +9,7 @@ import org.openqa.selenium.OutputType;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -18,9 +19,12 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.Reporter;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
@@ -47,46 +51,54 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-@Listeners(JyperionListener.class)
+@Listeners(report.class)
 
-public class NewTest {
+public class RegistrationTesting {
 	static WebDriver driver;
 	FGRegisterdemo demo ;
-	address add;
+	FGAddressdemo add;
 	String[][]  Data =new String [64][64];
 	private String expected;
+	private String[][] address;
+	private String baseUrl;
 	
-@BeforeTest
+
+	@BeforeTest
 public void readTC(){
-		Data=ReadTC.fileopen("files\\DTC1.xlsx","sheet1");  }
-   
-@BeforeMethod 
+		Data=ReadTC.fileopen("files\\DTC1.xlsx","RegistrationTCData");  
+        address=ReadTC.fileopen("files\\DTC1.xlsx","AddressData");
+        System.out.println("launching chrome browser"); 
+        baseUrl = "https://devwcs2.frontgate.com/UserRegistrationFormView";					
+    	System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe");    
+	}
+
 public void launchBrowser() {
 	
-        System.out.println("launching chrome browser"); 
-        String baseUrl = "https://devwcs2.frontgate.com/UserRegistrationFormView";					
-    	System.setProperty("webdriver.chrome.driver","Jars\\chromedriver.exe");
-        driver = new ChromeDriver();					
+     
+    	driver = new ChromeDriver();					
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
         driver.get(baseUrl);	
-        demo=new FGRegisterdemo (driver);}
+        demo=new FGRegisterdemo (driver);
+        }
 	
 
 	
 @Test  
 public void verifyssucsessregistration(){
 	int i=TCindex("verifyssucsessregistration");
-	 setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	 
-	 add=new address(demo.getdriver());
-	 add.setbillNames(Data[i][5], Data[i][6], Data[i][7], Data[i][8]);
- 	 add.setbilladdrss(Data[i][9], Data[i][10], Data[i][11], Data[i][12], Data[i][13], Data[i][14]);
-	 add.setbillphone(Data[i][15], Data[i][16]);
-	 if(Data[i][17]!=null){
+	 add=new FGAddressdemo(demo.getdriver());
+	 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
+ 	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
+	 add.setbillphone(address[1][10], address[1][11]);
+	 if(Data[i][6]!=null){
 		 add.hasshipaddress();
-		 add.setshipNames(Data[i][18], Data[i][19], Data[i][20],Data[i][21]);
-         add.setshipaddrss(Data[i][22], Data[i][23],Data[i][24], Data[i][25],Data[i][26], Data[i][27]);
-		 add.setshipphone(Data[i][28], Data[i][29]); 
+		 add.setshipNames(address[1][0], address[1][1], address[1][2],address[1][3]);
+         add.setshipaddrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
+		 add.setshipphone(address[1][10], address[1][11]);
 	 }
 	add.clicksave();
 	        
@@ -104,84 +116,105 @@ public void verifyssucsessregistration(){
 	     
 	     testresult(expected,demo.getTitle());
 	 
-	 
+	     demo.quit();
 	
 }
 
 @Test 
 public void verifyInvalidEmail(){
 	int i=TCindex("verifyInvalidEmail");
-	setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
-	 testresult("Please enter Email Address in valid format.",demo.getEmailLabel());
-
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
+	 testresult("Please enter Email Address in vali format.",demo.getEmailLabel());
+	 demo.quit();
+	 
 }
 
 @Test
 public void verifyEmailConfirmationFelides(){
 	int i=TCindex("verifyEmailConfirmationFelides");
-	setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
     testresult("The Email Addresses you entered do not match. Please try again.",demo.getVerifyConfermEmailLabel());
-
+    demo.quit();
 }
 
 @Test
 public void verifyPasswordContainsAtLeast1Digit(){
 	int i=TCindex("verifyPasswordContainsAtLeast1Digit");
-	setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
     testresult("Your password must contain at least 1 digit. Please try again.",demo.getPassLabel());
-
+    demo.quit();
 }
 @Test
 public void verifyPasswordContainsAtLeast1Letter(){
 	int i=TCindex("verifyPasswordContainsAtLeast1Letter");
-	setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
     testresult("Your password must contain at least 1 letter. Please try again.",demo.getPassLabel());
-
+    demo.quit();
 }
 @Test
 public void verifyPasswordContainsAtLeast6Characters(){
 	int i=TCindex("verifyPasswordContainsAtLeast6Characters");
-	setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
     testresult("Your password must be at least 6 characters. Please try again.",demo.getPassLabel());
-
+    demo.quit();
 }
 @Test
 public void verifyPasswordNotContainsSameCharacter4Time(){
 	int i=TCindex("verifyPasswordNotContainsSameCharacter4Time");
-	setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
     testresult("You cannot use the same character 4 or more times. Please try again.",demo.getPassLabel());
-
+    demo.quit();
 }
 @Test
 public void verifyPasswordConfirmationFiled(){
 	int i=TCindex("verifyPasswordConfirmationFiled");
-	setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
     testresult("The passwords you entered do not match. Please try again.",demo.getVerifyConfermPassLabel());
-
+    demo.quit();
 }
 @Test
 public void verifyEmailAddressNotRegistered (){
 	int i=TCindex("verifyEmailAddressNotRegistered");
-	
-	setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	 setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
     testresult("The email address is already registered with the website. Please enter a different email address.",demo.getGeneralError());
-
+    demo.quit();
 }
 @Test
 public void verifyEmptyRegistrationFields(){
 	int i=TCindex("verifyEmptyRegistrationFields");
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
 	setup("","","","");
     
     testresult("Please enter Email Address.",demo.getEmailLabel());
     testresult("Please Re-Enter Email Address.",demo.getVerifyEmptyEmailLabel());
     testresult("Please Enter Password.",demo.getPassLabel());
     testresult("Please Re-Enter Password.",demo.getVerifyEmptyPassLabel());
+    demo.quit();
 }
 @Test
 public void verifyEmptyRegistrationInfoFields(){
 	int i=TCindex("verifyEmptyRegistrationInfoFields");
-	setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
-	 add=new address(demo.getdriver());
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
+	 add=new FGAddressdemo(demo.getdriver());
 	 add.setbillNames("", "", "", "");
  	 add.setbilladdrss("","", "", "", "Select Country", "");
 	
@@ -205,21 +238,24 @@ public void verifyEmptyRegistrationInfoFields(){
     testresult("Please enter Zip/Postal Code.",add.getScodeLabel());
     testresult("Please select a Country Name.",add.getSRegoinLabel());
     testresult("Please enter a Daytime phone number, including area code (US Only).",add.getSPhoneLabel());
+    demo.quit();
 }
 @Test  
 public void verifyErrZipCodeRegistration(){
 	int i=TCindex("verifyErrZipCodeRegistration");
-	 setup(Data[i][1],Data[i][2],Data[i][3],Data[i][4]);
+	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
+	launchBrowser();
+	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	 
-	 add=new address(demo.getdriver());
-	 add.setbillNames(Data[i][5], Data[i][6], Data[i][7], Data[i][8]);
- 	 add.setbilladdrss(Data[i][9], Data[i][10], Data[i][11], Data[i][12], Data[i][13], Data[i][14]);
-	 add.setbillphone(Data[i][15], Data[i][16]);
-	 if(Data[i][17]!=null){
+	 add=new FGAddressdemo(demo.getdriver());
+	 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
+ 	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],"101", address[1][8], address[1][9]);
+	 add.setbillphone(address[1][10], address[1][11]);
+	 if(Data[i][6]!=null){
 		 add.hasshipaddress();
-		 add.setshipNames(Data[i][18], Data[i][19], Data[i][20],Data[i][21]);
-         add.setshipaddrss(Data[i][22], Data[i][23],Data[i][24], Data[i][25],Data[i][26], Data[i][27]);
-		 add.setshipphone(Data[i][28], Data[i][29]); 
+		 add.setshipNames(address[1][0], address[1][1], address[1][2],address[1][3]);
+         add.setshipaddrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
+		 add.setshipphone(address[1][10], address[1][11]);
 	 }
 	add.clicksave();
 	testresult("Please enter a valid Zip/Postal code for the selected state.",add.getErrCodeLabel());
@@ -227,6 +263,7 @@ public void verifyErrZipCodeRegistration(){
 			testresult("Please enter a valid Zip/Postal code for the selected state.",add.getSErrCodeLabel());
  
 	 }
+	 demo.quit();
 	 
 	
 }
@@ -244,15 +281,15 @@ void setup(String email, String pass, String vemail,String vpass){
 private void testresult(String expected,String actual){
 	  System.out.println(actual);
 	  
-     AssertJUnit.assertEquals(actual, expected);
-	
+     AssertJUnit.assertEquals("actual:"+actual+",expected:"+expected+",",actual, expected);
+     
 }
 public int TCindex(String msg){
 	int i=0;
 	for ( ;i<Data.length;i++){
 		if (msg.equals("verifyEmailAddressNotRegistered")){return 10;}
 		                 
-				 if(Data[i][0].equals(msg)){
+				 if(Data[i][1].equals(msg)){
        
 					break;
 					 }
@@ -283,8 +320,10 @@ public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws 
 
 }	 
 
-  
-  @AfterMethod
+
+
+
+ // @AfterMethod
   public void terminateBrowser(){
       
 	  demo.quit();
