@@ -126,7 +126,7 @@ public void verifyInvalidEmail(){
 	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
 	launchBrowser();
 	setup(Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	 testresult("Please enter Email Address in vali format.",demo.getEmailLabel());
+	 testresult("Please enter Email Address in valid format.",demo.getEmailLabel());
 	 demo.quit();
 	 
 }
