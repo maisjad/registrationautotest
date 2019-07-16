@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/11</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/9</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 15 13:16:21 IDT 2019</td>
+<td>Started on:</td><td>Tue Jul 16 11:35:19 IDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>131 seconds (131910 ms)</td>
+<tr><td>Total time:</td><td>245 seconds (245519 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,11 +75,64 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail()'><b>verifyInvalidEmail</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
-<td><div><pre>java.lang.AssertionError: actual:Please enter Email Address in valid format.,expected:Please enter Email Address in vali format., expected:&lt;Please enter Email Address in valid format.&gt; but was:&lt;Please enter Email Address in vali format.&gt;
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
-	at FG_RegistrationTest.RegistrationTesting.testresult(RegistrationTesting.java:284)
-	at FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail(RegistrationTesting.java:129)
+<td title='FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides()'><b>verifyEmailConfirmationFelides</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00F31B23+1448739]
+	Ordinal0 [0x00EB5A11+940561]
+	Ordinal0 [0x00E42293+467603]
+	Ordinal0 [0x00DDF1DA+61914]
+	Ordinal0 [0x00DDBBBD+48061]
+	Ordinal0 [0x00DF8D19+167193]
+	Ordinal0 [0x00DF88ED+166125]
+	Ordinal0 [0x00DF6FFB+159739]
+	Ordinal0 [0x00DE09F6+68086]
+	Ordinal0 [0x00DE1990+72080]
+	Ordinal0 [0x00DE1929+71977]
+	GetHandleVerifier [0x01072E4C+1172140]
+	GetHandleVerifier [0x00FCFE35+504469]
+	GetHandleVerifier [0x00FCFBD0+503856]
+	Ordinal0 [0x00F3C9A8+1493416]
+	GetHandleVerifier [0x00FD060A+506474]
+	Ordinal0 [0x00EC7136+1012022]
+	Ordinal0 [0x00EC6FAF+1011631]
+	Ordinal0 [0x00ED133B+1053499]
+	Ordinal0 [0x00ED14A3+1053859]
+	Ordinal0 [0x00ED04D5+1049813]
+	BaseThreadInitThunk [0x764B8494+36]
+	RtlAreBitsSet [0x773041C8+136]
+	RtlAreBitsSet [0x77304198+88]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides(RegistrationTesting.java:152)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -105,11 +158,64 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace641882263", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace641882263'><pre>java.lang.AssertionError: actual:Please enter Email Address in valid format.,expected:Please enter Email Address in vali format., expected:&lt;Please enter Email Address in valid format.&gt; but was:&lt;Please enter Email Address in vali format.&gt;
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
-	at FG_RegistrationTest.RegistrationTesting.testresult(RegistrationTesting.java:284)
-	at FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail(RegistrationTesting.java:129)
+</pre></div><a href='#' onClick='toggleBox("stack-trace976827477", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace976827477'><pre>org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00F31B23+1448739]
+	Ordinal0 [0x00EB5A11+940561]
+	Ordinal0 [0x00E42293+467603]
+	Ordinal0 [0x00DDF1DA+61914]
+	Ordinal0 [0x00DDBBBD+48061]
+	Ordinal0 [0x00DF8D19+167193]
+	Ordinal0 [0x00DF88ED+166125]
+	Ordinal0 [0x00DF6FFB+159739]
+	Ordinal0 [0x00DE09F6+68086]
+	Ordinal0 [0x00DE1990+72080]
+	Ordinal0 [0x00DE1929+71977]
+	GetHandleVerifier [0x01072E4C+1172140]
+	GetHandleVerifier [0x00FCFE35+504469]
+	GetHandleVerifier [0x00FCFBD0+503856]
+	Ordinal0 [0x00F3C9A8+1493416]
+	GetHandleVerifier [0x00FD060A+506474]
+	Ordinal0 [0x00EC7136+1012022]
+	Ordinal0 [0x00EC6FAF+1011631]
+	Ordinal0 [0x00ED133B+1053499]
+	Ordinal0 [0x00ED14A3+1053859]
+	Ordinal0 [0x00ED04D5+1049813]
+	BaseThreadInitThunk [0x764B8494+36]
+	RtlAreBitsSet [0x773041C8+136]
+	RtlAreBitsSet [0x77304198+88]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides(RegistrationTesting.java:152)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -136,7 +242,25 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>113</td>
+<td>100</td>
+<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Digit()'><b>verifyPasswordContainsAtLeast1Digit</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td></td>
+<td>93</td>
+<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<tr>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Letter()'><b>verifyPasswordContainsAtLeast1Letter</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td></td>
+<td>31</td>
 <td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
@@ -149,7 +273,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered()'><b>verifyEmailAddressNotRegistered</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered(RegistrationTesting.java:192)
+	at FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered(RegistrationTesting.java:249)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -175,69 +299,9 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1526970878", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1526970878'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered(RegistrationTesting.java:192)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
-<tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides()'><b>verifyEmailConfirmationFelides</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
-<td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides(RegistrationTesting.java:137)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace936653983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace936653983'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides(RegistrationTesting.java:137)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1406014249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1406014249'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered(RegistrationTesting.java:249)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -269,7 +333,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields()'><b>verifyEmptyRegistrationFields</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields(RegistrationTesting.java:201)
+	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields(RegistrationTesting.java:265)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -295,9 +359,9 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1128948651", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1128948651'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields(RegistrationTesting.java:201)
+</pre></div><a href='#' onClick='toggleBox("stack-trace758572926", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace758572926'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields(RegistrationTesting.java:265)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -329,7 +393,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields()'><b>verifyEmptyRegistrationInfoFields</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields(RegistrationTesting.java:214)
+	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields(RegistrationTesting.java:283)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -355,9 +419,9 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1846501247", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1846501247'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields(RegistrationTesting.java:214)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1640612861", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1640612861'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields(RegistrationTesting.java:283)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -389,7 +453,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration()'><b>verifyErrZipCodeRegistration</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration(RegistrationTesting.java:246)
+	at FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration(RegistrationTesting.java:322)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -415,9 +479,69 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace671471369", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace671471369'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration(RegistrationTesting.java:246)
+</pre></div><a href='#' onClick='toggleBox("stack-trace990679445", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace990679445'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration(RegistrationTesting.java:322)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<tr>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail()'><b>verifyInvalidEmail</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td><div><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail(RegistrationTesting.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace913065088", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace913065088'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail(RegistrationTesting.java:132)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -449,7 +573,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled()'><b>verifyPasswordConfirmationFiled</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled(RegistrationTesting.java:183)
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled(RegistrationTesting.java:233)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -475,129 +599,9 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1978209605", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1978209605'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled(RegistrationTesting.java:183)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
-<tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Digit()'><b>verifyPasswordContainsAtLeast1Digit</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
-<td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Digit(RegistrationTesting.java:147)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1624351535", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1624351535'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Digit(RegistrationTesting.java:147)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
-<tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Letter()'><b>verifyPasswordContainsAtLeast1Letter</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
-<td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Letter(RegistrationTesting.java:156)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1394356510", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1394356510'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Letter(RegistrationTesting.java:156)
+</pre></div><a href='#' onClick='toggleBox("stack-trace746280996", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace746280996'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled(RegistrationTesting.java:233)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -629,7 +633,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters()'><b>verifyPasswordContainsAtLeast6Characters</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters(RegistrationTesting.java:165)
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters(RegistrationTesting.java:200)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -655,9 +659,9 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace582300198", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace582300198'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters(RegistrationTesting.java:165)
+</pre></div><a href='#' onClick='toggleBox("stack-trace493944943", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace493944943'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters(RegistrationTesting.java:200)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -689,7 +693,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time()'><b>verifyPasswordNotContainsSameCharacter4Time</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time(RegistrationTesting.java:174)
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time(RegistrationTesting.java:216)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -715,9 +719,9 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace533415944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace533415944'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time(RegistrationTesting.java:174)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1533547487", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1533547487'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time(RegistrationTesting.java:216)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -775,8 +779,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1919834117", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1919834117'><pre>org.testng.SkipException: not need to test
+</pre></div><a href='#' onClick='toggleBox("stack-trace99770475", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace99770475'><pre>org.testng.SkipException: not need to test
 	at FG_RegistrationTest.RegistrationTesting.verifyssucsessregistration(RegistrationTesting.java:89)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
