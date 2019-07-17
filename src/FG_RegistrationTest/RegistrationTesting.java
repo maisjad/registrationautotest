@@ -17,11 +17,9 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.Reporter;
 import org.testng.SkipException;
-import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -73,19 +71,29 @@ public void readTC(){
 		Data=ReadTC.fileopen("files\\DTC1.xlsx","RegistrationTCData");  
         address=ReadTC.fileopen("files\\DTC1.xlsx","AddressData");
         System.out.println("launching chrome browser"); 
-		System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
+		System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe");
+	 System.setProperty("webdriver.gecko.driver","drivers\\geckodriver.exe"); 
 		 options = new ChromeOptions();
 			options.setExperimentalOption("useAutomationExtension", false);
         baseUrl = "https://devwcs2.frontgate.com/UserRegistrationFormView";	
     	   
 	}
-
+	
+@Parameters ({"browser"})
 @Test (invocationCount = 12 )
-public void regTest(){
+public void regTest(String browser){
+	
 	System.out.println(i+":"+Data[i][0]+":"+Data[i][1]);
 	if (!Data[i][0].equals("T")){ i++;
 		throw new SkipException(Data[i-1][1]+ "not need to test");}
-	 driver = new ChromeDriver(options);
+	WebDriver	driver=null;
+	if(browser.equals("firefox")){
+	
+		 driver = new FirefoxDriver();
+	}
+	 if(browser.equalsIgnoreCase("chrome")){
+
+		driver = new ChromeDriver(options);}	
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo =new FGRegisterdemo (driver);

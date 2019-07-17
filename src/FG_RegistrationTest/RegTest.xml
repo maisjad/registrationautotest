@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="regSuite" thread-count="2" parallel="tests" >
+<test name="firfoxRegistrationTesting">
+<parameter name="browser" value="firefox"/>
+<classes>
+<class name="FG_RegistrationTest.RegistrationTesting">
+</class>
+</classes>
+</test>
+<test name="chromeRegistrationTesting">
+<parameter name="browser" value="chrome"/>
+<classes>
+<class name="FG_RegistrationTest.RegistrationTesting">
+</class>
+</classes>
+</test>
+</suite>
