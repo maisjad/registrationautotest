@@ -97,7 +97,7 @@ public void verifyssucsessregistration(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 //	System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}					
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
@@ -146,7 +146,7 @@ public void verifyInvalidEmail(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 	//System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}					
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
@@ -172,7 +172,7 @@ public void verifyEmailConfirmationFelides(String browser){
 	
 		 driver = new ChromeDriver();
 		}									
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
@@ -195,7 +195,7 @@ public void verifyPasswordContainsAtLeast1Digit(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 	//System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}									
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
@@ -217,7 +217,7 @@ public void verifyPasswordContainsAtLeast1Letter(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 	//System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}										
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	
@@ -240,7 +240,7 @@ public void verifyPasswordContainsAtLeast6Characters(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 	//System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}									
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
@@ -262,7 +262,7 @@ public void verifyPasswordNotContainsSameCharacter4Time(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 	//System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}									
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
@@ -285,7 +285,7 @@ public void verifyPasswordConfirmationFiled(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 //	System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}										
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
@@ -307,7 +307,7 @@ public void verifyEmailAddressNotRegistered (String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 	//System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}									
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	 setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
@@ -329,7 +329,7 @@ public void verifyEmptyRegistrationFields(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 	//System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}										
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	setup(demo,"","","","");
@@ -354,7 +354,7 @@ public void verifyEmptyRegistrationInfoFields(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 //	System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}								
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
@@ -398,7 +398,7 @@ public void verifyErrZipCodeRegistration(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 //	System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		driver = new ChromeDriver();}												
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo    =new FGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);

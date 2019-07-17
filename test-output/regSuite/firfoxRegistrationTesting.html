@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  chromeRegistrationTesting</title>
+<title>TestNG:  firfoxRegistrationTesting</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>chromeRegistrationTesting</h2><table border='1' align="center">
+<h2 align='center'>firfoxRegistrationTesting</h2><table border='1' align="center">
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/3/9</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 16 15:21:08 IDT 2019</td>
+<td>Started on:</td><td>Tue Jul 16 14:52:22 IDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>114 seconds (114797 ms)</td>
+<tr><td>Total time:</td><td>289 seconds (289406 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,37 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides()'><b>verifyEmailConfirmationFelides</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+<td title='FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides()'><b>verifyEmailConfirmationFelides</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: connection refused
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00F31B23+1448739]
-	Ordinal0 [0x00EB5A11+940561]
-	Ordinal0 [0x00E42293+467603]
-	Ordinal0 [0x00DDE91D+59677]
-	Ordinal0 [0x00DDBB1D+47901]
-	Ordinal0 [0x00DF8D19+167193]
-	Ordinal0 [0x00DF88ED+166125]
-	Ordinal0 [0x00DF6FFB+159739]
-	Ordinal0 [0x00DE09F6+68086]
-	Ordinal0 [0x00DE1990+72080]
-	Ordinal0 [0x00DE1929+71977]
-	GetHandleVerifier [0x01072E4C+1172140]
-	GetHandleVerifier [0x00FCFE35+504469]
-	GetHandleVerifier [0x00FCFBD0+503856]
-	Ordinal0 [0x00F3C9A8+1493416]
-	GetHandleVerifier [0x00FD060A+506474]
-	Ordinal0 [0x00EC7136+1012022]
-	Ordinal0 [0x00EC6FAF+1011631]
-	Ordinal0 [0x00ED133B+1053499]
-	Ordinal0 [0x00ED14A3+1053859]
-	Ordinal0 [0x00ED04D5+1049813]
-	BaseThreadInitThunk [0x764B8494+36]
-	RtlAreBitsSet [0x773041C8+136]
-	RtlAreBitsSet [0x77304198+88]
-
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
 	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
@@ -125,44 +100,19 @@ remote stacktrace: Backtrace:
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides(RegistrationTesting.java:152)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides(RegistrationTesting.java:169)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace590743485", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace590743485'><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1057991058", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1057991058'><pre>org.openqa.selenium.WebDriverException: connection refused
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00F31B23+1448739]
-	Ordinal0 [0x00EB5A11+940561]
-	Ordinal0 [0x00E42293+467603]
-	Ordinal0 [0x00DDE91D+59677]
-	Ordinal0 [0x00DDBB1D+47901]
-	Ordinal0 [0x00DF8D19+167193]
-	Ordinal0 [0x00DF88ED+166125]
-	Ordinal0 [0x00DF6FFB+159739]
-	Ordinal0 [0x00DE09F6+68086]
-	Ordinal0 [0x00DE1990+72080]
-	Ordinal0 [0x00DE1929+71977]
-	GetHandleVerifier [0x01072E4C+1172140]
-	GetHandleVerifier [0x00FCFE35+504469]
-	GetHandleVerifier [0x00FCFBD0+503856]
-	Ordinal0 [0x00F3C9A8+1493416]
-	GetHandleVerifier [0x00FD060A+506474]
-	Ordinal0 [0x00EC7136+1012022]
-	Ordinal0 [0x00EC6FAF+1011631]
-	Ordinal0 [0x00ED133B+1053499]
-	Ordinal0 [0x00ED14A3+1053859]
-	Ordinal0 [0x00ED04D5+1049813]
-	BaseThreadInitThunk [0x764B8494+36]
-	RtlAreBitsSet [0x773041C8+136]
-	RtlAreBitsSet [0x77304198+88]
-
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -186,10 +136,9 @@ remote stacktrace: Backtrace:
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides(RegistrationTesting.java:152)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at FG_RegistrationTest.RegistrationTesting.verifyEmailConfirmationFelides(RegistrationTesting.java:169)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -200,44 +149,26 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>82</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>108</td>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Digit()'><b>verifyPasswordContainsAtLeast1Digit</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Digit()'><b>verifyPasswordContainsAtLeast1Digit</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: connection refused
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00F31B23+1448739]
-	Ordinal0 [0x00EB5A11+940561]
-	Ordinal0 [0x00E42293+467603]
-	Ordinal0 [0x00DDE91D+59677]
-	Ordinal0 [0x00DDBB1D+47901]
-	Ordinal0 [0x00DF8D19+167193]
-	Ordinal0 [0x00DF88ED+166125]
-	Ordinal0 [0x00DF6FFB+159739]
-	Ordinal0 [0x00DE09F6+68086]
-	Ordinal0 [0x00DE1990+72080]
-	Ordinal0 [0x00DE1929+71977]
-	GetHandleVerifier [0x01072E4C+1172140]
-	GetHandleVerifier [0x00FCFE35+504469]
-	GetHandleVerifier [0x00FCFBD0+503856]
-	Ordinal0 [0x00F3C9A8+1493416]
-	GetHandleVerifier [0x00FD060A+506474]
-	Ordinal0 [0x00EC7136+1012022]
-	Ordinal0 [0x00EC6FAF+1011631]
-	Ordinal0 [0x00ED133B+1053499]
-	Ordinal0 [0x00ED14A3+1053859]
-	Ordinal0 [0x00ED04D5+1049813]
-	BaseThreadInitThunk [0x764B8494+36]
-	RtlAreBitsSet [0x773041C8+136]
-	RtlAreBitsSet [0x77304198+88]
-
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
 	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
@@ -257,44 +188,19 @@ remote stacktrace: Backtrace:
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Digit(RegistrationTesting.java:169)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Digit(RegistrationTesting.java:193)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace648544843", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace648544843'><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace652806251", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace652806251'><pre>org.openqa.selenium.WebDriverException: connection refused
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00F31B23+1448739]
-	Ordinal0 [0x00EB5A11+940561]
-	Ordinal0 [0x00E42293+467603]
-	Ordinal0 [0x00DDE91D+59677]
-	Ordinal0 [0x00DDBB1D+47901]
-	Ordinal0 [0x00DF8D19+167193]
-	Ordinal0 [0x00DF88ED+166125]
-	Ordinal0 [0x00DF6FFB+159739]
-	Ordinal0 [0x00DE09F6+68086]
-	Ordinal0 [0x00DE1990+72080]
-	Ordinal0 [0x00DE1929+71977]
-	GetHandleVerifier [0x01072E4C+1172140]
-	GetHandleVerifier [0x00FCFE35+504469]
-	GetHandleVerifier [0x00FCFBD0+503856]
-	Ordinal0 [0x00F3C9A8+1493416]
-	GetHandleVerifier [0x00FD060A+506474]
-	Ordinal0 [0x00EC7136+1012022]
-	Ordinal0 [0x00EC6FAF+1011631]
-	Ordinal0 [0x00ED133B+1053499]
-	Ordinal0 [0x00ED14A3+1053859]
-	Ordinal0 [0x00ED04D5+1049813]
-	BaseThreadInitThunk [0x764B8494+36]
-	RtlAreBitsSet [0x773041C8+136]
-	RtlAreBitsSet [0x77304198+88]
-
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -318,10 +224,9 @@ remote stacktrace: Backtrace:
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Digit(RegistrationTesting.java:169)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Digit(RegistrationTesting.java:193)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -332,44 +237,26 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>82</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>66</td>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Letter()'><b>verifyPasswordContainsAtLeast1Letter</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Letter()'><b>verifyPasswordContainsAtLeast1Letter</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: connection refused
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00F31B23+1448739]
-	Ordinal0 [0x00EB5A11+940561]
-	Ordinal0 [0x00E42293+467603]
-	Ordinal0 [0x00DDE91D+59677]
-	Ordinal0 [0x00DDBB1D+47901]
-	Ordinal0 [0x00DF8D19+167193]
-	Ordinal0 [0x00DF88ED+166125]
-	Ordinal0 [0x00DF6FFB+159739]
-	Ordinal0 [0x00DE09F6+68086]
-	Ordinal0 [0x00DE1990+72080]
-	Ordinal0 [0x00DE1929+71977]
-	GetHandleVerifier [0x01072E4C+1172140]
-	GetHandleVerifier [0x00FCFE35+504469]
-	GetHandleVerifier [0x00FCFBD0+503856]
-	Ordinal0 [0x00F3C9A8+1493416]
-	GetHandleVerifier [0x00FD060A+506474]
-	Ordinal0 [0x00EC7136+1012022]
-	Ordinal0 [0x00EC6FAF+1011631]
-	Ordinal0 [0x00ED133B+1053499]
-	Ordinal0 [0x00ED14A3+1053859]
-	Ordinal0 [0x00ED04D5+1049813]
-	BaseThreadInitThunk [0x764B8494+36]
-	RtlAreBitsSet [0x773041C8+136]
-	RtlAreBitsSet [0x77304198+88]
-
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
 	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
@@ -389,44 +276,19 @@ remote stacktrace: Backtrace:
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Letter(RegistrationTesting.java:185)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Letter(RegistrationTesting.java:215)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1882731221", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1882731221'><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1105808894", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1105808894'><pre>org.openqa.selenium.WebDriverException: connection refused
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00F31B23+1448739]
-	Ordinal0 [0x00EB5A11+940561]
-	Ordinal0 [0x00E42293+467603]
-	Ordinal0 [0x00DDE91D+59677]
-	Ordinal0 [0x00DDBB1D+47901]
-	Ordinal0 [0x00DF8D19+167193]
-	Ordinal0 [0x00DF88ED+166125]
-	Ordinal0 [0x00DF6FFB+159739]
-	Ordinal0 [0x00DE09F6+68086]
-	Ordinal0 [0x00DE1990+72080]
-	Ordinal0 [0x00DE1929+71977]
-	GetHandleVerifier [0x01072E4C+1172140]
-	GetHandleVerifier [0x00FCFE35+504469]
-	GetHandleVerifier [0x00FCFBD0+503856]
-	Ordinal0 [0x00F3C9A8+1493416]
-	GetHandleVerifier [0x00FD060A+506474]
-	Ordinal0 [0x00EC7136+1012022]
-	Ordinal0 [0x00EC6FAF+1011631]
-	Ordinal0 [0x00ED133B+1053499]
-	Ordinal0 [0x00ED14A3+1053859]
-	Ordinal0 [0x00ED04D5+1049813]
-	BaseThreadInitThunk [0x764B8494+36]
-	RtlAreBitsSet [0x773041C8+136]
-	RtlAreBitsSet [0x77304198+88]
-
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -450,10 +312,9 @@ remote stacktrace: Backtrace:
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Letter(RegistrationTesting.java:185)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast1Letter(RegistrationTesting.java:215)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -464,12 +325,19 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>82</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>76</td>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -479,15 +347,16 @@ remote stacktrace: Backtrace:
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered()'><b>verifyEmailAddressNotRegistered</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered()'><b>verifyEmailAddressNotRegistered</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered(RegistrationTesting.java:249)
+	at FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered(RegistrationTesting.java:300)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace95931131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace95931131'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered(RegistrationTesting.java:249)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1686480583", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1686480583'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyEmailAddressNotRegistered(RegistrationTesting.java:300)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -498,22 +367,30 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields()'><b>verifyEmptyRegistrationFields</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields()'><b>verifyEmptyRegistrationFields</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields(RegistrationTesting.java:265)
+	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields(RegistrationTesting.java:322)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace108690953", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace108690953'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields(RegistrationTesting.java:265)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1096552586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1096552586'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationFields(RegistrationTesting.java:322)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -524,22 +401,30 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields()'><b>verifyEmptyRegistrationInfoFields</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields()'><b>verifyEmptyRegistrationInfoFields</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields(RegistrationTesting.java:283)
+	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields(RegistrationTesting.java:347)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2090782397", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2090782397'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields(RegistrationTesting.java:283)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace56455690", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace56455690'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyEmptyRegistrationInfoFields(RegistrationTesting.java:347)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -550,22 +435,30 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration()'><b>verifyErrZipCodeRegistration</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration()'><b>verifyErrZipCodeRegistration</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration(RegistrationTesting.java:322)
+	at FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration(RegistrationTesting.java:392)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2078481962", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2078481962'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration(RegistrationTesting.java:322)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace638732543", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace638732543'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyErrZipCodeRegistration(RegistrationTesting.java:392)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -576,22 +469,30 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail()'><b>verifyInvalidEmail</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail()'><b>verifyInvalidEmail</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail(RegistrationTesting.java:132)
+	at FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail(RegistrationTesting.java:139)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1864442915", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1864442915'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail(RegistrationTesting.java:132)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace656112091", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace656112091'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyInvalidEmail(RegistrationTesting.java:139)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -602,22 +503,30 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled()'><b>verifyPasswordConfirmationFiled</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled()'><b>verifyPasswordConfirmationFiled</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled(RegistrationTesting.java:233)
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled(RegistrationTesting.java:278)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1653239877", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1653239877'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled(RegistrationTesting.java:233)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace115533298", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace115533298'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordConfirmationFiled(RegistrationTesting.java:278)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -628,22 +537,30 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters()'><b>verifyPasswordContainsAtLeast6Characters</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters()'><b>verifyPasswordContainsAtLeast6Characters</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters(RegistrationTesting.java:200)
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters(RegistrationTesting.java:233)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1138417545", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1138417545'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters(RegistrationTesting.java:200)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace793758382", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace793758382'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordContainsAtLeast6Characters(RegistrationTesting.java:233)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -654,22 +571,30 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time()'><b>verifyPasswordNotContainsSameCharacter4Time</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time()'><b>verifyPasswordNotContainsSameCharacter4Time</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time(RegistrationTesting.java:216)
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time(RegistrationTesting.java:255)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace739031182", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace739031182'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time(RegistrationTesting.java:216)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace608363524", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace608363524'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyPasswordNotContainsSameCharacter4Time(RegistrationTesting.java:255)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -680,22 +605,30 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.verifyssucsessregistration()'><b>verifyssucsessregistration</b><br>Test class: FG_RegistrationTest.RegistrationTesting</td>
+<td title='FG_RegistrationTest.RegistrationTesting.verifyssucsessregistration()'><b>verifyssucsessregistration</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: firefox</td>
 <td><div><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyssucsessregistration(RegistrationTesting.java:89)
+	at FG_RegistrationTest.RegistrationTesting.verifyssucsessregistration(RegistrationTesting.java:90)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace599019273", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace599019273'><pre>org.testng.SkipException: not need to test
-	at FG_RegistrationTest.RegistrationTesting.verifyssucsessregistration(RegistrationTesting.java:89)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace851902363", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace851902363'><pre>org.testng.SkipException: not need to test
+	at FG_RegistrationTest.RegistrationTesting.verifyssucsessregistration(RegistrationTesting.java:90)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -706,12 +639,19 @@ remote stacktrace: Backtrace:
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@5622fdf</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 </table><p>
 </body>
 </html>

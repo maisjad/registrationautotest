@@ -90,6 +90,7 @@ public class report implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		log("onTestSuccess("+result+")");
 		 passresult.add(result);
+		 System.out.print(result.getInstanceName());
 		if (successTable == null) {
 			this.successTable = new PdfPTable(new float[]{.3f, .3f, .1f, .3f});
 			Paragraph p = new Paragraph("PASSED TESTS", new Font(Font.TIMES_ROMAN, Font.DEFAULTSIZE, Font.BOLD));
@@ -141,6 +142,7 @@ public class report implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		log("onTestFailure("+result+")");
 		failresult.add(result);
+		 System.out.print(result.getInstanceName());
 		String file = System.getProperty("user.dir")+"\\"+"screenshot"+(new Random().nextInt())+".png";
 		img.add(file);
 		try {
@@ -255,7 +257,7 @@ public class report implements ITestListener {
 			            "<td>Method</td>" +
 			            "<td>Time (ms)</td>" +
 			            "<td>Exception</td>" +
-			            "</tr>");
+			            "<td>Platform</td>"+"</tr>");//RegistrationTesting.getDriver()
 		        int i=0;
 		        for(ITestResult res :failresult){
 		        	bw.write(failcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
@@ -269,30 +271,36 @@ public class report implements ITestListener {
 		    			this.nb1Exceptions++;
 		    			String []token=throwable.getMessage().split(",");
 		    			
-		        	bw.write("<td>"+token[0]+","+token[1]+"<a href="+img.get(i)+">[SCREEN SHOT]</a>"+"</td></tr>");
+		        	bw.write("<td>"+token[0]+","+token[1]+"<a href="+img.get(i)+">[SCREEN SHOT]</a>"+"</td>");
 		        	i++;
-		    		}}
-		        bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>Passed Test</h2>"+"</tr>"
+		    		}
+		    		
+		    		 if (RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.chrome.ChromeDriver")){
+					    	bw.write("<td>"+"chrome"+"</td></tr>");	}
+				           else if (RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.firefox.FirefoxDriver")){
+                           bw.write("<td>"+"Firefox"+"</td></tr>");	}}
+		    		 bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>Passed Test</h2>"+"</tr>"
 				           + "<tr>" +
 				            "<td>Class</td>" +
 				            "<td>Method</td>" +
 				            "<td>Time (ms)</td>" +
-				             "</tr>");
+				            "<td>Platform</td>"+ "</tr>");
 		    		
 		    		for(ITestResult res :passresult){
 			        	bw.write(passcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
 			                      res.getMethod().getMethodName().toString()+"</td>"+ 
 			        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
-			            bw.write("</tr>");
-			        	
-			    		 }
+			        	 if (RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.chrome.ChromeDriver")){
+						    	bw.write("<td>"+"chrome"+"</td></tr>");	}
+					           else if (RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.firefox.FirefoxDriver")){
+	                              bw.write("<td>"+"Firefox"+"</td></tr>");	}			    		 }
 		    		 bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>skipped Test</h2>"+"</tr>"
 					           + "<tr>" +
 					            "<td>Class</td>" +
 					            "<td>Method</td>" +
 					            "<td>Time (ms)</td>" +
 					            "<td>Exception</td>" +
-					            "</tr>");
+					            "<td>Platform</td>"+ "</tr>");
 			    		
 			    		for(ITestResult res :skipresult){
 				        	bw.write(skipcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
@@ -300,8 +308,11 @@ public class report implements ITestListener {
 				        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
 				        	Throwable throwable = res.getThrowable();
 				    		
-				            bw.write("<td>"+throwable.getMessage()+"</td></tr>");
-				        	
+				            bw.write("<td>"+throwable.getMessage()+"</td>");
+				            if (RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.chrome.ChromeDriver")){
+					    	bw.write("<td>"+"chrome"+"</td></tr>");	}
+				           else if (RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.firefox.FirefoxDriver")){
+                              bw.write("<td>"+"Firefox"+"</td></tr>");	}
 				    		 }
 			    		bw.write("</table>" +
 			    			       "</body>" +

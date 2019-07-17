@@ -58,12 +58,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class RegistrationTesting {
 	
 	
+	
 	private static WebDriver driver;
 	ChromeOptions options;
 	String[][]  Data =new String [64][64];
 	private String expected;
 	private String[][] address;
 	private String baseUrl;
+	private int i=2;
 	
 
 	@BeforeTest
@@ -74,279 +76,154 @@ public void readTC(){
 		System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe"); 
 		 options = new ChromeOptions();
 			options.setExperimentalOption("useAutomationExtension", false);
-        baseUrl = "https://devwcs2.frontgate.com/UserRegistrationFormView";					
+        baseUrl = "https://devwcs2.frontgate.com/UserRegistrationFormView";	
     	   
 	}
 
-
-	
-
-	
-@Test  
-
-public void verifyssucsessregistration(){
-	int i=TCindex("verifyssucsessregistration");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	//launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);
-					
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+@Test (invocationCount = 12 )
+public void regTest(){
+	System.out.println(i+":"+Data[i][0]+":"+Data[i][1]);
+	if (!Data[i][0].equals("T")){ i++;
+		throw new SkipException(Data[i-1][1]+ "not need to test");}
+	 driver = new ChromeDriver(options);
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	 
-	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
-	 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
- 	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
-	 add.setbillphone(address[1][10], address[1][11]);
-	 if(Data[i][6]!=null){
-		 add.hasshipaddress();
-		 add.setshipNames(address[1][0], address[1][1], address[1][2],address[1][3]);
-         add.setshipaddrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
-		 add.setshipphone(address[1][10], address[1][11]);
-	 }
-	add.clicksave();
-	        
-	        Wait<WebDriver> wait = new FluentWait<WebDriver>(add.getDriver())							
-	    			.withTimeout(30, TimeUnit.SECONDS) 			
-	    			.pollingEvery(5, TimeUnit.SECONDS) 			
-	    			.ignoring(NoSuchElementException.class);
-	    	WebElement pageloaded = wait.until(new Function<WebDriver, WebElement>(){
-	    	
-	    		public WebElement apply(WebDriver driver ) {
-	    			return driver.findElement(By.xpath("//*[@id=\"bottomEspot\"]/div/img"));
-	    		}
-	    	});
-	        expected = "Account Overview | Frontgate";
-	        this.driver=driver;
-	     testresult(expected,demo.getTitle());
-	 
-	     demo.quit();
+    FGRegisterdemo demo =new FGRegisterdemo (driver);
+    if(!Data[i][1].equals("verifyEmptyRegistrationFields")){
+    setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);}
 	
-}
-
-@Test 
-
-public void verifyInvalidEmail(){
-	int i=TCindex("verifyInvalidEmail");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	//launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);
-					
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	this.driver=driver;
-	testresult("Please enter Email Address in valid format.",demo.getEmailLabel());
-	 demo.quit();
-	 
-}
-
-@Test
-
-public void verifyEmailConfirmationFelides(){
-	int i=TCindex("verifyEmailConfirmationFelides");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	//launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);
-									
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	this.driver=driver;
+	if(Data[i][1].equals("verifyssucsessregistration")){
+		FGAddressdemo add=new FGAddressdemo(demo.getdriver());
+		 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
+	 	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
+		 add.setbillphone(address[1][10], address[1][11]);
+		 if(Data[i][6]!=null){
+			 add.hasshipaddress();
+			 add.setshipNames(address[1][0], address[1][1], address[1][2],address[1][3]);
+	         add.setshipaddrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
+			 add.setshipphone(address[1][10], address[1][11]);
+		 }
+		add.clicksave();
+		        
+		        Wait<WebDriver> wait = new FluentWait<WebDriver>(add.getDriver())							
+		    			.withTimeout(30, TimeUnit.SECONDS) 			
+		    			.pollingEvery(5, TimeUnit.SECONDS) 			
+		    			.ignoring(NoSuchElementException.class);
+		    	WebElement pageloaded = wait.until(new Function<WebDriver, WebElement>(){
+		    	
+		    		public WebElement apply(WebDriver driver ) {
+		    			return driver.findElement(By.xpath("//*[@id=\"bottomEspot\"]/div/img"));
+		    		}
+		    	});
+		        expected = "Account Overview | Frontgate";
+		        i++;    
+		     testresult(expected,demo.getTitle());
+		 
+		
+	}
+	
+	else if(Data[i][1].equals("verifyInvalidEmail")){
+		i++;
+		testresult("Please enter Email Address in valid format.",demo.getEmailLabel());
+		
+	}
+else if(Data[i][1].equals("verifyEmailConfirmationFelides")){
+	i++;
 	testresult("The Email Addresses you entered do not match. Please try again.",demo.getVerifyConfermEmailLabel());
-    demo.quit();
-}
-
-@Test
-
-public void verifyPasswordContainsAtLeast1Digit(){
-	int i=TCindex("verifyPasswordContainsAtLeast1Digit");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	//launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);
-									
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	this.driver=driver;
+		
+	}
+	
+else if(Data[i][1].equals("verifyPasswordContainsAtLeast1Digit")){
+	i++;
 	testresult("Your password must contain at least 1 digit. Please try again.",demo.getPassLabel());
-    demo.quit();
-}
-@Test
-
-public void verifyPasswordContainsAtLeast1Letter(){
-	int i=TCindex("verifyPasswordContainsAtLeast1Letter");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	//launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);
-									
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	
-	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	this.driver=driver;
+		
+	}
+else if(Data[i][1].equals("verifyPasswordContainsAtLeast1Letter")){
+	i++;
 	testresult("Your password must contain at least 1 letter. Please try again.",demo.getPassLabel());
-    demo.quit();
-}
-@Test
-
-public void verifyPasswordContainsAtLeast6Characters(){
-	int i=TCindex("verifyPasswordContainsAtLeast6Characters");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	//launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);
-									
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	this.driver=driver;
+		
+	}
+else if(Data[i][1].equals("verifyPasswordContainsAtLeast6Characters")){
+	i++;
 	testresult("Your password must be at least 6 characters. Please try again.",demo.getPassLabel());
-    demo.quit();
-}
-@Test
-
-public void verifyPasswordNotContainsSameCharacter4Time(){
-	int i=TCindex("verifyPasswordNotContainsSameCharacter4Time");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-//	launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);
-								
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	this.driver=driver;
+		
+	}
 	
+else if(Data[i][1].equals("verifyPasswordNotContainsSameCharacter4Time")){
+	i++;
 	testresult("You cannot use the same character 4 or more times. Please try again.",demo.getPassLabel());
-    demo.quit();
-}
-@Test
-
-public void verifyPasswordConfirmationFiled(){
-	int i=TCindex("verifyPasswordConfirmationFiled");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	//launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);
-								
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	this.driver=driver;
+		
+	}
+else if(Data[i][1].equals("verifyPasswordConfirmationFiled")){
+	i++;
 	testresult("The passwords you entered do not match. Please try again.",demo.getVerifyConfermPassLabel());
-    demo.quit();
-}
-@Test
-
-public void verifyEmailAddressNotRegistered (){
-	int i=TCindex("verifyEmailAddressNotRegistered");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	//launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);
-								
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	 setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	 this.driver=driver;
+		
+	}
+else if(Data[i][1].equals("verifyEmailAddressNotRegistered")){
+	i++;
 	 testresult("The email address is already registered with the website. Please enter a different email address.",demo.getGeneralError());
-    demo.quit();
-}
-@Test
-
-public void verifyEmptyRegistrationFields(){
-	int i=TCindex("verifyEmptyRegistrationFields");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	//launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);						
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+		
+	}
+else if(Data[i][1].equals("verifyEmptyRegistrationFields")){
 	setup(demo,"","","","");
-	this.driver=driver;
-    testresult("Please enter Email Address.",demo.getEmailLabel());
-    testresult("Please Re-Enter Email Address.",demo.getVerifyEmptyEmailLabel());
-    testresult("Please Enter Password.",demo.getPassLabel());
-    testresult("Please Re-Enter Password.",demo.getVerifyEmptyPassLabel());
-    demo.quit();
-}
-@Test
-
-public void verifyEmptyRegistrationInfoFields(){
-	int i=TCindex("verifyEmptyRegistrationInfoFields");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	//launchBrowser();
-	WebDriver	driver = new ChromeDriver(options);
-						
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
+	i++;
+	 testresult("Please enter Email Address.",demo.getEmailLabel());
+	    testresult("Please Re-Enter Email Address.",demo.getVerifyEmptyEmailLabel());
+	    testresult("Please Enter Password.",demo.getPassLabel());
+	    testresult("Please Re-Enter Password.",demo.getVerifyEmptyPassLabel());		
+	}
+else if(Data[i][1].equals("verifyEmptyRegistrationInfoFields")){
+	
 	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
 	 add.setbillNames("", "", "", "");
- 	 add.setbilladdrss("","", "", "", "Select Country", "");
+	 add.setbilladdrss("","", "", "", "Select Country", "");
 	
- 	 add.setbillphone("", "");
+	 add.setbillphone("", "");
 	 	 add.hasshipaddress();
 		 add.setshipNames("", "", "","");
-         add.setshipaddrss("", "","", "","Select Country", "");
+        add.setshipaddrss("", "","", "","Select Country", "");
 		 add.setshipphone("", ""); 
 			add.clicksave();
-			this.driver=driver;
+			i++;
 			testresult("Please enter First Name.",add.getFNLabel());
-    testresult("Please enter Last Name.",add.getLNLabel());
-    testresult("Please enter Street Address 1.",add.getstrLabel());
-    testresult("Please enter City.",add.getCityLabel());
-    testresult("Please enter Zip/Postal Code.",add.getcodeLabel());
-    testresult("Please select a Country Name.",add.getRegoinLabel());
-    testresult("Please enter a Daytime phone number, including area code (US Only).",add.getPhoneLabel());
-    testresult("Please enter First Name.",add.getSFNLabel());
-    testresult("Please enter Last Name.",add.getSLNLabel());
-    testresult("Please enter Street Address 1.",add.getSstrLabel());
-    testresult("Please enter City.",add.getSCityLabel());
-    testresult("Please enter Zip/Postal Code.",add.getScodeLabel());
-    testresult("Please select a Country Name.",add.getSRegoinLabel());
-    testresult("Please enter a Daytime phone number, including area code (US Only).",add.getSPhoneLabel());
-    demo.quit();
-}
-@Test 
-
-public void verifyErrZipCodeRegistration(){
-	int i=TCindex("verifyErrZipCodeRegistration");
-	if (!Data[i][0].equals("T")){throw new SkipException("not need to test");}
-	WebDriver	driver = new ChromeDriver(options);
-												
-    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
-	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	 
+   testresult("Please enter Last Name.",add.getLNLabel());
+   testresult("Please enter Street Address 1.",add.getstrLabel());
+   testresult("Please enter City.",add.getCityLabel());
+   testresult("Please enter Zip/Postal Code.",add.getcodeLabel());
+   testresult("Please select a Country Name.",add.getRegoinLabel());
+   testresult("Please enter a Daytime phone number, including area code (US Only).",add.getPhoneLabel());
+   testresult("Please enter First Name.",add.getSFNLabel());
+   testresult("Please enter Last Name.",add.getSLNLabel());
+   testresult("Please enter Street Address 1.",add.getSstrLabel());
+   testresult("Please enter City.",add.getSCityLabel());
+   testresult("Please enter Zip/Postal Code.",add.getScodeLabel());
+   testresult("Please select a Country Name.",add.getSRegoinLabel());
+   testresult("Please enter a Daytime phone number, including area code (US Only).",add.getSPhoneLabel());	
+	}
+else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
+	
 	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
 	 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
- 	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],"101", address[1][8], address[1][9]);
+	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],"101", address[1][8], address[1][9]);
 	 add.setbillphone(address[1][10], address[1][11]);
 	 if(Data[i][6]!=null){
 		 add.hasshipaddress();
 		 add.setshipNames(address[1][0], address[1][1], address[1][2],address[1][3]);
-         add.setshipaddrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
+        add.setshipaddrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
 		 add.setshipphone(address[1][10], address[1][11]);
 	 }
 	add.clicksave();
-	this.driver=driver;
+	i++;
 	testresult("Please enter a valid Zip/Postal code for the selected state.",add.getErrCodeLabel());
 	 if(Data[i][17]!=null){
+		
 			testresult("Please enter a valid Zip/Postal code for the selected state.",add.getSErrCodeLabel());
- 
-	 }
-	 demo.quit();
-	 
-	
+
+	 }	
+	}
+	//i++;
+    demo.quit();
+    
 }
 
 void setup(FGRegisterdemo demo,String email, String pass, String vemail,String vpass){
@@ -365,19 +242,7 @@ private void testresult(String expected,String actual){
      AssertJUnit.assertEquals("actual:"+actual+",expected:"+expected+",",actual, expected);
      
 }
-public int TCindex(String msg){
-	int i=0;
-	for ( ;i<Data.length;i++){
-		if (msg.equals("verifyEmailAddressNotRegistered")){return 10;}
-		                 
-				 if(Data[i][1].equals(msg)){
-       
-					break;
-					 }
-				 
-	 }
-	return i;
-}	 
+	 
 	
 public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
 

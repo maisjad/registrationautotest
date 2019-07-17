@@ -5,16 +5,7 @@
     <classes>
       <class name="FG_RegistrationTest.RegistrationTesting">
         <methods>
-          <include name="verifyPasswordNotContainsSameCharacter4Time"/>
-          <include name="verifyInvalidEmail"/>
-          <include name="verifyEmailAddressNotRegistered"/>
-          <include name="verifyPasswordContainsAtLeast6Characters"/>
-          <include name="verifyEmptyRegistrationInfoFields"/>
-          <include name="verifyPasswordConfirmationFiled"/>
-          <include name="verifyEmailConfirmationFelides"/>
-          <include name="verifyEmptyRegistrationFields"/>
-          <include name="verifyssucsessregistration"/>
-          <include name="verifyErrZipCodeRegistration"/>
+          <include name="regTest"/>
           <include name="readTC"/>
         </methods>
       </class> <!-- FG_RegistrationTest.RegistrationTesting -->
