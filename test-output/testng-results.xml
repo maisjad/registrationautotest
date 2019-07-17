@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="8" failed="1" ignored="0" total="12" passed="3">
+<testng-results skipped="10" failed="0" ignored="0" total="12" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="226547" started-at="2019-07-17T08:30:00Z" finished-at="2019-07-17T08:33:47Z">
+  <suite name="registartionSuite" duration-ms="252468" started-at="2019-07-17T12:09:13Z" finished-at="2019-07-17T12:13:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="226547" started-at="2019-07-17T08:30:00Z" finished-at="2019-07-17T08:33:47Z">
+    <test name="chromeRegistrationTesting" duration-ms="252468" started-at="2019-07-17T12:09:13Z" finished-at="2019-07-17T12:13:26Z">
       <class name="FG_RegistrationTest.RegistrationTesting">
-        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="readTC" is-config="true" duration-ms="14530" started-at="2019-07-17T08:30:02Z" finished-at="2019-07-17T08:30:16Z">
+        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="readTC" is-config="true" duration-ms="18234" started-at="2019-07-17T12:09:14Z" finished-at="2019-07-17T12:09:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readTC -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="100" started-at="2019-07-17T08:30:17Z" finished-at="2019-07-17T08:30:17Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="21" started-at="2019-07-17T12:09:36Z" finished-at="2019-07-17T12:09:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyssucsessregistrationnot need to test]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyssucsessregistrationnot need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:87)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:88)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -32,32 +39,34 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="41" started-at="2019-07-17T08:30:17Z" finished-at="2019-07-17T08:30:17Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="19" started-at="2019-07-17T12:09:36Z" finished-at="2019-07-17T12:09:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyInvalidEmailnot need to test]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyInvalidEmailnot need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:87)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:88)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -71,34 +80,56 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="FAIL" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="90918" started-at="2019-07-17T08:30:17Z" finished-at="2019-07-17T08:31:48Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="PASS" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="177802" started-at="2019-07-17T12:09:36Z" finished-at="2019-07-17T12:12:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="PASS" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="50899" started-at="2019-07-17T12:12:35Z" finished-at="2019-07-17T12:13:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="3" started-at="2019-07-17T12:13:26Z" finished-at="2019-07-17T12:13:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
             <message>
-              <![CDATA[actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entered do not match. Please ty again., expected:<The Email Addresses you entered do not match. Please try again.> but was:<The Email Addresses you entered do not match. Please ty again.>]]>
+              <![CDATA[verifyPasswordContainsAtLeast1Letternot need to test]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entered do not match. Please ty again., expected:<The Email Addresses you entered do not match. Please try again.> but was:<The Email Addresses you entered do not match. Please ty again.>
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
-at FG_RegistrationTest.RegistrationTesting.testresult(RegistrationTesting.java:242)
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:132)
+              <![CDATA[org.testng.SkipException: verifyPasswordContainsAtLeast1Letternot need to test
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:88)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -112,44 +143,75 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="PASS" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="41164" started-at="2019-07-17T08:31:49Z" finished-at="2019-07-17T08:32:31Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="3" started-at="2019-07-17T12:13:26Z" finished-at="2019-07-17T12:13:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyPasswordContainsAtLeast6Charactersnot need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyPasswordContainsAtLeast6Charactersnot need to test
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:88)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="PASS" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="38743" started-at="2019-07-17T08:32:31Z" finished-at="2019-07-17T08:33:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- regTest -->
-        <test-method status="PASS" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="37439" started-at="2019-07-17T08:33:09Z" finished-at="2019-07-17T08:33:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="10" started-at="2019-07-17T08:33:47Z" finished-at="2019-07-17T08:33:47Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="2" started-at="2019-07-17T12:13:26Z" finished-at="2019-07-17T12:13:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyPasswordNotContainsSameCharacter4Timenot need to test]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyPasswordNotContainsSameCharacter4Timenot need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:87)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:88)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -163,32 +225,34 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="5" started-at="2019-07-17T08:33:47Z" finished-at="2019-07-17T08:33:47Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="2" started-at="2019-07-17T12:13:26Z" finished-at="2019-07-17T12:13:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyPasswordConfirmationFilednot need to test]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyPasswordConfirmationFilednot need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:87)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:88)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -202,32 +266,34 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="2" started-at="2019-07-17T08:33:47Z" finished-at="2019-07-17T08:33:47Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="4" started-at="2019-07-17T12:13:26Z" finished-at="2019-07-17T12:13:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyEmailAddressNotRegistered not need to test]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyEmailAddressNotRegistered not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:87)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:88)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -241,32 +307,34 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="5" started-at="2019-07-17T08:33:47Z" finished-at="2019-07-17T08:33:47Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="3" started-at="2019-07-17T12:13:26Z" finished-at="2019-07-17T12:13:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyEmptyRegistrationFieldsnot need to test]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyEmptyRegistrationFieldsnot need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:87)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:88)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -280,32 +348,34 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="5" started-at="2019-07-17T08:33:47Z" finished-at="2019-07-17T08:33:47Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="2" started-at="2019-07-17T12:13:26Z" finished-at="2019-07-17T12:13:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyErrZipCodeRegistrationnot need to test]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyErrZipCodeRegistrationnot need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:87)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:88)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -319,32 +389,34 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@6093dd95]" name="regTest" duration-ms="4" started-at="2019-07-17T08:33:47Z" finished-at="2019-07-17T08:33:47Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="3" started-at="2019-07-17T12:13:26Z" finished-at="2019-07-17T12:13:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyEmptyRegistrationInfoFieldsnot need to test]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyEmptyRegistrationInfoFieldsnot need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:87)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:88)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -358,18 +430,13 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
@@ -377,6 +444,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- regTest -->
       </class> <!-- FG_RegistrationTest.RegistrationTesting -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- chromeRegistrationTesting -->
+  </suite> <!-- registartionSuite -->
 </testng-results>

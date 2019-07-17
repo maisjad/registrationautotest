@@ -82,11 +82,11 @@ public void readTC(){
 @Parameters ({"browser"})
 @Test (invocationCount = 12 )
 public void regTest(String browser){
-	
+		
 	System.out.println(i+":"+Data[i][0]+":"+Data[i][1]);
 	if (!Data[i][0].equals("T")){ i++;
 		throw new SkipException(Data[i-1][1]+ "not need to test");}
-	WebDriver	driver=null;
+	driver=null;
 	if(browser.equals("firefox")){
 	
 		 driver = new FirefoxDriver();
@@ -94,6 +94,7 @@ public void regTest(String browser){
 	 if(browser.equalsIgnoreCase("chrome")){
 
 		driver = new ChromeDriver(options);}	
+	// driver = new ChromeDriver(options);
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
     FGRegisterdemo demo =new FGRegisterdemo (driver);
