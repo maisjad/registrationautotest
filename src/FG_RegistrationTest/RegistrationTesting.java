@@ -126,7 +126,9 @@ public void regTest(String browser){
 		    		}
 		    	});
 		        expected = "Account Overview | Frontgate";
-		        i++;    
+		        i++;  
+		    	d=new ReportDriver(driver);
+
 		     testresult(expected,demo.getTitle());
 		 
 		
@@ -134,49 +136,67 @@ public void regTest(String browser){
 	
 	else if(Data[i][1].equals("verifyInvalidEmail")){
 		i++;
+		d=new ReportDriver(driver);
+
 		testresult("Please enter Email Address in valid format.",demo.getEmailLabel());
 		
 	}
 else if(Data[i][1].equals("verifyEmailConfirmationFelides")){
 	i++;
+	d=new ReportDriver(driver);
+
 	testresult("The Email Addresses you entered do not match. Please try again.",demo.getVerifyConfermEmailLabel());
 		
 	}
 	
 else if(Data[i][1].equals("verifyPasswordContainsAtLeast1Digit")){
 	i++;
+	d=new ReportDriver(driver);
+
 	testresult("Your password must contain at least 1 digit. Please try again.",demo.getPassLabel());
 		
 	}
 else if(Data[i][1].equals("verifyPasswordContainsAtLeast1Letter")){
 	i++;
+	d=new ReportDriver(driver);
+
 	testresult("Your password must contain at least 1 letter. Please try again.",demo.getPassLabel());
 		
 	}
 else if(Data[i][1].equals("verifyPasswordContainsAtLeast6Characters")){
 	i++;
+	d=new ReportDriver(driver);
+
 	testresult("Your password must be at least 6 characters. Please try again.",demo.getPassLabel());
 		
 	}
 	
 else if(Data[i][1].equals("verifyPasswordNotContainsSameCharacter4Time")){
 	i++;
+	d=new ReportDriver(driver);
+
 	testresult("You cannot use the same character 4 or more times. Please try again.",demo.getPassLabel());
 		
 	}
 else if(Data[i][1].equals("verifyPasswordConfirmationFiled")){
 	i++;
+	d=new ReportDriver(driver);
+
 	testresult("The passwords you entered do not match. Please try again.",demo.getVerifyConfermPassLabel());
 		
 	}
 else if(Data[i][1].equals("verifyEmailAddressNotRegistered")){
 	i++;
+	d=new ReportDriver(driver);
+
 	 testresult("The email address is already registered with the website. Please enter a different email address.",demo.getGeneralError());
 		
 	}
 else if(Data[i][1].equals("verifyEmptyRegistrationFields")){
 	setup(demo,"","","","");
 	i++;
+	d=new ReportDriver(driver);
+
 	 testresult("Please enter Email Address.",demo.getEmailLabel());
 	    testresult("Please Re-Enter Email Address.",demo.getVerifyEmptyEmailLabel());
 	    testresult("Please Enter Password.",demo.getPassLabel());
@@ -195,6 +215,8 @@ else if(Data[i][1].equals("verifyEmptyRegistrationInfoFields")){
 		 add.setshipphone("", ""); 
 			add.clicksave();
 			i++;
+			d=new ReportDriver(driver);
+
 			testresult("Please enter First Name.",add.getFNLabel());
    testresult("Please enter Last Name.",add.getLNLabel());
    testresult("Please enter Street Address 1.",add.getstrLabel());
@@ -224,6 +246,8 @@ else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
 	 }
 	add.clicksave();
 	i++;
+	d=new ReportDriver(driver);
+
 	testresult("Please enter a valid Zip/Postal code for the selected state.",add.getErrCodeLabel());
 	 if(Data[i][17]!=null){
 		
@@ -232,7 +256,6 @@ else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
 	 }	
 	}
 	//i++;
-	d=new ReportDriver(driver);
 
     demo.quit();
     

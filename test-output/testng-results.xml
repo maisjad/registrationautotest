@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="8" failed="2" ignored="0" total="12" passed="2">
+<testng-results skipped="10" failed="1" ignored="0" total="12" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="368619" started-at="2019-07-23T10:13:20Z" finished-at="2019-07-23T10:19:28Z">
+  <suite name="Default suite" duration-ms="256806" started-at="2019-07-23T10:36:35Z" finished-at="2019-07-23T10:40:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="368619" started-at="2019-07-23T10:13:20Z" finished-at="2019-07-23T10:19:28Z">
+    <test name="Default test" duration-ms="256806" started-at="2019-07-23T10:36:35Z" finished-at="2019-07-23T10:40:52Z">
       <class name="FG_RegistrationTest.mopileRegTest">
-        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="readTC" is-config="true" duration-ms="17525" started-at="2019-07-23T10:13:21Z" finished-at="2019-07-23T10:13:39Z">
+        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="readTC" is-config="true" duration-ms="15906" started-at="2019-07-23T10:36:36Z" finished-at="2019-07-23T10:36:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readTC -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="102" started-at="2019-07-23T10:13:39Z" finished-at="2019-07-23T10:13:39Z">
+        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="23" started-at="2019-07-23T10:36:52Z" finished-at="2019-07-23T10:36:52Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyssucsessregistrationnot need to test]]>
@@ -50,7 +50,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="4" started-at="2019-07-23T10:13:39Z" finished-at="2019-07-23T10:13:39Z">
+        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="14" started-at="2019-07-23T10:36:52Z" finished-at="2019-07-23T10:36:52Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyInvalidEmailnot need to test]]>
@@ -89,50 +89,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="PASS" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="170069" started-at="2019-07-23T10:13:39Z" finished-at="2019-07-23T10:16:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- regTest -->
-        <test-method status="FAIL" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="48720" started-at="2019-07-23T10:16:29Z" finished-at="2019-07-23T10:17:18Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="116511" started-at="2019-07-23T10:36:52Z" finished-at="2019-07-23T10:38:49Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#field\-2"}
-  (Session info: chrome=75.0.3770.142)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:57538}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ca1a06a873f7901409ee419f77b12aa6
-*** Element info: {Using=id, value=field-2}]]>
+              <![CDATA[actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entered do no match. Please try again., expected:<The Email Addresses you entered do not match. Please try again.> but was:<The Email Addresses you entered do no match. Please try again.>]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#field\-2"}
-  (Session info: chrome=75.0.3770.142)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:57538}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ca1a06a873f7901409ee419f77b12aa6
-*** Element info: {Using=id, value=field-2}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at FG_RegistrationTest.MopileFGRegisterdemo.setEmail(MopileFGRegisterdemo.java:40)
-at FG_RegistrationTest.mopileRegTest.setup(mopileRegTest.java:254)
-at FG_RegistrationTest.mopileRegTest.regTest(mopileRegTest.java:115)
+              <![CDATA[java.lang.AssertionError: actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entered do no match. Please try again., expected:<The Email Addresses you entered do not match. Please try again.> but was:<The Email Addresses you entered do no match. Please try again.>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
+at FG_RegistrationTest.mopileRegTest.testresult(mopileRegTest.java:288)
+at FG_RegistrationTest.mopileRegTest.regTest(mopileRegTest.java:160)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -160,86 +126,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="FAIL" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="46358" started-at="2019-07-23T10:17:20Z" finished-at="2019-07-23T10:18:07Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#field\-2"}
-  (Session info: chrome=75.0.3770.142)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:57628}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 79dfc180ab57dd71b31fc762c37bfd1c
-*** Element info: {Using=id, value=field-2}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#field\-2"}
-  (Session info: chrome=75.0.3770.142)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:57628}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 79dfc180ab57dd71b31fc762c37bfd1c
-*** Element info: {Using=id, value=field-2}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at FG_RegistrationTest.MopileFGRegisterdemo.setEmail(MopileFGRegisterdemo.java:40)
-at FG_RegistrationTest.mopileRegTest.setup(mopileRegTest.java:254)
-at FG_RegistrationTest.mopileRegTest.regTest(mopileRegTest.java:115)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="115832" started-at="2019-07-23T10:38:56Z" finished-at="2019-07-23T10:40:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="PASS" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="81297" started-at="2019-07-23T10:18:07Z" finished-at="2019-07-23T10:19:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="89" started-at="2019-07-23T10:19:28Z" finished-at="2019-07-23T10:19:28Z">
+        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="36" started-at="2019-07-23T10:40:52Z" finished-at="2019-07-23T10:40:52Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyPasswordContainsAtLeast1Letternot need to test]]>
@@ -278,7 +173,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="3" started-at="2019-07-23T10:19:28Z" finished-at="2019-07-23T10:19:28Z">
+        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="8" started-at="2019-07-23T10:40:52Z" finished-at="2019-07-23T10:40:52Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyPasswordContainsAtLeast6Charactersnot need to test]]>
@@ -317,7 +212,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="2" started-at="2019-07-23T10:19:28Z" finished-at="2019-07-23T10:19:28Z">
+        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="2" started-at="2019-07-23T10:40:52Z" finished-at="2019-07-23T10:40:52Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyPasswordNotContainsSameCharacter4Timenot need to test]]>
@@ -356,7 +251,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="3" started-at="2019-07-23T10:19:28Z" finished-at="2019-07-23T10:19:28Z">
+        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="3" started-at="2019-07-23T10:40:52Z" finished-at="2019-07-23T10:40:52Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyPasswordConfirmationFilednot need to test]]>
@@ -395,7 +290,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="3" started-at="2019-07-23T10:19:28Z" finished-at="2019-07-23T10:19:28Z">
+        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="2" started-at="2019-07-23T10:40:52Z" finished-at="2019-07-23T10:40:52Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyEmailAddressNotRegistered not need to test]]>
@@ -434,13 +329,91 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="3" started-at="2019-07-23T10:19:28Z" finished-at="2019-07-23T10:19:28Z">
+        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="3" started-at="2019-07-23T10:40:52Z" finished-at="2019-07-23T10:40:52Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[verifyEmptyRegistrationFieldsnot need to test]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyEmptyRegistrationFieldsnot need to test
+at FG_RegistrationTest.mopileRegTest.regTest(mopileRegTest.java:107)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="3" started-at="2019-07-23T10:40:52Z" finished-at="2019-07-23T10:40:52Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyErrZipCodeRegistrationnot need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyErrZipCodeRegistrationnot need to test
+at FG_RegistrationTest.mopileRegTest.regTest(mopileRegTest.java:107)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="SKIP" signature="regTest()[pri:0, instance:FG_RegistrationTest.mopileRegTest@6093dd95]" name="regTest" duration-ms="2" started-at="2019-07-23T10:40:52Z" finished-at="2019-07-23T10:40:52Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyEmptyRegistrationInfoFieldsnot need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyEmptyRegistrationInfoFieldsnot need to test
 at FG_RegistrationTest.mopileRegTest.regTest(mopileRegTest.java:107)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
