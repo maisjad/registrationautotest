@@ -64,6 +64,8 @@ public class RegistrationTesting2 {
 	private String expected;
 	private String[][] address;
 	private String baseUrl;
+
+	private ReportDriver d;
 	
 
 	@BeforeTest
@@ -99,7 +101,7 @@ public void verifyssucsessregistration(String browser){
 		driver = new ChromeDriver();}					
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	 
 	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
@@ -127,7 +129,8 @@ public void verifyssucsessregistration(String browser){
 	        expected = "Account Overview | Frontgate";
 	        this.driver=driver;
 	     testresult(expected,demo.getTitle());
-	 
+	 	d=new ReportDriver(driver);
+
 	     demo.quit();
 	
 }
@@ -148,11 +151,13 @@ public void verifyInvalidEmail(String browser){
 		driver = new ChromeDriver();}					
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	this.driver=driver;
 	testresult("Please enter Email Address in valid format.",demo.getEmailLabel());
-	 demo.quit();
+	d=new ReportDriver(driver);
+
+	demo.quit();
 	 
 }
 
@@ -174,11 +179,13 @@ public void verifyEmailConfirmationFelides(String browser){
 		}									
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	this.driver=driver;
 	testresult("The Email Addresses you entered do not match. Please try again.",demo.getVerifyConfermEmailLabel());
-    demo.quit();
+	d=new ReportDriver(driver);
+
+	demo.quit();
 }
 
 @Test
@@ -197,11 +204,13 @@ public void verifyPasswordContainsAtLeast1Digit(String browser){
 		driver = new ChromeDriver();}									
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	this.driver=driver;
 	testresult("Your password must contain at least 1 digit. Please try again.",demo.getPassLabel());
-    demo.quit();
+	d=new ReportDriver(driver);
+
+	demo.quit();
 }
 @Test
 @Parameters ({"browser"})
@@ -219,12 +228,14 @@ public void verifyPasswordContainsAtLeast1Letter(String browser){
 		driver = new ChromeDriver();}										
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	this.driver=driver;
 	testresult("Your password must contain at least 1 letter. Please try again.",demo.getPassLabel());
-    demo.quit();
+	d=new ReportDriver(driver);
+
+	demo.quit();
 }
 @Test
 @Parameters ({"browser"})
@@ -242,11 +253,13 @@ public void verifyPasswordContainsAtLeast6Characters(String browser){
 		driver = new ChromeDriver();}									
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	this.driver=driver;
 	testresult("Your password must be at least 6 characters. Please try again.",demo.getPassLabel());
-    demo.quit();
+	d=new ReportDriver(driver);
+
+	demo.quit();
 }
 @Test
 @Parameters ({"browser"})
@@ -264,12 +277,14 @@ public void verifyPasswordNotContainsSameCharacter4Time(String browser){
 		driver = new ChromeDriver();}									
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	this.driver=driver;
 	
 	testresult("You cannot use the same character 4 or more times. Please try again.",demo.getPassLabel());
-    demo.quit();
+	d=new ReportDriver(driver);
+
+	demo.quit();
 }
 @Test
 @Parameters ({"browser"})
@@ -287,11 +302,13 @@ public void verifyPasswordConfirmationFiled(String browser){
 		driver = new ChromeDriver();}										
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	this.driver=driver;
 	testresult("The passwords you entered do not match. Please try again.",demo.getVerifyConfermPassLabel());
-    demo.quit();
+	d=new ReportDriver(driver);
+
+	demo.quit();
 }
 @Test
 @Parameters ({"browser"})
@@ -309,11 +326,13 @@ public void verifyEmailAddressNotRegistered (String browser){
 		driver = new ChromeDriver();}									
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	 setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	 this.driver=driver;
 	 testresult("The email address is already registered with the website. Please enter a different email address.",demo.getGeneralError());
-    demo.quit();
+		d=new ReportDriver(driver);
+
+	 demo.quit();
 }
 @Test
 @Parameters ({"browser"})
@@ -331,13 +350,15 @@ public void verifyEmptyRegistrationFields(String browser){
 		driver = new ChromeDriver();}										
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,"","","","");
 	this.driver=driver;
     testresult("Please enter Email Address.",demo.getEmailLabel());
     testresult("Please Re-Enter Email Address.",demo.getVerifyEmptyEmailLabel());
     testresult("Please Enter Password.",demo.getPassLabel());
     testresult("Please Re-Enter Password.",demo.getVerifyEmptyPassLabel());
+	d=new ReportDriver(driver);
+
     demo.quit();
 }
 @Test
@@ -356,7 +377,7 @@ public void verifyEmptyRegistrationInfoFields(String browser){
 		driver = new ChromeDriver();}								
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
 	 add.setbillNames("", "", "", "");
@@ -383,6 +404,8 @@ public void verifyEmptyRegistrationInfoFields(String browser){
     testresult("Please enter Zip/Postal Code.",add.getScodeLabel());
     testresult("Please select a Country Name.",add.getSRegoinLabel());
     testresult("Please enter a Daytime phone number, including area code (US Only).",add.getSPhoneLabel());
+	d=new ReportDriver(driver);
+
     demo.quit();
 }
 @Test 
@@ -400,7 +423,7 @@ public void verifyErrZipCodeRegistration(String browser){
 		driver = new ChromeDriver();}												
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo    =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	 
 	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
@@ -420,12 +443,14 @@ public void verifyErrZipCodeRegistration(String browser){
 			testresult("Please enter a valid Zip/Postal code for the selected state.",add.getSErrCodeLabel());
  
 	 }
+		d=new ReportDriver(driver);
+
 	 demo.quit();
 	 
 	
 }
 
-void setup(FGRegisterdemo demo,String email, String pass, String vemail,String vpass){
+void setup(DesktopFGRegisterdemo demo,String email, String pass, String vemail,String vpass){
 
     demo.setEmail(email);
     demo.setVEmail(vemail);

@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FG_RegistrationTest.RegistrationTesting">
+      <class name="FG_RegistrationTest.mopileRegTest">
         <methods>
-          <include name="regTest"/>
           <include name="readTC"/>
+          <include name="regTest"/>
         </methods>
-      </class> <!-- FG_RegistrationTest.RegistrationTesting -->
+      </class> <!-- FG_RegistrationTest.mopileRegTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

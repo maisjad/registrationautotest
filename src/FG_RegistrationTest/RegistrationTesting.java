@@ -64,6 +64,7 @@ public class RegistrationTesting {
 	private String[][] address;
 	private String baseUrl;
 	private int i=2;
+	private ReportDriver d;
 	
 
 	@BeforeTest
@@ -97,7 +98,7 @@ public void regTest(String browser){
 	// driver = new ChromeDriver(options);
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    FGRegisterdemo demo =new FGRegisterdemo (driver);
+    DesktopFGRegisterdemo demo =new DesktopFGRegisterdemo (driver);
     if(!Data[i][1].equals("verifyEmptyRegistrationFields")){
     setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);}
 	
@@ -231,11 +232,13 @@ else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
 	 }	
 	}
 	//i++;
+	d=new ReportDriver(driver);
+
     demo.quit();
     
 }
 
-void setup(FGRegisterdemo demo,String email, String pass, String vemail,String vpass){
+void setup(DesktopFGRegisterdemo demo,String email, String pass, String vemail,String vpass){
 
     demo.setEmail(email);
     demo.setVEmail(vemail);

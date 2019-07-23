@@ -6,25 +6,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class FGRegisterdemo {
+public class MopileFGRegisterdemo {
 	WebDriver driver;
     
-    By email = By.id("logonId");
+    By email = By.id("field-2");
     By submit = By.id("continue");
-    By verifyemail =By.id("verifyLogonId");
-    By pass = By.id("logonPassword");
-    By verifypass = By.id("logonPasswordVerify");
-    By emaillabel = By.xpath("//*[@id=\"error-div-logonId\"]/div");
-    By verifyemptyemaillabel = By.xpath("//*[@id=\"error-div-verifyLogonId\"]/div");
-    By passlabel =By.xpath("//*[@id=\"error-div-logonPassword\"]/div");
-    By verifyemptypasslabel = By.xpath("//*[@id=\"error-div-logonPasswordVerify\"]/div");
-    By verifyconfermemaillabel = By.xpath("//*[@id=\"error-div-logonId-verifyLogonId\"]/div");
-    By verifyconfermpasslabel = By.xpath("//*[@id=\"error-div-logonPassword-logonPasswordVerify\"]/div");
-    By generalerror = By.xpath("//*[@id=\"gwt-error-placement-div\"]/div/span");
+    By verifyemail =By.id("field-3");
+    By pass = By.id("field-4");
+    By verifypass = By.id("field-5");
+    By emaillabel = By.xpath("//*[@id=\"register-form\"]/div/div[1]/div/div/div/div/div[2]");
+    By verifyemptyemaillabel = By.xpath("//*[@id=\"register-form\"]/div/div[2]/div/div/div/div/div[2]");
+    By passlabel =By.xpath("//*[@id=\"register-form\"]/div/div[3]/div/div/div[2]/div/div[2]");
+    By verifyemptypasslabel = By.xpath("//*[@id=\"register-form\"]/div/div[4]/div/div/div/div/div[2]");
+    By verifyconfermemaillabel = By.xpath("//*[@id=\"register-form\"]/div/div[2]/div/div/div/div/div[2]");
+    By verifyconfermpasslabel = By.xpath("//*[@id=\"register-form\"]/div/div[4]/div/div/div/div/div[2]");
+    By generalerror = By.xpath("//*[@id=\"register-form\"]/div[1]");
    
    
 
-    public FGRegisterdemo(WebDriver driver){
+    public MopileFGRegisterdemo(WebDriver driver){
        
     	this.driver = driver;
     	}	

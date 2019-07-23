@@ -146,7 +146,7 @@ public class report implements ITestListener {
 		String file = System.getProperty("user.dir")+"\\"+"screenshot"+(new Random().nextInt())+".png";
 		img.add(file);
 		try {
-			RegistrationTesting.takeSnapShot(RegistrationTesting.getDriver(), file);
+			RegistrationTesting.takeSnapShot(ReportDriver.getDriver(), file);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -275,10 +275,11 @@ public class report implements ITestListener {
 		        	i++;
 		    		}
 		    		
-		    		if(RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.chrome.ChromeDriver")){
+		    		if(ReportDriver.getDriver().getClass().getName().equals("org.openqa.selenium.chrome.ChromeDriver")){
 				    	bw.write("<td>"+"chrome"+"</td></tr>");	}
-			            else  if(RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.firefox.FirefoxDriver")){
-					    	bw.write("<td>"+"firefox"+"</td></tr>");	}	    
+			            else  if(ReportDriver.getDriver().getClass().getName().equals("org.openqa.selenium.firefox.FirefoxDriver")){
+					    	bw.write("<td>"+"firefox"+"</td></tr>");	}
+			            
 			    	}
 		        bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>Passed Test</h2>"+"</tr>"
 				           + "<tr>" +
@@ -291,9 +292,9 @@ public class report implements ITestListener {
 			        	bw.write(passcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
 			                      res.getMethod().getMethodName().toString()+"</td>"+ 
 			        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
-			        	if(RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.chrome.ChromeDriver")){
+			        	if(ReportDriver.getDriver().getClass().getName().equals("org.openqa.selenium.chrome.ChromeDriver")){
 					    	bw.write("<td>"+"chrome"+"</td></tr>");	}
-				            else  if(RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.firefox.FirefoxDriver")){
+				            else  if(ReportDriver.getDriver().getClass().getName().equals("org.openqa.selenium.firefox.FirefoxDriver")){
 						    	bw.write("<td>"+"firefox"+"</td></tr>");	}			    		
 		    		}
 		    		 bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>skipped Test</h2>"+"</tr>"
@@ -311,9 +312,9 @@ public class report implements ITestListener {
 				        	Throwable throwable = res.getThrowable();
 				    		
 				            bw.write("<td>"+throwable.getMessage()+"</td>");
-				            if(RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.chrome.ChromeDriver")){
+				            if(ReportDriver.getDriver().getClass().getName().equals("org.openqa.selenium.chrome.ChromeDriver")){
 					    	bw.write("<td>"+"chrome"+"</td></tr>");	}
-				            else  if(RegistrationTesting.getDriver().getClass().getName().equals("org.openqa.selenium.firefox.FirefoxDriver")){
+				            else  if(ReportDriver.getDriver().getClass().getName().equals("org.openqa.selenium.firefox.FirefoxDriver")){
 						    	bw.write("<td>"+"firefox"+"</td></tr>");	}
 
 				    		 }
