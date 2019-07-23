@@ -104,7 +104,7 @@ public void verifyssucsessregistration(String browser){
     DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	 
-	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
+	DesktopFGAddressdemo add=new DesktopFGAddressdemo(demo.getdriver());
 	 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
  	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
 	 add.setbillphone(address[1][10], address[1][11]);
@@ -379,7 +379,7 @@ public void verifyEmptyRegistrationInfoFields(String browser){
     driver.get(baseUrl);	
     DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
-	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
+	DesktopFGAddressdemo add=new DesktopFGAddressdemo(demo.getdriver());
 	 add.setbillNames("", "", "", "");
  	 add.setbilladdrss("","", "", "", "Select Country", "");
 	
@@ -426,7 +426,7 @@ public void verifyErrZipCodeRegistration(String browser){
     DesktopFGRegisterdemo demo    =new DesktopFGRegisterdemo (driver);
 	setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);
 	 
-	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
+	DesktopFGAddressdemo add=new DesktopFGAddressdemo(demo.getdriver());
 	 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
  	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],"101", address[1][8], address[1][9]);
 	 add.setbillphone(address[1][10], address[1][11]);

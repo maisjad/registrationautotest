@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class DesktopFGRegisterdemo {
+public class DesktopFGRegisterdemo extends FGRegistrationdemo {
 	WebDriver driver;
     
     By email = By.id("logonId");
@@ -25,7 +25,7 @@ public class DesktopFGRegisterdemo {
    
 
     public DesktopFGRegisterdemo(WebDriver driver){
-       
+       super(driver);
     	this.driver = driver;
     	}	
     

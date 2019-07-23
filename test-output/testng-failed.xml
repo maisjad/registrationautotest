@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [registartionSuite]" parallel="tests">
+  <test thread-count="1" name="mopileRegistrationTesting(failed)" parallel="tests">
+    <parameter name="browser" value="mopile"/>
     <classes>
-      <class name="FG_RegistrationTest.mopileRegTest">
+      <class name="FG_RegistrationTest.RegistrationTesting">
         <methods>
+          <include name="regTest" invocation-numbers="0 0 0 0 0 0 0 0 0 0 0"/>
           <include name="readTC"/>
-          <include name="regTest"/>
         </methods>
-      </class> <!-- FG_RegistrationTest.mopileRegTest -->
+      </class> <!-- FG_RegistrationTest.RegistrationTesting -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- mopileRegistrationTesting(failed) -->
+</suite> <!-- Failed suite [registartionSuite] -->

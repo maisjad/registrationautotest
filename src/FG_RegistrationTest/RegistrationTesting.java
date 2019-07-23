@@ -23,6 +23,8 @@ import org.testng.SkipException;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
@@ -65,7 +67,8 @@ public class RegistrationTesting {
 	private String baseUrl;
 	private int i=2;
 	private ReportDriver d;
-	
+	FGRegistrationdemo demo;
+	private FGAddressdemo add;
 
 	@BeforeTest
 public void readTC(){
@@ -75,7 +78,7 @@ public void readTC(){
 		System.setProperty("webdriver.chrome.driver","drivers\\chromedriver.exe");
 	 System.setProperty("webdriver.gecko.driver","drivers\\geckodriver.exe"); 
 		 options = new ChromeOptions();
-			options.setExperimentalOption("useAutomationExtension", false);
+		options.setExperimentalOption("useAutomationExtension", false);
         baseUrl = "https://devwcs2.frontgate.com/UserRegistrationFormView";	
     	   
 	}
@@ -86,24 +89,50 @@ public void regTest(String browser){
 		
 	System.out.println(i+":"+Data[i][0]+":"+Data[i][1]);
 	if (!Data[i][0].equals("T")){ i++;
-		throw new SkipException(Data[i-1][1]+ "not need to test");}
-	driver=null;
+		throw new SkipException(Data[i-1][1]+ ":not need to test");}
+	
 	if(browser.equals("firefox")){
 	
 		 driver = new FirefoxDriver();
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+		    driver.get(baseUrl);
+		     demo =new DesktopFGRegisterdemo (driver);
+
 	}
 	 if(browser.equalsIgnoreCase("chrome")){
 
-		driver = new ChromeDriver(options);}	
-	// driver = new ChromeDriver(options);
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
-    driver.get(baseUrl);	
-    DesktopFGRegisterdemo demo =new DesktopFGRegisterdemo (driver);
+		driver = new ChromeDriver(options);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+	    driver.get(baseUrl);
+	     demo =new DesktopFGRegisterdemo (driver);
+	
+	 }
+	 if(browser.equalsIgnoreCase("mopile")){
+		 Map<String, String> mobileEmulation = new HashMap<>();
+
+	        mobileEmulation.put("deviceName", "iPhone 6");
+
+
+	         options = new ChromeOptions();
+	       options.setExperimentalOption("mobileEmulation", mobileEmulation);
+	       driver = new ChromeDriver(options);
+	       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+	       driver.get(baseUrl);	
+	        demo =new MopileFGRegisterdemo (driver);
+
+	 }
+	
+    
+
     if(!Data[i][1].equals("verifyEmptyRegistrationFields")){
     setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);}
 	
 	if(Data[i][1].equals("verifyssucsessregistration")){
-		FGAddressdemo add=new FGAddressdemo(demo.getdriver());
+		if (browser.equals("mopile")){
+			 add=new MopileFGAddressdemo(demo.getdriver());
+
+		}
+		else{add=new DesktopFGAddressdemo(demo.getdriver());}
 		 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
 	 	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
 		 add.setbillphone(address[1][10], address[1][11]);
@@ -128,7 +157,8 @@ public void regTest(String browser){
 		        expected = "Account Overview | Frontgate";
 		        i++;  
 		    	d=new ReportDriver(driver);
-
+		    	d.setplatform(browser);
+		    	d.setmethod(Data[i][1]);
 		     testresult(expected,demo.getTitle());
 		 
 		
@@ -137,36 +167,41 @@ public void regTest(String browser){
 	else if(Data[i][1].equals("verifyInvalidEmail")){
 		i++;
 		d=new ReportDriver(driver);
-
+		d.setplatform(browser);
+		d.setmethod(Data[i][1]);
 		testresult("Please enter Email Address in valid format.",demo.getEmailLabel());
 		
 	}
 else if(Data[i][1].equals("verifyEmailConfirmationFelides")){
 	i++;
 	d=new ReportDriver(driver);
-
-	testresult("The Email Addresses you entered do not match. Please try again.",demo.getVerifyConfermEmailLabel());
+	d.setplatform(browser);
+	d.setmethod(Data[i][1]);
+	testresult("The Email Addresses you entred do not match. Please try again.",demo.getVerifyConfermEmailLabel());
 		
 	}
 	
 else if(Data[i][1].equals("verifyPasswordContainsAtLeast1Digit")){
 	i++;
 	d=new ReportDriver(driver);
-
+	d.setplatform(browser);
+	d.setmethod(Data[i][1]);
 	testresult("Your password must contain at least 1 digit. Please try again.",demo.getPassLabel());
 		
 	}
 else if(Data[i][1].equals("verifyPasswordContainsAtLeast1Letter")){
 	i++;
 	d=new ReportDriver(driver);
-
+	d.setplatform(browser);
+	d.setmethod(Data[i][1]);
 	testresult("Your password must contain at least 1 letter. Please try again.",demo.getPassLabel());
 		
 	}
 else if(Data[i][1].equals("verifyPasswordContainsAtLeast6Characters")){
 	i++;
 	d=new ReportDriver(driver);
-
+	d.setplatform(browser);
+	d.setmethod(Data[i][1]);
 	testresult("Your password must be at least 6 characters. Please try again.",demo.getPassLabel());
 		
 	}
@@ -174,21 +209,24 @@ else if(Data[i][1].equals("verifyPasswordContainsAtLeast6Characters")){
 else if(Data[i][1].equals("verifyPasswordNotContainsSameCharacter4Time")){
 	i++;
 	d=new ReportDriver(driver);
-
+	d.setplatform(browser);
+	d.setmethod(Data[i][1]);
 	testresult("You cannot use the same character 4 or more times. Please try again.",demo.getPassLabel());
 		
 	}
 else if(Data[i][1].equals("verifyPasswordConfirmationFiled")){
 	i++;
 	d=new ReportDriver(driver);
-
+	d.setplatform(browser);
+	d.setmethod(Data[i][1]);
 	testresult("The passwords you entered do not match. Please try again.",demo.getVerifyConfermPassLabel());
 		
 	}
 else if(Data[i][1].equals("verifyEmailAddressNotRegistered")){
 	i++;
 	d=new ReportDriver(driver);
-
+	d.setplatform(browser);
+	d.setmethod(Data[i][1]);
 	 testresult("The email address is already registered with the website. Please enter a different email address.",demo.getGeneralError());
 		
 	}
@@ -196,7 +234,8 @@ else if(Data[i][1].equals("verifyEmptyRegistrationFields")){
 	setup(demo,"","","","");
 	i++;
 	d=new ReportDriver(driver);
-
+	d.setplatform(browser);
+	d.setmethod(Data[i][1]);
 	 testresult("Please enter Email Address.",demo.getEmailLabel());
 	    testresult("Please Re-Enter Email Address.",demo.getVerifyEmptyEmailLabel());
 	    testresult("Please Enter Password.",demo.getPassLabel());
@@ -204,8 +243,12 @@ else if(Data[i][1].equals("verifyEmptyRegistrationFields")){
 	}
 else if(Data[i][1].equals("verifyEmptyRegistrationInfoFields")){
 	
-	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
-	 add.setbillNames("", "", "", "");
+	if (browser.equals("mopile")){
+		 add=new MopileFGAddressdemo(demo.getdriver());
+
+	}
+	else{add=new DesktopFGAddressdemo(demo.getdriver());}
+	add.setbillNames("", "", "", "");
 	 add.setbilladdrss("","", "", "", "Select Country", "");
 	
 	 add.setbillphone("", "");
@@ -216,25 +259,38 @@ else if(Data[i][1].equals("verifyEmptyRegistrationInfoFields")){
 			add.clicksave();
 			i++;
 			d=new ReportDriver(driver);
+			d.setplatform(browser);
+			d.setmethod(Data[i][1]);
+if(browser.equals("mopile")){
+	
+	   testresult("Please select a State/Province.",add.getRegoinLabel());
+	   testresult("Please select a State/Province.",add.getSRegoinLabel());
 
+
+}
+else{
+	 testresult("Please select a Country Name.",add.getRegoinLabel());
+	   testresult("Please select a Country Name.",add.getSRegoinLabel());
+}
 			testresult("Please enter First Name.",add.getFNLabel());
    testresult("Please enter Last Name.",add.getLNLabel());
    testresult("Please enter Street Address 1.",add.getstrLabel());
    testresult("Please enter City.",add.getCityLabel());
    testresult("Please enter Zip/Postal Code.",add.getcodeLabel());
-   testresult("Please select a Country Name.",add.getRegoinLabel());
    testresult("Please enter a Daytime phone number, including area code (US Only).",add.getPhoneLabel());
    testresult("Please enter First Name.",add.getSFNLabel());
    testresult("Please enter Last Name.",add.getSLNLabel());
    testresult("Please enter Street Address 1.",add.getSstrLabel());
    testresult("Please enter City.",add.getSCityLabel());
    testresult("Please enter Zip/Postal Code.",add.getScodeLabel());
-   testresult("Please select a Country Name.",add.getSRegoinLabel());
    testresult("Please enter a Daytime phone number, including area code (US Only).",add.getSPhoneLabel());	
 	}
 else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
-	
-	FGAddressdemo add=new FGAddressdemo(demo.getdriver());
+	if (browser.equals("mopile")){
+		 add=new MopileFGAddressdemo(demo.getdriver());
+
+	}
+	else{add=new DesktopFGAddressdemo(demo.getdriver());}
 	 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
 	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],"101", address[1][8], address[1][9]);
 	 add.setbillphone(address[1][10], address[1][11]);
@@ -247,7 +303,8 @@ else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
 	add.clicksave();
 	i++;
 	d=new ReportDriver(driver);
-
+	d.setplatform(browser);
+    d.setmethod(Data[i][1]);
 	testresult("Please enter a valid Zip/Postal code for the selected state.",add.getErrCodeLabel());
 	 if(Data[i][17]!=null){
 		
@@ -261,7 +318,7 @@ else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
     
 }
 
-void setup(DesktopFGRegisterdemo demo,String email, String pass, String vemail,String vpass){
+void setup(FGRegistrationdemo demo,String email, String pass, String vemail,String vpass){
 
     demo.setEmail(email);
     demo.setVEmail(vemail);
@@ -279,27 +336,7 @@ private void testresult(String expected,String actual){
 }
 	 
 	
-public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
-
-    //Convert web driver object to TakeScreenshot
-
-    TakesScreenshot scrShot =((TakesScreenshot)webdriver);
-
-    //Call getScreenshotAs method to create image file
-
-            File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-
-        //Move image file to new destination
-
-            File DestFile=new File(fileWithPath);
-
-            //Copy file at destination
-
-            FileUtils.copyFile(SrcFile, DestFile);
-
-        
-
-}	 
+	 
 
 
 

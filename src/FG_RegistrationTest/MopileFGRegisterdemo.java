@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class MopileFGRegisterdemo {
+public class MopileFGRegisterdemo extends FGRegistrationdemo{
 	WebDriver driver;
     
     By email = By.id("field-2");
@@ -23,10 +23,10 @@ public class MopileFGRegisterdemo {
     By generalerror = By.xpath("//*[@id=\"register-form\"]/div[1]");
    
    
-
+ 
     public MopileFGRegisterdemo(WebDriver driver){
-       
-    	this.driver = driver;
+      super(driver);
+       this.driver = driver;
     	}	
     
     
@@ -46,6 +46,7 @@ public class MopileFGRegisterdemo {
     public void setPass(String str){
 	   
     	driver.findElement(pass).sendKeys(str);
+    	
 	   }
     public void setVPass(String str){
 	   
