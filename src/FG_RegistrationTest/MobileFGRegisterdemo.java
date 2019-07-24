@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class MopileFGRegisterdemo extends FGRegistrationdemo{
+public class MobileFGRegisterdemo extends FGRegistrationdemo{
 	WebDriver driver;
     
     By email = By.id("field-2");
@@ -24,7 +24,7 @@ public class MopileFGRegisterdemo extends FGRegistrationdemo{
    
    
  
-    public MopileFGRegisterdemo(WebDriver driver){
+    public MobileFGRegisterdemo(WebDriver driver){
       super(driver);
        this.driver = driver;
     	}	

@@ -60,7 +60,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 @Listeners(report.class)
-public class mopileRegTest {
+public class mobileRegTest {
 	
 	
 	
@@ -110,12 +110,12 @@ public void regTest(){
 
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
     driver.get(baseUrl);	
-    MopileFGRegisterdemo demo =new MopileFGRegisterdemo (driver);
+    MobileFGRegisterdemo demo =new MobileFGRegisterdemo (driver);
     if(!Data[i][1].equals("verifyEmptyRegistrationFields")){
     setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);}
 	
 	if(Data[i][1].equals("verifyssucsessregistration")){
-		MopileFGAddressdemo add=new MopileFGAddressdemo(demo.getdriver());
+		MobileFGAddressdemo add=new MobileFGAddressdemo(demo.getdriver());
 		 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
 	 	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],address[1][7], address[1][8], address[1][9]);
 		 add.setbillphone(address[1][10], address[1][11]);
@@ -216,7 +216,7 @@ else if(Data[i][1].equals("verifyEmptyRegistrationFields")){
 	}
 else if(Data[i][1].equals("verifyEmptyRegistrationInfoFields")){
 	
-	MopileFGAddressdemo add=new MopileFGAddressdemo(demo.getdriver());
+	MobileFGAddressdemo add=new MobileFGAddressdemo(demo.getdriver());
 	 add.setbillNames("", "", "", "");
 	 add.setbilladdrss("","", "", "", "Select Country", "");
 	
@@ -246,7 +246,7 @@ else if(Data[i][1].equals("verifyEmptyRegistrationInfoFields")){
 	}
 else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
 	
-	MopileFGAddressdemo add=new MopileFGAddressdemo(demo.getdriver());
+	MobileFGAddressdemo add=new MobileFGAddressdemo(demo.getdriver());
 	 add.setbillNames(address[1][0], address[1][1], address[1][2],address[1][3]);
 	 add.setbilladdrss(address[1][4], address[1][5], address[1][6],"101", address[1][8], address[1][9]);
 	 add.setbillphone(address[1][10], address[1][11]);
@@ -272,7 +272,7 @@ else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
     
 }
 
-void setup(MopileFGRegisterdemo demo,String email, String pass, String vemail,String vpass){
+void setup(MobileFGRegisterdemo demo,String email, String pass, String vemail,String vpass){
 
     demo.setEmail(email);
     demo.setVEmail(vemail);

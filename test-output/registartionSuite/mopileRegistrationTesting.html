@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>mopileRegistrationTesting</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/4/7</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/11</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 24 09:55:14 IDT 2019</td>
+<td>Started on:</td><td>Wed Jul 24 14:41:34 IDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>623 seconds (623473 ms)</td>
+<tr><td>Total time:</td><td>275 seconds (275913 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,345 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00F31B23+1448739]
-	Ordinal0 [0x00EB5A11+940561]
-	Ordinal0 [0x00E42293+467603]
-	Ordinal0 [0x00DDF1DA+61914]
-	Ordinal0 [0x00DDBBBD+48061]
-	Ordinal0 [0x00DF8D19+167193]
-	Ordinal0 [0x00DF88ED+166125]
-	Ordinal0 [0x00DF6FFB+159739]
-	Ordinal0 [0x00DE09F6+68086]
-	Ordinal0 [0x00DE1990+72080]
-	Ordinal0 [0x00DE1929+71977]
-	GetHandleVerifier [0x01072E4C+1172140]
-	GetHandleVerifier [0x00FCFE35+504469]
-	GetHandleVerifier [0x00FCFBD0+503856]
-	Ordinal0 [0x00F3C9A8+1493416]
-	GetHandleVerifier [0x00FD060A+506474]
-	Ordinal0 [0x00EC7136+1012022]
-	Ordinal0 [0x00EC6FAF+1011631]
-	Ordinal0 [0x00ED133B+1053499]
-	Ordinal0 [0x00ED14A3+1053859]
-	Ordinal0 [0x00ED04D5+1049813]
-	BaseThreadInitThunk [0x764B8494+36]
-	RtlAreBitsSet [0x773041C8+136]
-	RtlAreBitsSet [0x77304198+88]
-
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:118)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1361566667", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1361566667'><pre>org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00F31B23+1448739]
-	Ordinal0 [0x00EB5A11+940561]
-	Ordinal0 [0x00E42293+467603]
-	Ordinal0 [0x00DDF1DA+61914]
-	Ordinal0 [0x00DDBBBD+48061]
-	Ordinal0 [0x00DF8D19+167193]
-	Ordinal0 [0x00DF88ED+166125]
-	Ordinal0 [0x00DF6FFB+159739]
-	Ordinal0 [0x00DE09F6+68086]
-	Ordinal0 [0x00DE1990+72080]
-	Ordinal0 [0x00DE1929+71977]
-	GetHandleVerifier [0x01072E4C+1172140]
-	GetHandleVerifier [0x00FCFE35+504469]
-	GetHandleVerifier [0x00FCFBD0+503856]
-	Ordinal0 [0x00F3C9A8+1493416]
-	GetHandleVerifier [0x00FD060A+506474]
-	Ordinal0 [0x00EC7136+1012022]
-	Ordinal0 [0x00EC6FAF+1011631]
-	Ordinal0 [0x00ED133B+1053499]
-	Ordinal0 [0x00ED14A3+1053859]
-	Ordinal0 [0x00ED04D5+1049813]
-	BaseThreadInitThunk [0x764B8494+36]
-	RtlAreBitsSet [0x773041C8+136]
-	RtlAreBitsSet [0x77304198+88]
-
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:118)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
-<td>121</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
-<tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#field\-2&quot;}
-  (Session info: chrome=75.0.3770.142)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ee3a3491f2138a4287490581253e09ec
-*** Element info: {Using=id, value=field-2}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at FG_RegistrationTest.MopileFGRegisterdemo.setEmail(MopileFGRegisterdemo.java:40)
-	at FG_RegistrationTest.RegistrationTesting.setup(RegistrationTesting.java:323)
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:128)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace142538159", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace142538159'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#field\-2&quot;}
-  (Session info: chrome=75.0.3770.142)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ee3a3491f2138a4287490581253e09ec
-*** Element info: {Using=id, value=field-2}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at FG_RegistrationTest.MopileFGRegisterdemo.setEmail(MopileFGRegisterdemo.java:40)
-	at FG_RegistrationTest.RegistrationTesting.setup(RegistrationTesting.java:323)
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:128)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
-<td>166</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
-<tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
-<td><div><pre>java.lang.AssertionError: actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entred do not match. Please try again., expected:&lt;The Email Addresses you entered do not match. Please try again.&gt; but was:&lt;The Email Addresses you entred do not match. Please try again.&gt;
-	at FG_RegistrationTest.RegistrationTesting.testresult(RegistrationTesting.java:334)
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:180)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace853430418", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace853430418'><pre>java.lang.AssertionError: actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entred do not match. Please try again., expected:&lt;The Email Addresses you entered do not match. Please try again.&gt; but was:&lt;The Email Addresses you entred do not match. Please try again.&gt;
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
-	at FG_RegistrationTest.RegistrationTesting.testresult(RegistrationTesting.java:334)
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
-<td>132</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
-<tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:118)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:5936/status] to be available after 59713 ms
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
-	... 29 more
-Caused by: java.util.concurrent.TimeoutException
-	at java.util.concurrent.FutureTask.get(Unknown Source)
-	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
-	... 30 more
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace454960003", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace454960003'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;MAIS-JARADAT&apos;, ip: &apos;10.20.20.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:118)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:5936/status] to be available after 59713 ms
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
-	... 29 more
-Caused by: java.util.concurrent.TimeoutException
-	at java.util.concurrent.FutureTask.get(Unknown Source)
-	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
-	... 30 more
-</pre></div></td>
-<td>63</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -414,10 +75,10 @@ Caused by: java.util.concurrent.TimeoutException
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
 <td></td>
-<td>104</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
+<td>171</td>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -427,16 +88,16 @@ Caused by: java.util.concurrent.TimeoutException
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
 <td><div><pre>org.testng.SkipException: verifyssucsessregistration:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace995479853", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace995479853'><pre>org.testng.SkipException: verifyssucsessregistration:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1771121946", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1771121946'><pre>org.testng.SkipException: verifyssucsessregistration:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -459,18 +120,18 @@ Caused by: java.util.concurrent.TimeoutException
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
 <td><div><pre>org.testng.SkipException: verifyInvalidEmail:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1550506305", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1550506305'><pre>org.testng.SkipException: verifyInvalidEmail:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1680810536", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1680810536'><pre>org.testng.SkipException: verifyInvalidEmail:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -493,19 +154,54 @@ Caused by: java.util.concurrent.TimeoutException
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
+<td><div><pre>org.testng.SkipException: verifyEmailConfirmationFelides: problem when opening the browser(timeout , unknown problem) ,retest please
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:345)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace254143135", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace254143135'><pre>org.testng.SkipException: verifyEmailConfirmationFelides: problem when opening the browser(timeout , unknown problem) ,retest please
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:345)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>81</td>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
+<tr>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
 <td><div><pre>org.testng.SkipException: verifyPasswordContainsAtLeast1Letter:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1856015847", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1856015847'><pre>org.testng.SkipException: verifyPasswordContainsAtLeast1Letter:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace515464129", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace515464129'><pre>org.testng.SkipException: verifyPasswordContainsAtLeast1Letter:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -526,19 +222,20 @@ Caused by: java.util.concurrent.TimeoutException
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
 <td><div><pre>org.testng.SkipException: verifyPasswordContainsAtLeast6Characters:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace795790209", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace795790209'><pre>org.testng.SkipException: verifyPasswordContainsAtLeast6Characters:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2123959721", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2123959721'><pre>org.testng.SkipException: verifyPasswordContainsAtLeast6Characters:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -559,19 +256,20 @@ Caused by: java.util.concurrent.TimeoutException
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
 <td><div><pre>org.testng.SkipException: verifyPasswordNotContainsSameCharacter4Time:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2028453204", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2028453204'><pre>org.testng.SkipException: verifyPasswordNotContainsSameCharacter4Time:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1105426327", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1105426327'><pre>org.testng.SkipException: verifyPasswordNotContainsSameCharacter4Time:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -592,19 +290,20 @@ Caused by: java.util.concurrent.TimeoutException
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
 <td><div><pre>org.testng.SkipException: verifyPasswordConfirmationFiled:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace474922774", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace474922774'><pre>org.testng.SkipException: verifyPasswordConfirmationFiled:not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2044238436", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2044238436'><pre>org.testng.SkipException: verifyPasswordConfirmationFiled:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -625,19 +324,20 @@ Caused by: java.util.concurrent.TimeoutException
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 <tr>
-<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mopile</td>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
 <td><div><pre>org.testng.SkipException: verifyEmailAddressNotRegistered :not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1995167437", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1995167437'><pre>org.testng.SkipException: verifyEmailAddressNotRegistered :not need to test
-	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace770421197", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace770421197'><pre>org.testng.SkipException: verifyEmailAddressNotRegistered :not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -658,7 +358,109 @@ Caused by: java.util.concurrent.TimeoutException
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>FG_RegistrationTest.RegistrationTesting@31a5c39e</td></tr>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
+<tr>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
+<td><div><pre>org.testng.SkipException: verifyEmptyRegistrationFields:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace455677340", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace455677340'><pre>org.testng.SkipException: verifyEmptyRegistrationFields:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
+<tr>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
+<td><div><pre>org.testng.SkipException: verifyErrZipCodeRegistration:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1101829793", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1101829793'><pre>org.testng.SkipException: verifyErrZipCodeRegistration:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
+<tr>
+<td title='FG_RegistrationTest.RegistrationTesting.regTest()'><b>regTest</b><br>Test class: FG_RegistrationTest.RegistrationTesting<br>Parameters: mobile</td>
+<td><div><pre>org.testng.SkipException: verifyEmptyRegistrationInfoFields:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2090479434", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2090479434'><pre>org.testng.SkipException: verifyEmptyRegistrationInfoFields:not need to test
+	at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>FG_RegistrationTest.RegistrationTesting@42e26948</td></tr>
 </table><p>
 </body>
 </html>

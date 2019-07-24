@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class MopileFGAddressdemo extends FGAddressdemo{
+public class MobileFGAddressdemo extends FGAddressdemo{
 	WebDriver driver;
 	 By save=By.xpath("//*[@id=\"register-form\"]/div[2]/button");
 	 By fn=By.id("field-7"); 
@@ -50,7 +50,7 @@ public class MopileFGAddressdemo extends FGAddressdemo{
 	 By sregoinlabel=By.xpath("//*[@id=\"register-form\"]/div[1]/div[3]/div[2]/div/div[7]/div/div[2]");
 	 By sphonelabel=By.xpath("//*[@id=\"register-form\"]/div[1]/div[3]/div[2]/div/div[9]/div/div/div/div/div[2]");
 	 By serrcodelabel=By.xpath("//*[@id=\"register-form\"]/div[1]/div[3]/div[2]/div/div[8]/div/div/div/div/div[2]");
-	 public MopileFGAddressdemo(WebDriver driver){
+	 public MobileFGAddressdemo(WebDriver driver){
 		 super(driver);
 	    	this.driver = driver;
 	       }	

@@ -15,6 +15,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.html5.AddApplicationCache;
 import org.testng.ITestContext;
@@ -47,6 +48,13 @@ public class report implements ITestListener {
 	ArrayList <ITestResult >failresult=new ArrayList <ITestResult>();
 	ArrayList <ITestResult >skipresult=new ArrayList <ITestResult>();
 	ArrayList <String >img=new ArrayList <String>();
+	ArrayList <String >passmethod=new ArrayList <String>();
+	ArrayList <String >passplat=new ArrayList <String>();
+	ArrayList <String >failmethod=new ArrayList <String>();
+	ArrayList <String >failplat=new ArrayList <String>();
+	ArrayList <String >skipmethod=new ArrayList <String>();
+	ArrayList <String >skipplat=new ArrayList <String>();
+	
 
 
 
@@ -69,6 +77,8 @@ public class report implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		
 		 passresult.add(result);
+		 passmethod.add(ReportDriver.getmethod());
+		 passplat.add(ReportDriver.getplatform());
 		
 	}
 
@@ -76,6 +86,8 @@ public class report implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		
 		failresult.add(result);
+		 failmethod.add(ReportDriver.getmethod());
+		 failplat.add(ReportDriver.getplatform());
 		String file = System.getProperty("user.dir")+"\\"+"screenshot"+(new Random().nextInt())+".png";
 		img.add(file);
 		try {
@@ -91,6 +103,8 @@ public class report implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 		
 		skipresult.add(result);
+		//skipmethod.add(ReportDriver.getmethod());
+       //  skipplat.add(ReportDriver.getplatform());
 	}
 
 	
@@ -100,8 +114,8 @@ public class report implements ITestListener {
 
 	
 	public void onFinish(ITestContext context) {
-		try{
-	if (ReportDriver.getplatform().equals("chrome")){
+	try{
+		if(ReportDriver.getplatform().equals("chrome")){
 		
 	        f = new File("reports\\chromeRegistrationreport.html");
 	        bw = new BufferedWriter(new FileWriter(f));
@@ -116,9 +130,9 @@ public class report implements ITestListener {
 	        writereport(f,bw);
 
 	}
-	else if (ReportDriver.getplatform().equals("mopile")){
+	else if (ReportDriver.getplatform().equals("mobile")){
 		
-	        f = new File("reports\\mopileRegistrationreport.html");
+	        f = new File("reports\\mobileRegistrationreport.html");
 	        bw = new BufferedWriter(new FileWriter(f));
 	        writereport(f,bw);
 	
@@ -148,25 +162,45 @@ public class report implements ITestListener {
 	}
 	public void writereport(File f ,BufferedWriter bw){
 		 try {
+			 
 				String passcolor = " <tr bgcolor=\"#5FFF33\">";
 				String failcolor =" <tr bgcolor=\"red\">";
 				String skipcolor=" <tr bgcolor=\"yellow\">";
 				bw.write("<html>");
 				 bw.write("<body>");
 			        bw.write("<h1>Registration Report</h1>");
+			        bw.write("<table border ='1'>" +"<tr>"+"<td><h4>#of Failed Test</h4></td><td>"+failresult.size()+
+			        		"</td></tr><tr> <td><h4>#of pass Test</h4></td><td>"+passresult.size()+
+			        		"</td></tr><tr><td><h4>#of skip Test</h4></td><td>"+skipresult.size()+
+			        		"</td></tr><tr> <td><h4>total Test time(min)</h4></td><td>");
+			      long sum =0;
+			       for(ITestResult res :failresult){
+			        	 
+			        			 sum+=(res.getEndMillis()-res.getStartMillis());}
+			       for(ITestResult res :passresult){
+			        	 
+	        			 sum+=(res.getEndMillis()-res.getStartMillis());}
+			       for(ITestResult res :skipresult){
+			        	 
+	        			 sum+=(res.getEndMillis()-res.getStartMillis());}
+			       sum=TimeUnit.MILLISECONDS.toMinutes(sum);
+			        bw.write(""+sum+"</td></tr><tr><td><h4>enviroment</h4></td><td>https://devwcs2.frontgate.com/UserRegistrationFormView</td>"
+			        		+ "</tr><tr><td><h4>platform</h4></td><td>"+ReportDriver.getplatform()+"</td></tr></table>");
+
 			        bw.write("<table border ='1'>" +"<tr>"+"<h2>Failed Test</h2>"+"</tr>"
 				           + "<tr>" +
 				            "<td>Class</td>" +
-				            "<td>Method</td>" +
+				            "<td>TC Description</td>" +
 				            "<td>Time (ms)</td>" +
 				            "<td>Exception</td>" +"<td>start time(ms)</td>"+"<td>end time(ms)</td>"+
 				            "<td>Platform</td>"+"</tr>");//RegistrationTesting.getDriver()
 			        int i=0;
-			        
+			        int j=0;
+			        int k=0;
+			        int m=0;
 			        for(ITestResult res :failresult){
-			        
-			        	bw.write(failcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
-			                      res.getMethod().getMethodName().toString()+":"+ReportDriver.getmethod()+"</td>"+ 
+			        	bw.write(failcolor + "<td> TestClass name: RegistrationTesting</td>"+"<td>"+
+			                      failmethod.get(k++)+"</td>"+ 
 			        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
 			        	Throwable throwable = res.getThrowable();
 			        	
@@ -174,7 +208,7 @@ public class report implements ITestListener {
 			    			
 			    			String []token=throwable.getMessage().split(",");
 			    			
-			        	bw.write("<td>"+ReportDriver.getmethod()+":"+token[0]+","+token[1]+"<a href="+img.get(i)+">[SCREEN SHOT]</a>"+"</td>");
+			        	bw.write("<td>"+failmethod.get(m++)+":"+token[0]+","+token[1]+"<a href="+img.get(i)+">[SCREEN SHOT]</a>"+"</td>");
 			        	i++;
 			    		}
 			    		Date st=new Date(res.getStartMillis());
@@ -183,47 +217,55 @@ public class report implements ITestListener {
 			        	  bw.write("<td>"+st+"</td><td>"+et+"</td>");
 
 			    		
-						    	bw.write("<td>"+ReportDriver.getplatform()+"</td></tr>");	
+						    	bw.write("<td>"+failplat.get(j++)+"</td></tr>");	
 				            
 				    	}
 			        bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>Passed Test</h2>"+"</tr>"
 					           + "<tr>" +
 					            "<td>Class</td>" +
-					            "<td>Method</td>" +
+					            "<td>TC Description</td>" +
 					            "<td>Time (ms)</td>"  +"<td>start time(ms)</td>"+"<td>end time(ms)</td>"+
 					            "<td>Platform</td>"+ "</tr>");
-			    		
+			        j=0;
+			         k=0;
+			        m=0;
 			    		for(ITestResult res :passresult){
-				        	bw.write(passcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
-				                      res.getMethod().getMethodName().toString()+":"+ReportDriver.getmethod()+"</td>"+ 
+				        	bw.write(passcolor + "<td> TestClass name:RegistrationTesting</td>"+"<td>"+
+				                      passmethod.get(j++)+"</td>"+ 
 				        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
 				        	Date st=new Date(res.getStartMillis());
 				    		Date et=new Date(res.getEndMillis());
 				    		
 				        	  bw.write("<td>"+st+"</td><td>"+et+"</td>");
-						    	bw.write("<td>"+ReportDriver.getplatform()+"</td></tr>");	
+						    	bw.write("<td>"+passplat.get(k++)+"</td></tr>");	
 			    		
 			    		}
 			    		 bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>skipped Test</h2>"+"</tr>"
 						           + "<tr>" +
 						            "<td>Class</td>" +
-						            "<td>Method</td>" +
+						            "<td>TC Description</td>" +
 						            "<td>Time (ms)</td>" +
 						            "<td>Exception</td>" +"<td>start time(ms)</td>"+"<td>end time(ms)</td>"+
 						            "<td>Platform</td>"+ "</tr>");
-				    		
+			    		  j=0;
+					         k=0;
+					        m=0;
 				    		for(ITestResult res :skipresult){
-					        	bw.write(skipcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
-					                      res.getMethod().getMethodName().toString()+":"+ReportDriver.getmethod()+"</td>"+ 
-					        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
-					        	Throwable throwable = res.getThrowable();
+				    			String []token=res.getThrowable().getMessage().split(":");
+
+
+					        	bw.write(skipcolor + "<td> TestClass Name:RegistrationTesting</td>"+"<td>"+token[0]+"</td>"+ 
+					        		"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
+				    			
+				    			Throwable throwable = res.getThrowable();
 					    		
 					            bw.write("<td>"+throwable.getMessage()+"</td>");
 					            Date st=new Date(res.getStartMillis());
 					    		Date et=new Date(res.getEndMillis());
 					    		
 					        	  bw.write("<td>"+st+"</td><td>"+et+"</td>");
-							    	bw.write("<td>"+ReportDriver.getplatform()+"</td></tr>");	
+							    	//bw.write("<td>"+skipplat.get(k++)+"</td></tr>");
+					        	bw.write("<td>"+ReportDriver.getplatform()+"</td></tr>");
 
 
 					    		 }
