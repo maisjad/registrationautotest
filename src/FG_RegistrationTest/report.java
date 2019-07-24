@@ -52,7 +52,7 @@ public class report implements ITestListener {
 
 	
 	
-	 File f ;
+	 File f;
 	 BufferedWriter bw;
 
 	
@@ -62,12 +62,7 @@ public class report implements ITestListener {
 	
 	public report() {
 		
-		try{
-	        f = new File("reports\\Registrationreport.html");
-	        bw = new BufferedWriter(new FileWriter(f));}
-	catch(IOException e){
-		e.printStackTrace();
-	}
+	
 	}
 	
 	
@@ -105,92 +100,33 @@ public class report implements ITestListener {
 
 	
 	public void onFinish(ITestContext context) {
+		try{
+	if (ReportDriver.getplatform().equals("chrome")){
 		
-		 try {
-			String passcolor = " <tr bgcolor=\"#5FFF33\">";
-			String failcolor =" <tr bgcolor=\"red\">";
-			String skipcolor=" <tr bgcolor=\"yellow\">";
-			bw.write("<html>");
-			 bw.write("<body>");
-		        bw.write("<h1>Registration Report</h1>");
-		        bw.write("<table border ='1'>" +"<tr>"+"<h2>Failed Test</h2>"+"</tr>"
-			           + "<tr>" +
-			            "<td>Class</td>" +
-			            "<td>Method</td>" +
-			            "<td>Time (ms)</td>" +
-			            "<td>Exception</td>" +"<td>start time(ms)</td>"+"<td>end time(ms)</td>"+
-			            "<td>Platform</td>"+"</tr>");//RegistrationTesting.getDriver()
-		        int i=0;
-		        for(ITestResult res :failresult){
-		        	bw.write(failcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
-		                      res.getMethod().getMethodName().toString()+"</td>"+ 
-		        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
-		        	Throwable throwable = res.getThrowable();
-		        	
-		    		if (throwable != null) {
-		    			
-		    			String []token=throwable.getMessage().split(",");
-		    			
-		        	bw.write("<td>"+ReportDriver.getmethod()+":"+token[0]+","+token[1]+"<a href="+img.get(i)+">[SCREEN SHOT]</a>"+"</td>");
-		        	i++;
-		    		}
-		        	  bw.write("<td>"+res.getStartMillis()+"</td><td>"+res.getEndMillis()+"</td>");
+	        f = new File("reports\\chromeRegistrationreport.html");
+	        bw = new BufferedWriter(new FileWriter(f));
+	        writereport(f,bw);
 
-		    		
-					    	bw.write("<td>"+ReportDriver.getplatform()+"</td></tr>");	
-			            
-			    	}
-		        bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>Passed Test</h2>"+"</tr>"
-				           + "<tr>" +
-				            "<td>Class</td>" +
-				            "<td>Method</td>" +
-				            "<td>Time (ms)</td>"  +"<td>start time(ms)</td>"+"<td>end time(ms)</td>"+
-				            "<td>Platform</td>"+ "</tr>");
-		    		
-		    		for(ITestResult res :passresult){
-			        	bw.write(passcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
-			                      res.getMethod().getMethodName().toString()+"</td>"+ 
-			        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
-			        	  bw.write("<td>"+res.getStartMillis()+"</td><td>"+res.getEndMillis()+"</td>");
+	
+	}	
+	else if (ReportDriver.getplatform().equals("firefox")){
+	
+	        f = new File("reports\\firefoxRegistrationreport.html");
+	        bw = new BufferedWriter(new FileWriter(f));
+	        writereport(f,bw);
 
-					    	bw.write("<td>"+ReportDriver.getplatform()+"</td></tr>");	
-		    		
-		    		}
-		    		 bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>skipped Test</h2>"+"</tr>"
-					           + "<tr>" +
-					            "<td>Class</td>" +
-					            "<td>Method</td>" +
-					            "<td>Time (ms)</td>" +
-					            "<td>Exception</td>" +"<td>start time(ms)</td>"+"<td>end time(ms)</td>"+
-					            "<td>Platform</td>"+ "</tr>");
-			    		
-			    		for(ITestResult res :skipresult){
-				        	bw.write(skipcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
-				                      res.getMethod().getMethodName().toString()+"</td>"+ 
-				        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
-				        	Throwable throwable = res.getThrowable();
-				    		
-				            bw.write("<td>"+throwable.getMessage()+"</td>");
-				        	  bw.write("<td>"+res.getStartMillis()+"</td><td>"+res.getEndMillis()+"</td>");
-
-						    	bw.write("<td>"+ReportDriver.getplatform()+"</td></tr>");	
-
-
-				    		 }
-			    		bw.write("</table>" +
-			    			       "</body>" +
-			    			       "</html>"); 
-			    	bw.close();
-
-
+	}
+	else if (ReportDriver.getplatform().equals("mopile")){
+		
+	        f = new File("reports\\mopileRegistrationreport.html");
+	        bw = new BufferedWriter(new FileWriter(f));
+	        writereport(f,bw);
+	
+	}}
+		catch (IOException e){
+			e.printStackTrace();
 		}
-		 
-		 
-		 catch (IOException e4) {
-			
-			e4.printStackTrace();
-		}
-	       
+		
 		
 	}
 	
@@ -209,5 +145,101 @@ public class report implements ITestListener {
 	public void onTestStart(ITestResult arg0) {
 		
 		
+	}
+	public void writereport(File f ,BufferedWriter bw){
+		 try {
+				String passcolor = " <tr bgcolor=\"#5FFF33\">";
+				String failcolor =" <tr bgcolor=\"red\">";
+				String skipcolor=" <tr bgcolor=\"yellow\">";
+				bw.write("<html>");
+				 bw.write("<body>");
+			        bw.write("<h1>Registration Report</h1>");
+			        bw.write("<table border ='1'>" +"<tr>"+"<h2>Failed Test</h2>"+"</tr>"
+				           + "<tr>" +
+				            "<td>Class</td>" +
+				            "<td>Method</td>" +
+				            "<td>Time (ms)</td>" +
+				            "<td>Exception</td>" +"<td>start time(ms)</td>"+"<td>end time(ms)</td>"+
+				            "<td>Platform</td>"+"</tr>");//RegistrationTesting.getDriver()
+			        int i=0;
+			        
+			        for(ITestResult res :failresult){
+			        
+			        	bw.write(failcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
+			                      res.getMethod().getMethodName().toString()+":"+ReportDriver.getmethod()+"</td>"+ 
+			        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
+			        	Throwable throwable = res.getThrowable();
+			        	
+			    		if (throwable != null) {
+			    			
+			    			String []token=throwable.getMessage().split(",");
+			    			
+			        	bw.write("<td>"+ReportDriver.getmethod()+":"+token[0]+","+token[1]+"<a href="+img.get(i)+">[SCREEN SHOT]</a>"+"</td>");
+			        	i++;
+			    		}
+			    		Date st=new Date(res.getStartMillis());
+			    		Date et=new Date(res.getEndMillis());
+			    		
+			        	  bw.write("<td>"+st+"</td><td>"+et+"</td>");
+
+			    		
+						    	bw.write("<td>"+ReportDriver.getplatform()+"</td></tr>");	
+				            
+				    	}
+			        bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>Passed Test</h2>"+"</tr>"
+					           + "<tr>" +
+					            "<td>Class</td>" +
+					            "<td>Method</td>" +
+					            "<td>Time (ms)</td>"  +"<td>start time(ms)</td>"+"<td>end time(ms)</td>"+
+					            "<td>Platform</td>"+ "</tr>");
+			    		
+			    		for(ITestResult res :passresult){
+				        	bw.write(passcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
+				                      res.getMethod().getMethodName().toString()+":"+ReportDriver.getmethod()+"</td>"+ 
+				        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
+				        	Date st=new Date(res.getStartMillis());
+				    		Date et=new Date(res.getEndMillis());
+				    		
+				        	  bw.write("<td>"+st+"</td><td>"+et+"</td>");
+						    	bw.write("<td>"+ReportDriver.getplatform()+"</td></tr>");	
+			    		
+			    		}
+			    		 bw.write("</table>"+"<table border ='1'>" +"<tr>"+"<h2>skipped Test</h2>"+"</tr>"
+						           + "<tr>" +
+						            "<td>Class</td>" +
+						            "<td>Method</td>" +
+						            "<td>Time (ms)</td>" +
+						            "<td>Exception</td>" +"<td>start time(ms)</td>"+"<td>end time(ms)</td>"+
+						            "<td>Platform</td>"+ "</tr>");
+				    		
+				    		for(ITestResult res :skipresult){
+					        	bw.write(skipcolor + "<td>"+res.getTestClass().toString()+"</td>"+"<td>"+
+					                      res.getMethod().getMethodName().toString()+":"+ReportDriver.getmethod()+"</td>"+ 
+					        			"<td>"+ (res.getEndMillis()-res.getStartMillis()) +"</td>");
+					        	Throwable throwable = res.getThrowable();
+					    		
+					            bw.write("<td>"+throwable.getMessage()+"</td>");
+					            Date st=new Date(res.getStartMillis());
+					    		Date et=new Date(res.getEndMillis());
+					    		
+					        	  bw.write("<td>"+st+"</td><td>"+et+"</td>");
+							    	bw.write("<td>"+ReportDriver.getplatform()+"</td></tr>");	
+
+
+					    		 }
+				    		bw.write("</table>" +
+				    			       "</body>" +
+				    			       "</html>"); 
+				    	bw.close();
+
+
+			}
+			 
+			 
+			 catch (IOException e4) {
+				
+				e4.printStackTrace();
+			}
+		       
 	}
 }

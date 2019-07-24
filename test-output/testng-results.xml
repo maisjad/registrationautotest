@@ -1,17 +1,602 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="9" failed="2" ignored="0" total="12" passed="1">
+<testng-results skipped="15" failed="7" ignored="0" total="24" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="registartionSuite" duration-ms="306204" started-at="2019-07-23T14:10:16Z" finished-at="2019-07-23T14:15:23Z">
+  <suite name="registartionSuite" duration-ms="623473" started-at="2019-07-24T06:55:14Z" finished-at="2019-07-24T07:05:37Z">
     <groups>
     </groups>
-    <test name="mopileRegistrationTesting" duration-ms="306204" started-at="2019-07-23T14:10:16Z" finished-at="2019-07-23T14:15:23Z">
+    <test name="chromeRegistrationTesting" duration-ms="575795" started-at="2019-07-24T06:55:14Z" finished-at="2019-07-24T07:04:50Z">
       <class name="FG_RegistrationTest.RegistrationTesting">
-        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="readTC" is-config="true" duration-ms="12184" started-at="2019-07-23T14:10:16Z" finished-at="2019-07-23T14:10:29Z">
+        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="readTC" is-config="true" duration-ms="26102" started-at="2019-07-24T06:55:14Z" finished-at="2019-07-24T06:55:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readTC -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="34" started-at="2019-07-23T14:10:29Z" finished-at="2019-07-23T14:10:29Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="322" started-at="2019-07-24T06:55:40Z" finished-at="2019-07-24T06:55:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyssucsessregistration:not need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyssucsessregistration:not need to test
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="7" started-at="2019-07-24T06:55:40Z" finished-at="2019-07-24T06:55:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyInvalidEmail:not need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyInvalidEmail:not need to test
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="FAIL" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="121311" started-at="2019-07-24T06:55:40Z" finished-at="2019-07-24T06:57:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: unable to discover open pages
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00F31B23+1448739]
+Ordinal0 [0x00EB5A11+940561]
+Ordinal0 [0x00E42293+467603]
+Ordinal0 [0x00DDF1DA+61914]
+Ordinal0 [0x00DDBBBD+48061]
+Ordinal0 [0x00DF8D19+167193]
+Ordinal0 [0x00DF88ED+166125]
+Ordinal0 [0x00DF6FFB+159739]
+Ordinal0 [0x00DE09F6+68086]
+Ordinal0 [0x00DE1990+72080]
+Ordinal0 [0x00DE1929+71977]
+GetHandleVerifier [0x01072E4C+1172140]
+GetHandleVerifier [0x00FCFE35+504469]
+GetHandleVerifier [0x00FCFBD0+503856]
+Ordinal0 [0x00F3C9A8+1493416]
+GetHandleVerifier [0x00FD060A+506474]
+Ordinal0 [0x00EC7136+1012022]
+Ordinal0 [0x00EC6FAF+1011631]
+Ordinal0 [0x00ED133B+1053499]
+Ordinal0 [0x00ED14A3+1053859]
+Ordinal0 [0x00ED04D5+1049813]
+BaseThreadInitThunk [0x764B8494+36]
+RtlAreBitsSet [0x773041C8+136]
+RtlAreBitsSet [0x77304198+88]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00F31B23+1448739]
+Ordinal0 [0x00EB5A11+940561]
+Ordinal0 [0x00E42293+467603]
+Ordinal0 [0x00DDF1DA+61914]
+Ordinal0 [0x00DDBBBD+48061]
+Ordinal0 [0x00DF8D19+167193]
+Ordinal0 [0x00DF88ED+166125]
+Ordinal0 [0x00DF6FFB+159739]
+Ordinal0 [0x00DE09F6+68086]
+Ordinal0 [0x00DE1990+72080]
+Ordinal0 [0x00DE1929+71977]
+GetHandleVerifier [0x01072E4C+1172140]
+GetHandleVerifier [0x00FCFE35+504469]
+GetHandleVerifier [0x00FCFBD0+503856]
+Ordinal0 [0x00F3C9A8+1493416]
+GetHandleVerifier [0x00FD060A+506474]
+Ordinal0 [0x00EC7136+1012022]
+Ordinal0 [0x00EC6FAF+1011631]
+Ordinal0 [0x00ED133B+1053499]
+Ordinal0 [0x00ED14A3+1053859]
+Ordinal0 [0x00ED04D5+1049813]
+BaseThreadInitThunk [0x764B8494+36]
+RtlAreBitsSet [0x773041C8+136]
+RtlAreBitsSet [0x77304198+88]
+
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:104)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="FAIL" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="174026" started-at="2019-07-24T06:57:43Z" finished-at="2019-07-24T07:00:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entred do not match. Please try again., expected:<The Email Addresses you entered do not match. Please try again.> but was:<The Email Addresses you entred do not match. Please try again.>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entred do not match. Please try again., expected:<The Email Addresses you entered do not match. Please try again.> but was:<The Email Addresses you entred do not match. Please try again.>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
+at FG_RegistrationTest.RegistrationTesting.testresult(RegistrationTesting.java:334)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:180)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="FAIL" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="98916" started-at="2019-07-24T07:00:41Z" finished-at="2019-07-24T07:02:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#logonId"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62436}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 007903645f4b92123ceab392f530962f
+*** Element info: {Using=id, value=logonId}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#logonId"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62436}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 007903645f4b92123ceab392f530962f
+*** Element info: {Using=id, value=logonId}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at FG_RegistrationTest.DesktopFGRegisterdemo.setEmail(DesktopFGRegisterdemo.java:40)
+at FG_RegistrationTest.RegistrationTesting.setup(RegistrationTesting.java:323)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:128)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="PASS" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="145942" started-at="2019-07-24T07:02:21Z" finished-at="2019-07-24T07:04:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="157" started-at="2019-07-24T07:04:47Z" finished-at="2019-07-24T07:04:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyPasswordContainsAtLeast1Letter:not need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyPasswordContainsAtLeast1Letter:not need to test
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="3" started-at="2019-07-24T07:04:47Z" finished-at="2019-07-24T07:04:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyPasswordContainsAtLeast6Characters:not need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyPasswordContainsAtLeast6Characters:not need to test
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="695" started-at="2019-07-24T07:04:47Z" finished-at="2019-07-24T07:04:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyPasswordNotContainsSameCharacter4Time:not need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyPasswordNotContainsSameCharacter4Time:not need to test
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="3" started-at="2019-07-24T07:04:48Z" finished-at="2019-07-24T07:04:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyPasswordConfirmationFiled:not need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyPasswordConfirmationFiled:not need to test
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="3" started-at="2019-07-24T07:04:48Z" finished-at="2019-07-24T07:04:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyEmailAddressNotRegistered :not need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyEmailAddressNotRegistered :not need to test
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="3" started-at="2019-07-24T07:04:48Z" finished-at="2019-07-24T07:04:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyEmptyRegistrationFields:not need to test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyEmptyRegistrationFields:not need to test
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
+at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+      </class> <!-- FG_RegistrationTest.RegistrationTesting -->
+    </test> <!-- chromeRegistrationTesting -->
+    <test name="mopileRegistrationTesting" duration-ms="623473" started-at="2019-07-24T06:55:14Z" finished-at="2019-07-24T07:05:37Z">
+      <class name="FG_RegistrationTest.RegistrationTesting">
+        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="readTC" is-config="true" duration-ms="26102" started-at="2019-07-24T06:55:14Z" finished-at="2019-07-24T06:55:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readTC -->
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="303" started-at="2019-07-24T06:55:40Z" finished-at="2019-07-24T06:55:40Z">
           <params>
             <param index="0">
               <value>
@@ -52,7 +637,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="9" started-at="2019-07-23T14:10:29Z" finished-at="2019-07-23T14:10:29Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="6" started-at="2019-07-24T06:55:40Z" finished-at="2019-07-24T06:55:40Z">
           <params>
             <param index="0">
               <value>
@@ -93,7 +678,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="FAIL" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="122331" started-at="2019-07-23T14:10:29Z" finished-at="2019-07-23T14:12:31Z">
+        <test-method status="FAIL" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="121319" started-at="2019-07-24T06:55:40Z" finished-at="2019-07-24T06:57:42Z">
           <params>
             <param index="0">
               <value>
@@ -101,15 +686,97 @@ at java.lang.Thread.run(Unknown Source)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entred do not match. Please try again., expected:<The Email Addresses you entered do not match. Please try again.> but was:<The Email Addresses you entred do not match. Please try again.>]]>
+              <![CDATA[unknown error: unable to discover open pages
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00F31B23+1448739]
+Ordinal0 [0x00EB5A11+940561]
+Ordinal0 [0x00E42293+467603]
+Ordinal0 [0x00DDF1DA+61914]
+Ordinal0 [0x00DDBBBD+48061]
+Ordinal0 [0x00DF8D19+167193]
+Ordinal0 [0x00DF88ED+166125]
+Ordinal0 [0x00DF6FFB+159739]
+Ordinal0 [0x00DE09F6+68086]
+Ordinal0 [0x00DE1990+72080]
+Ordinal0 [0x00DE1929+71977]
+GetHandleVerifier [0x01072E4C+1172140]
+GetHandleVerifier [0x00FCFE35+504469]
+GetHandleVerifier [0x00FCFBD0+503856]
+Ordinal0 [0x00F3C9A8+1493416]
+GetHandleVerifier [0x00FD060A+506474]
+Ordinal0 [0x00EC7136+1012022]
+Ordinal0 [0x00EC6FAF+1011631]
+Ordinal0 [0x00ED133B+1053499]
+Ordinal0 [0x00ED14A3+1053859]
+Ordinal0 [0x00ED04D5+1049813]
+BaseThreadInitThunk [0x764B8494+36]
+RtlAreBitsSet [0x773041C8+136]
+RtlAreBitsSet [0x77304198+88]
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entred do not match. Please try again., expected:<The Email Addresses you entered do not match. Please try again.> but was:<The Email Addresses you entred do not match. Please try again.>
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
-at FG_RegistrationTest.RegistrationTesting.testresult(RegistrationTesting.java:334)
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:180)
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00F31B23+1448739]
+Ordinal0 [0x00EB5A11+940561]
+Ordinal0 [0x00E42293+467603]
+Ordinal0 [0x00DDF1DA+61914]
+Ordinal0 [0x00DDBBBD+48061]
+Ordinal0 [0x00DF8D19+167193]
+Ordinal0 [0x00DF88ED+166125]
+Ordinal0 [0x00DF6FFB+159739]
+Ordinal0 [0x00DE09F6+68086]
+Ordinal0 [0x00DE1990+72080]
+Ordinal0 [0x00DE1929+71977]
+GetHandleVerifier [0x01072E4C+1172140]
+GetHandleVerifier [0x00FCFE35+504469]
+GetHandleVerifier [0x00FCFBD0+503856]
+Ordinal0 [0x00F3C9A8+1493416]
+GetHandleVerifier [0x00FD060A+506474]
+Ordinal0 [0x00EC7136+1012022]
+Ordinal0 [0x00EC6FAF+1011631]
+Ordinal0 [0x00ED133B+1053499]
+Ordinal0 [0x00ED14A3+1053859]
+Ordinal0 [0x00ED04D5+1049813]
+BaseThreadInitThunk [0x764B8494+36]
+RtlAreBitsSet [0x773041C8+136]
+RtlAreBitsSet [0x77304198+88]
+
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:118)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -132,11 +799,11 @@ at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="FAIL" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="83088" started-at="2019-07-23T14:12:34Z" finished-at="2019-07-23T14:13:57Z">
+        <test-method status="FAIL" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="166002" started-at="2019-07-24T06:57:43Z" finished-at="2019-07-24T07:00:29Z">
           <params>
             <param index="0">
               <value>
@@ -152,8 +819,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
 System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:56712}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 8ec630a6ee572a5964202a53aad3f91a
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ee3a3491f2138a4287490581253e09ec
 *** Element info: {Using=id, value=field-2}]]>
             </message>
             <full-stacktrace>
@@ -163,8 +830,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
 System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:56712}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 8ec630a6ee572a5964202a53aad3f91a
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\me\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:62248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ee3a3491f2138a4287490581253e09ec
 *** Element info: {Using=id, value=field-2}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -209,7 +876,115 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="PASS" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="80775" started-at="2019-07-23T14:14:02Z" finished-at="2019-07-23T14:15:22Z">
+        <test-method status="FAIL" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="132662" started-at="2019-07-24T07:00:29Z" finished-at="2019-07-24T07:02:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mopile]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entred do not match. Please try again., expected:<The Email Addresses you entered do not match. Please try again.> but was:<The Email Addresses you entred do not match. Please try again.>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: actual:The Email Addresses you entered do not match. Please try again.,expected:The Email Addresses you entred do not match. Please try again., expected:<The Email Addresses you entered do not match. Please try again.> but was:<The Email Addresses you entred do not match. Please try again.>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
+at FG_RegistrationTest.RegistrationTesting.testresult(RegistrationTesting.java:334)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:180)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="FAIL" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="63216" started-at="2019-07-24T07:02:46Z" finished-at="2019-07-24T07:03:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mopile]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Timed out waiting for driver server to start.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'MAIS-JARADAT', ip: '10.20.20.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:118)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:5936/status] to be available after 59713 ms
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+... 29 more
+Caused by: java.util.concurrent.TimeoutException
+at java.util.concurrent.FutureTask.get(Unknown Source)
+at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regTest -->
+        <test-method status="PASS" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="104526" started-at="2019-07-24T07:03:52Z" finished-at="2019-07-24T07:05:37Z">
           <params>
             <param index="0">
               <value>
@@ -220,7 +995,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="18" started-at="2019-07-23T14:15:22Z" finished-at="2019-07-23T14:15:22Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="114" started-at="2019-07-24T07:05:37Z" finished-at="2019-07-24T07:05:37Z">
           <params>
             <param index="0">
               <value>
@@ -235,8 +1010,7 @@ at java.lang.Thread.run(Unknown Source)
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyPasswordContainsAtLeast1Letter:not need to test
 at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -261,7 +1035,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="35" started-at="2019-07-23T14:15:22Z" finished-at="2019-07-23T14:15:23Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="12" started-at="2019-07-24T07:05:37Z" finished-at="2019-07-24T07:05:37Z">
           <params>
             <param index="0">
               <value>
@@ -276,8 +1050,7 @@ at java.lang.Thread.run(Unknown Source)
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyPasswordContainsAtLeast6Characters:not need to test
 at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -302,7 +1075,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="4" started-at="2019-07-23T14:15:23Z" finished-at="2019-07-23T14:15:23Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="83" started-at="2019-07-24T07:05:37Z" finished-at="2019-07-24T07:05:37Z">
           <params>
             <param index="0">
               <value>
@@ -317,8 +1090,7 @@ at java.lang.Thread.run(Unknown Source)
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyPasswordNotContainsSameCharacter4Time:not need to test
 at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -343,7 +1115,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="5" started-at="2019-07-23T14:15:23Z" finished-at="2019-07-23T14:15:23Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="4" started-at="2019-07-24T07:05:37Z" finished-at="2019-07-24T07:05:37Z">
           <params>
             <param index="0">
               <value>
@@ -358,8 +1130,7 @@ at java.lang.Thread.run(Unknown Source)
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyPasswordConfirmationFiled:not need to test
 at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -384,7 +1155,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="6" started-at="2019-07-23T14:15:23Z" finished-at="2019-07-23T14:15:23Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@31a5c39e]" name="regTest" duration-ms="2" started-at="2019-07-24T07:05:37Z" finished-at="2019-07-24T07:05:37Z">
           <params>
             <param index="0">
               <value>
@@ -399,90 +1170,7 @@ at java.lang.Thread.run(Unknown Source)
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyEmailAddressNotRegistered :not need to test
 at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="4" started-at="2019-07-23T14:15:23Z" finished-at="2019-07-23T14:15:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mopile]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[verifyEmptyRegistrationFields:not need to test]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: verifyEmptyRegistrationFields:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@39c0f4a]" name="regTest" duration-ms="8" started-at="2019-07-23T14:15:23Z" finished-at="2019-07-23T14:15:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mopile]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[verifyErrZipCodeRegistration:not need to test]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: verifyErrZipCodeRegistration:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:92)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)

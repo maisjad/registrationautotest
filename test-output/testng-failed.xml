@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [registartionSuite]" parallel="tests">
-  <test thread-count="1" name="mopileRegistrationTesting(failed)" parallel="tests">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [registartionSuite]" parallel="tests">
+  <test thread-count="2" name="chromeRegistrationTesting(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="FG_RegistrationTest.RegistrationTesting">
+        <methods>
+          <include name="regTest" invocation-numbers="0 0 0 0 0 0 0 0 0 0 0"/>
+          <include name="readTC"/>
+        </methods>
+      </class> <!-- FG_RegistrationTest.RegistrationTesting -->
+    </classes>
+  </test> <!-- chromeRegistrationTesting(failed) -->
+  <test thread-count="2" name="mopileRegistrationTesting(failed)" parallel="tests">
     <parameter name="browser" value="mopile"/>
     <classes>
       <class name="FG_RegistrationTest.RegistrationTesting">
