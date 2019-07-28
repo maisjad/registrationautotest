@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="11" failed="0" ignored="0" total="12" passed="1">
+<testng-results skipped="12" failed="0" ignored="0" total="12" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="registartionSuite" duration-ms="275913" started-at="2019-07-24T11:41:34Z" finished-at="2019-07-24T11:46:09Z">
+  <suite name="registartionSuite" duration-ms="86846" started-at="2019-07-28T14:33:20Z" finished-at="2019-07-28T14:34:47Z">
     <groups>
     </groups>
-    <test name="mopileRegistrationTesting" duration-ms="275913" started-at="2019-07-24T11:41:34Z" finished-at="2019-07-24T11:46:09Z">
+    <test name="real mopileRegistrationTesting" duration-ms="86846" started-at="2019-07-28T14:33:20Z" finished-at="2019-07-28T14:34:47Z">
       <class name="FG_RegistrationTest.RegistrationTesting">
-        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="readTC" is-config="true" duration-ms="22064" started-at="2019-07-24T11:41:34Z" finished-at="2019-07-24T11:41:56Z">
+        <test-method status="PASS" signature="readTC()[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="readTC" is-config="true" duration-ms="38115" started-at="2019-07-28T14:33:20Z" finished-at="2019-07-28T14:33:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readTC -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="58" started-at="2019-07-24T11:41:56Z" finished-at="2019-07-24T11:41:56Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="181" started-at="2019-07-28T14:33:59Z" finished-at="2019-07-28T14:33:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -25,7 +25,7 @@
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyssucsessregistration:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:108)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -52,11 +52,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="8" started-at="2019-07-24T11:41:56Z" finished-at="2019-07-24T11:41:56Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="5" started-at="2019-07-28T14:33:59Z" finished-at="2019-07-28T14:33:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -66,7 +66,7 @@ at java.lang.Thread.run(Unknown Source)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyInvalidEmail:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:108)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -93,11 +93,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="81530" started-at="2019-07-24T11:41:56Z" finished-at="2019-07-24T11:43:17Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="47224" started-at="2019-07-28T14:33:59Z" finished-at="2019-07-28T14:34:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -107,7 +107,7 @@ at java.lang.Thread.run(Unknown Source)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyEmailConfirmationFelides: problem when opening the browser(timeout , unknown problem) ,retest please
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:345)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:412)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -134,22 +134,52 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="PASS" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="171919" started-at="2019-07-24T11:43:17Z" finished-at="2019-07-24T11:46:09Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="544" started-at="2019-07-28T14:34:46Z" finished-at="2019-07-28T14:34:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[verifyPasswordContainsAtLeast1Digit: problem when opening the browser(timeout , unknown problem) ,retest please]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: verifyPasswordContainsAtLeast1Digit: problem when opening the browser(timeout , unknown problem) ,retest please
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:412)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="10" started-at="2019-07-24T11:46:09Z" finished-at="2019-07-24T11:46:09Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="4" started-at="2019-07-28T14:34:47Z" finished-at="2019-07-28T14:34:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -159,7 +189,7 @@ at java.lang.Thread.run(Unknown Source)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyPasswordContainsAtLeast1Letter:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:108)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -186,11 +216,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="11" started-at="2019-07-24T11:46:09Z" finished-at="2019-07-24T11:46:09Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="3" started-at="2019-07-28T14:34:47Z" finished-at="2019-07-28T14:34:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -200,7 +230,7 @@ at java.lang.Thread.run(Unknown Source)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyPasswordContainsAtLeast6Characters:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:108)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -227,11 +257,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="3" started-at="2019-07-24T11:46:09Z" finished-at="2019-07-24T11:46:09Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="3" started-at="2019-07-28T14:34:47Z" finished-at="2019-07-28T14:34:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -241,7 +271,7 @@ at java.lang.Thread.run(Unknown Source)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyPasswordNotContainsSameCharacter4Time:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:108)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -268,11 +298,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="3" started-at="2019-07-24T11:46:09Z" finished-at="2019-07-24T11:46:09Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="5" started-at="2019-07-28T14:34:47Z" finished-at="2019-07-28T14:34:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -282,7 +312,7 @@ at java.lang.Thread.run(Unknown Source)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyPasswordConfirmationFiled:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:108)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -309,11 +339,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="2" started-at="2019-07-24T11:46:09Z" finished-at="2019-07-24T11:46:09Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="4" started-at="2019-07-28T14:34:47Z" finished-at="2019-07-28T14:34:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -323,7 +353,7 @@ at java.lang.Thread.run(Unknown Source)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyEmailAddressNotRegistered :not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:108)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -350,11 +380,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="4" started-at="2019-07-24T11:46:09Z" finished-at="2019-07-24T11:46:09Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="3" started-at="2019-07-28T14:34:47Z" finished-at="2019-07-28T14:34:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -364,7 +394,7 @@ at java.lang.Thread.run(Unknown Source)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyEmptyRegistrationFields:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:108)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -391,11 +421,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="2" started-at="2019-07-24T11:46:09Z" finished-at="2019-07-24T11:46:09Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="2" started-at="2019-07-28T14:34:47Z" finished-at="2019-07-28T14:34:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -405,7 +435,7 @@ at java.lang.Thread.run(Unknown Source)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyErrZipCodeRegistration:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:108)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -432,11 +462,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- regTest -->
-        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@42e26948]" name="regTest" duration-ms="3" started-at="2019-07-24T11:46:09Z" finished-at="2019-07-24T11:46:09Z">
+        <test-method status="SKIP" signature="regTest(java.lang.String)[pri:0, instance:FG_RegistrationTest.RegistrationTesting@f6c48ac]" name="regTest" duration-ms="7" started-at="2019-07-28T14:34:47Z" finished-at="2019-07-28T14:34:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mobile]]>
+                <![CDATA[real mobile]]>
               </value>
             </param>
           </params>
@@ -446,7 +476,7 @@ at java.lang.Thread.run(Unknown Source)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: verifyEmptyRegistrationInfoFields:not need to test
-at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:100)
+at FG_RegistrationTest.RegistrationTesting.regTest(RegistrationTesting.java:108)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -474,6 +504,6 @@ at java.lang.Thread.run(Unknown Source)
           </reporter-output>
         </test-method> <!-- regTest -->
       </class> <!-- FG_RegistrationTest.RegistrationTesting -->
-    </test> <!-- mopileRegistrationTesting -->
+    </test> <!-- real mopileRegistrationTesting -->
   </suite> <!-- registartionSuite -->
 </testng-results>

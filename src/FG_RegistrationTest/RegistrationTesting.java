@@ -9,6 +9,8 @@ import org.openqa.selenium.OutputType;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 
 import org.apache.commons.io.FileUtils;
@@ -38,8 +40,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.AssertJUnit;
 import org.testng.annotations.*;
 
@@ -54,6 +59,8 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 @Listeners(report.class)
 
 public class RegistrationTesting {
@@ -70,6 +77,8 @@ public class RegistrationTesting {
 	private ReportDriver d;
 	FGRegistrationdemo demo;
 	private FGAddressdemo add;
+	public AndroidDriver<MobileElement> driver1;
+    public WebDriverWait wait;
 
 	@BeforeTest
 public void readTC(){
@@ -131,13 +140,36 @@ public void regTest(String browser){
 
 	 }
 	
-		
+		if(browser.equals("real mobile")){
+			DesiredCapabilities caps = new DesiredCapabilities();
+		//	caps.setCapability("appPackage", "com.android.vending");
+	    //   caps.setCapability("appActivity", "com.google.android.apps.chrome.Main");
+			caps.setCapability("deviceName", "Nexus 5X");
+	        caps.setCapability("udid", "0113736e65ba1dea"); //DeviceId from "adb devices" command
+	        caps.setCapability("platformName", "Android");
+	        caps.setCapability("platformVersion", "8.1.0");
+	        caps.setCapability("noReset","false");
+	       caps.setCapability("browserName", "chrome");
+	        caps.setCapability("browserVersion", "75.0");
+	        
+	        try {
+	        	
+				driver1 = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),caps);
+				driver1.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);	
+			       driver1.get(baseUrl);	
+			        demo =new MobileFGRegisterdemo (driver1);
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	       
+		}
 		
     if(!Data[i][1].equals("verifyEmptyRegistrationFields")){
     setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);}
 	
 	if(Data[i][1].equals("verifyssucsessregistration")){
-		if (browser.equals("mobile")){
+		if (browser.equals("mobile")||browser.equals("real mobile")){
 			 add=new MobileFGAddressdemo(demo.getdriver());
 
 		}
@@ -164,8 +196,10 @@ public void regTest(String browser){
 		    		}
 		    	});
 		        expected = "Account Overview | Frontgate";
-		         
-		    	d=new ReportDriver(driver);
+if(browser.equals("real mobile")){
+	d=new ReportDriver(driver1);
+}		         
+else{	d=new ReportDriver(driver);}
 		    	d.setplatform(browser);
 		    	d.setmethod(Data[i][1]);
 		    	i++; 
@@ -176,7 +210,10 @@ public void regTest(String browser){
 	
 	else if(Data[i][1].equals("verifyInvalidEmail")){
 		
-		d=new ReportDriver(driver);
+		if(browser.equals("real mobile")){
+			d=new ReportDriver(driver1);
+		}		         
+		else{	d=new ReportDriver(driver);}
 		d.setplatform(browser);
 		d.setmethod(Data[i][1]);
 		i++;
@@ -185,8 +222,10 @@ public void regTest(String browser){
 	}
 else if(Data[i][1].equals("verifyEmailConfirmationFelides")){
 	
-	d=new ReportDriver(driver);
-	d.setplatform(browser);
+	if(browser.equals("real mobile")){
+		d=new ReportDriver(driver1);
+	}		         
+	else{	d=new ReportDriver(driver);}	d.setplatform(browser);
 	d.setmethod(Data[i][1]);
 	i++;
 	testresult("The Email Addresses you entred do not match. Please try again.",demo.getVerifyConfermEmailLabel());
@@ -195,7 +234,10 @@ else if(Data[i][1].equals("verifyEmailConfirmationFelides")){
 	
 else if(Data[i][1].equals("verifyPasswordContainsAtLeast1Digit")){
 	
-	d=new ReportDriver(driver);
+	if(browser.equals("real mobile")){
+		d=new ReportDriver(driver1);
+	}		         
+	else{	d=new ReportDriver(driver);}
 	d.setplatform(browser);
 	d.setmethod(Data[i][1]);
 	i++;
@@ -204,7 +246,10 @@ else if(Data[i][1].equals("verifyPasswordContainsAtLeast1Digit")){
 	}
 else if(Data[i][1].equals("verifyPasswordContainsAtLeast1Letter")){
 	
-	d=new ReportDriver(driver);
+	if(browser.equals("real mobile")){
+		d=new ReportDriver(driver1);
+	}		         
+	else{	d=new ReportDriver(driver);}
 	d.setplatform(browser);
 	d.setmethod(Data[i][1]);
 	i++;
@@ -213,7 +258,10 @@ else if(Data[i][1].equals("verifyPasswordContainsAtLeast1Letter")){
 	}
 else if(Data[i][1].equals("verifyPasswordContainsAtLeast6Characters")){
 	
-	d=new ReportDriver(driver);
+	if(browser.equals("real mobile")){
+		d=new ReportDriver(driver1);
+	}		         
+	else{	d=new ReportDriver(driver);}
 	d.setplatform(browser);
 	d.setmethod(Data[i][1]);
 	i++;
@@ -223,7 +271,10 @@ else if(Data[i][1].equals("verifyPasswordContainsAtLeast6Characters")){
 	
 else if(Data[i][1].equals("verifyPasswordNotContainsSameCharacter4Time")){
 	
-	d=new ReportDriver(driver);
+	if(browser.equals("real mobile")){
+		d=new ReportDriver(driver1);
+	}		         
+	else{	d=new ReportDriver(driver);}
 	d.setplatform(browser);
 	d.setmethod(Data[i][1]);
 	i++;
@@ -232,7 +283,10 @@ else if(Data[i][1].equals("verifyPasswordNotContainsSameCharacter4Time")){
 	}
 else if(Data[i][1].equals("verifyPasswordConfirmationFiled")){
 	
-	d=new ReportDriver(driver);
+	if(browser.equals("real mobile")){
+		d=new ReportDriver(driver1);
+	}		         
+	else{	d=new ReportDriver(driver);}
 	d.setplatform(browser);
 	d.setmethod(Data[i][1]);
 	i++;
@@ -241,7 +295,10 @@ else if(Data[i][1].equals("verifyPasswordConfirmationFiled")){
 	}
 else if(Data[i][1].equals("verifyEmailAddressNotRegistered")){
 	
-	d=new ReportDriver(driver);
+	if(browser.equals("real mobile")){
+		d=new ReportDriver(driver1);
+	}		         
+	else{	d=new ReportDriver(driver);}
 	d.setplatform(browser);
 	d.setmethod(Data[i][1]);
 	i++;
@@ -251,7 +308,10 @@ else if(Data[i][1].equals("verifyEmailAddressNotRegistered")){
 else if(Data[i][1].equals("verifyEmptyRegistrationFields")){
 	setup(demo,"","","","");
 	
-	d=new ReportDriver(driver);
+	if(browser.equals("real mobile")){
+		d=new ReportDriver(driver1);
+	}		         
+	else{	d=new ReportDriver(driver);}
 	d.setplatform(browser);
 	d.setmethod(Data[i][1]);
 	i++;
@@ -262,7 +322,7 @@ else if(Data[i][1].equals("verifyEmptyRegistrationFields")){
 	}
 else if(Data[i][1].equals("verifyEmptyRegistrationInfoFields")){
 	
-	if (browser.equals("mobile")){
+	if (browser.equals("mobile")||browser.equals("real mobile")){
 		 add=new MobileFGAddressdemo(demo.getdriver());
 
 	}
@@ -277,11 +337,14 @@ else if(Data[i][1].equals("verifyEmptyRegistrationInfoFields")){
 		 add.setshipphone("", ""); 
 			add.clicksave();
 			
-			d=new ReportDriver(driver);
+			if(browser.equals("real mobile")){
+				d=new ReportDriver(driver1);
+			}		         
+			else{	d=new ReportDriver(driver);}
 			d.setplatform(browser);
 			d.setmethod(Data[i][1]);
 			i++;
-if(browser.equals("mobile")){
+if(browser.equals("mobile")||browser.equals("real mobile")){
 	
 	   testresult("Please select a State/Province.",add.getRegoinLabel());
 	   testresult("Please select a State/Province.",add.getSRegoinLabel());
@@ -306,7 +369,7 @@ else{
    testresult("Please enter a Daytime phone number, including area code (US Only).",add.getSPhoneLabel());	
 	}
 else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
-	if (browser.equals("mobile")){
+	if (browser.equals("mobile")||browser.equals("real mobile")){
 		 add=new MobileFGAddressdemo(demo.getdriver());
 
 	}
@@ -322,7 +385,10 @@ else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
 	 }
 	add.clicksave();
 	
-	d=new ReportDriver(driver);
+	if(browser.equals("real mobile")){
+		d=new ReportDriver(driver1);
+	}		         
+	else{	d=new ReportDriver(driver);}
 	d.setplatform(browser);
     d.setmethod(Data[i][1]);
     i++;
@@ -338,7 +404,10 @@ else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
     }
 	catch(WebDriverException e){
 		
-		d=new ReportDriver(driver);
+		if(browser.equals("real mobile")){
+			d=new ReportDriver(driver1);
+		}		         
+		else{	d=new ReportDriver(driver);}
 		d.setplatform(browser);
 	    d.setmethod(Data[i][1]);
 	    i++;
@@ -347,7 +416,10 @@ else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
 	}
 	catch(NoSuchElementException e){
 		
-		d=new ReportDriver(driver);
+		if(browser.equals("real mobile")){
+			d=new ReportDriver(driver1);
+		}		         
+		else{	d=new ReportDriver(driver);}
 		d.setplatform(browser);
 	    d.setmethod(Data[i][1]);
 	    i++;

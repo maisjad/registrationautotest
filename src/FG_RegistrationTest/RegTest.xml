@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="registartionSuite" thread-count="3" parallel="tests" >
-<test name="mopileRegistrationTesting">
+<suite name="registartionSuite" thread-count="4" parallel="tests" >
+<test name="real mobileRegistrationTesting">
+<parameter name="browser" value="real mobile"/>
+<classes>
+<class name="FG_RegistrationTest.RegistrationTesting">
+</class>
+</classes>
+</test>
+<test name="mobileRegistrationTesting">
 <parameter name="browser" value="mobile"/>
+<classes>
+<class name="FG_RegistrationTest.RegistrationTesting">
+</class>
+</classes>
+</test>
+<test name="firefoxRegistrationTesting">
+<parameter name="browser" value="firefox"/>
 <classes>
 <class name="FG_RegistrationTest.RegistrationTesting">
 </class>
@@ -10,13 +24,6 @@
 </test>
 <test name="chromeRegistrationTesting">
 <parameter name="browser" value="chrome"/>
-<classes>
-<class name="FG_RegistrationTest.RegistrationTesting">
-</class>
-</classes>
-</test>
-<test name="firefoxeRegistrationTesting">
-<parameter name="browser" value="firefox"/>
 <classes>
 <class name="FG_RegistrationTest.RegistrationTesting">
 </class>

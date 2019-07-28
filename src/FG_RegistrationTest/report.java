@@ -130,6 +130,13 @@ public class report implements ITestListener {
 	        writereport(f,bw);
 
 	}
+	else if (ReportDriver.getplatform().equals("real mobile")){
+		
+        f = new File("reports\\realmobileRegistrationreport.html");
+        bw = new BufferedWriter(new FileWriter(f));
+        writereport(f,bw);
+
+}
 	else if (ReportDriver.getplatform().equals("mobile")){
 		
 	        f = new File("reports\\mobileRegistrationreport.html");
