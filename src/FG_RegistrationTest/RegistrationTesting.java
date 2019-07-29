@@ -5,6 +5,7 @@ import java.io.File;
 
 
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,7 +18,6 @@ import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.AssertJUnit;
 import org.testng.Reporter;
@@ -61,6 +61,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
 @Listeners(report.class)
 
 public class RegistrationTesting {
@@ -141,29 +143,40 @@ public void regTest(String browser){
 	 }
 	
 		if(browser.equals("real mobile")){
+		
 			DesiredCapabilities caps = new DesiredCapabilities();
-		//	caps.setCapability("appPackage", "com.android.vending");
-	    //   caps.setCapability("appActivity", "com.google.android.apps.chrome.Main");
-			caps.setCapability("deviceName", "Nexus 5X");
-	        caps.setCapability("udid", "0113736e65ba1dea"); //DeviceId from "adb devices" command
-	        caps.setCapability("platformName", "Android");
-	        caps.setCapability("platformVersion", "8.1.0");
-	        caps.setCapability("noReset","false");
-	       caps.setCapability("browserName", "chrome");
-	        caps.setCapability("browserVersion", "75.0");
-	        
-	        try {
-	        	
-				driver1 = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),caps);
-				driver1.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);	
-			       driver1.get(baseUrl);	
-			        demo =new MobileFGRegisterdemo (driver1);
+		
+				caps.setCapability("deviceName", "Nexus 5X");
+		        caps.setCapability("udid", "0113736e65ba1dea"); //DeviceId from "adb devices" command
+		        caps.setCapability("platformName", "Android");
+		        caps.setCapability("platformVersion", "8.1.0");
+		        caps.setCapability("noReset","false");
+		       caps.setCapability("browserName", "chrome");
+		        caps.setCapability("browserVersion", "75.0");
+			 try {
+				
+				driver1 = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
+				 driver1.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			 try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+	        
+	        
+				
+			       driver1.get(baseUrl);	
+			        demo =new MobileFGRegisterdemo (driver1);}
+			
 	       
-		}
+		
 		
     if(!Data[i][1].equals("verifyEmptyRegistrationFields")){
     setup(demo,Data[i][2],Data[i][3],Data[i][4],Data[i][5]);}
@@ -426,7 +439,17 @@ else if(Data[i][1].equals("verifyErrZipCodeRegistration")){
 		throw new SkipException(Data[i-1][1]+ ": the elements not found ,retest please");
 	}
 	
-	
+catch(Exception e){
+		
+		if(browser.equals("real mobile")){
+			d=new ReportDriver(driver1);
+		}		         
+		else{	d=new ReportDriver(driver);}
+		d.setplatform(browser);
+	    d.setmethod(Data[i][1]);
+	    i++;
+		throw new SkipException(Data[i-1][1]+ ":  "+e.getMessage()+",retest please");
+	}
     
 }
 

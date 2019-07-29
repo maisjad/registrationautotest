@@ -36,5 +36,6 @@
 	<classpathentry kind="lib" path="C:/Jars/testng-6.9.9.jar"/>
 	<classpathentry kind="lib" path="C:/Jars/xmlbeans-3.1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Jars/java-client-7.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/gson-2.8.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
